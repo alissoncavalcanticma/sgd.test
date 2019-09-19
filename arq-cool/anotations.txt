@@ -1,0 +1,97 @@
+CAMPOS CHECKLIST:
+
+turno (CAMPO HIDDEN)
+data
+operador_fca
+operador_sp
+operador_tr
+entrada_fca
+saida_fca
+entrada_sp
+saida_sp
+entrada_tr
+saida_tr
+racks_fca
+racks_sp
+racks_tr
+org_fca
+org_sp
+org_tr
+lumin_fca
+lumin_sp
+lumin_tr
+infra_fca
+infra_sp
+infra_tr
+acesso_fca
+acesso_sp
+acesso_tr
+portacf_fca
+portacf_sp
+arc_fca
+arc_sp
+arc_tr
+sist_extint_fca
+sist_extint_sp
+sist_extint_tr
+ledsaude_fca
+temp01_fca
+humid01_fca
+temp01_sp
+humid01_sp
+temp02_fca
+humid02_fca
+temp02_sp
+humid02_sp
+temp03_fca
+humid03_fca
+temp03_sp
+humid03_sp
+cap_ups_tr
+lumin_sc_fca
+portacf_sc_fca
+acesso_sc_fca
+geradores_fca
+geradores_sp
+org_ext_fca
+org_ext_sp
+org_ext_tr
+zabbix
+obs_fca
+obs_sp
+obs_tr
+chk_carro
+chk_sala
+chk_not
+chk_cel
+chk_batcel
+obs_npo
+
+END CAMPOS CHECKLIST
+
+
+Pegando ultimo registro da tabela:
+
+SELECT * FROM `checklists` ORDER BY id DESC limit 1
+
+// link sobre enviar e-mail de servidor local:
+
+https://pt.stackoverflow.com/questions/40858/como-enviar-e-mail-do-localhost-usando-a-fun%C3%A7%C3%A3o-mail-do-php
+
+// Pesquisa acessos ajax:
+
+https://www.gigasystems.com.br/artigo/35/pesquisa-dinamica-com-ajax-banco-de-dados-e-php
+
+implementando pesquisa:
+
+https://www.youtube.com/watch?v=b8Y
+
+
+// Ordenação com datatables
+
+https://pt.stackoverflow.com/questions/11648/ordenar-coluna-da-tabela-datatable-atrav%C3%A9s-da-query
+
+//bootstrap-wysihtml5:
+
+X - http://jhollingworth.github.io/bootstrap-wysihtml5/
+https://github.com/mindmup/bootstrap-wysiwyg/
