@@ -13345,7 +13345,7 @@ section {
 
 .cad {
     padding: 30px;
-    padding-left: 30px;
+    padding-left: 0px;
 }
 
 .form-part {
@@ -13416,4 +13416,15 @@ section {
 
 #cke_resumo {
     width: 100%;
+}
+
+
+/* form acessos */
+
+.row_form {
+    padding-left: 150px;
+}
+
+.jumbFormAccess {
+    padding: 15px !important;
 }

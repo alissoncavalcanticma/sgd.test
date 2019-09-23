@@ -47,6 +47,7 @@ class AcessoController{
 			$dc = addslashes($_GET['dc']);
 			$turno = addslashes($_GET['turno']);
 			$operador = addslashes($_GET['operador']);
+			$operador_2 = addslashes($_GET['operador_2']);
 			$data = explode('/', addslashes($_GET['data']));
 				$data = $data[2].'-'.$data[1].'-'.$data[0];
 			$motivo = addslashes($_GET['motivo']);
@@ -66,7 +67,7 @@ class AcessoController{
 			$pdo = new Conexao();
 			$acesso = new Acesso($pdo);
 
-			$acesso->cadastrarAcesso($dc, $turno, $motivo, $servico, $equipamento, $obs, $solicitante, $empresa, $operador, $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao);
+			$acesso->cadastrarAcesso($dc, $turno, $motivo, $servico, $equipamento, $obs, $solicitante, $empresa, $operador, $operador_2, $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao);
 	}
 
 	public function listaAcessos(){
@@ -351,6 +352,7 @@ class AcessoController{
 			$dc = addslashes($_GET['dc']);
 			$turno = addslashes($_GET['turno']);
 			$operador = addslashes($_GET['operador']);
+			$operador_2 = addslashes($_GET['operador_2']);
 			$data = explode('/', addslashes($_GET['data']));
 				$data = $data[2].'-'.$data[1].'-'.$data[0];
 			$motivo = addslashes($_GET['motivo']);
@@ -370,7 +372,7 @@ class AcessoController{
 			$pdo = new Conexao();
 			$acesso = new Acesso($pdo);
 
-			$acesso->editAccess($i, $dc, $turno, $motivo, $servico, $equipamento, $obs, $solicitante, $empresa, $operador, $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao);
+			$acesso->editAccess($i, $dc, $turno, $motivo, $servico, $equipamento, $obs, $solicitante, $empresa, $operador, $operador_2, $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao);
 	}
 }
 

@@ -9,6 +9,7 @@ class Acesso{
 	private $dc;
 	private $turno;
 	private $operador;
+	private $operador_2;
 	private $data; 
 	private $motivo;
 	private $servico;
@@ -84,7 +85,7 @@ class Acesso{
 		$maximo = $max;
 		$param = $pesquisa;
 		//$sql="SELECT * FROM acessos ORDER BY id DESC LIMIT $inicio, $maximo"; //consulta no BD
-		$sql = "SELECT * FROM acessos WHERE id LIKE '%$param%' OR dc LIKE '%$param%' OR turno LIKE '%$param%' OR motivo LIKE '%$param%' OR solicitante LIKE '%$param%' OR empresa LIKE '%$param%' OR operador LIKE '%$param%' OR data LIKE '%$param%' OR entrada LIKE '%$param%' OR saida LIKE '%$param%' ORDER BY id DESC LIMIT $inicio, $maximo";
+		$sql = "SELECT * FROM acessos WHERE id LIKE '%$param%' OR dc LIKE '%$param%' OR turno LIKE '%$param%' OR motivo LIKE '%$param%' OR solicitante LIKE '%$param%' OR empresa LIKE '%$param%' OR operador LIKE '%$param%' OR operador_2 LIKE '%$param%' OR data LIKE '%$param%' OR entrada LIKE '%$param%' OR saida LIKE '%$param%' ORDER BY id DESC LIMIT $inicio, $maximo";
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
 
@@ -101,7 +102,7 @@ class Acesso{
 	}
 
 	public function cadastrarAcesso($dc, $turno,  $motivo, $servico, $equipamento, $obs, 
-		$solicitante, $empresa, $operador, $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao){
+		$solicitante, $empresa, $operador, $operador_2, $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao){
 
 		$this->dc = $dc;
 		$this->turno = $turno;
@@ -112,6 +113,7 @@ class Acesso{
 		$this->solicitante = $solicitante; 
 		$this->empresa =  $empresa;
 		$this->operador = $operador;
+		$this->operador_2 = $operador_2;
 		$this->data = $data;  	
 		$this->entrada = $entrada;
 		$this->saida = $saida;
@@ -121,7 +123,7 @@ class Acesso{
 		$this->chegada = $chegada;
 		$this->area_atuacao = $area_atuacao;
 
-		$sql = "INSERT INTO acessos (dc, turno, motivo, servico, equipamento, obs, solicitante, empresa, operador, data, entrada, saida, meio_de_contato, solicitacao_acesso, agendamento, chegada, area_atuacao) VALUES ( '$this->dc', '$this->turno', '$this->motivo', '$this->servico', '$this->equipamento', '$this->obs', '$this->solicitante', '$this->empresa', '$this->operador', '$this->data', '$this->entrada', '$this->saida', '$this->meio_de_contato', '$this->solicitacao_acesso', '$this->agendamento', '$this->chegada', '$this->area_atuacao')";
+		$sql = "INSERT INTO acessos (dc, turno, motivo, servico, equipamento, obs, solicitante, empresa, operador, operador_2, data, entrada, saida, meio_de_contato, solicitacao_acesso, agendamento, chegada, area_atuacao) VALUES ( '$this->dc', '$this->turno', '$this->motivo', '$this->servico', '$this->equipamento', '$this->obs', '$this->solicitante', '$this->empresa', '$this->operador', '$this->operador_2', '$this->data', '$this->entrada', '$this->saida', '$this->meio_de_contato', '$this->solicitacao_acesso', '$this->agendamento', '$this->chegada', '$this->area_atuacao')";
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
 
@@ -129,7 +131,7 @@ class Acesso{
 	}
 
 	public function editAccess($i, $dc, $turno,  $motivo, $servico, $equipamento, $obs,
-		$solicitante, $empresa, $operador, $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao){
+		$solicitante, $empresa, $operador, $operador_2, $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao){
 
 		$this->id = $i;
 		$this->dc = $dc;
@@ -141,6 +143,7 @@ class Acesso{
 		$this->solicitante = $solicitante;
 		$this->empresa =  $empresa;
 		$this->operador = $operador;
+		$this->operador_2 = $operador_2;
 		$this->data = $data;
 		$this->entrada = $entrada;
 		$this->saida = $saida;
@@ -150,7 +153,7 @@ class Acesso{
 		$this->chegada = $chegada;
 		$this->area_atuacao = $area_atuacao;
 
-		$sql = "UPDATE acessos SET dc = '$this->dc', turno = '$this->turno', motivo = '$this->motivo', servico = '$this->servico', equipamento = '$this->equipamento', obs = '$this->obs', solicitante = '$this->solicitante', empresa = '$this->empresa', operador = '$this->operador', data = '$this->data', entrada = '$this->entrada', saida = '$this->saida', meio_de_contato = '$this->meio_de_contato', solicitacao_acesso = '$this->solicitacao_acesso', agendamento = '$this->agendamento', chegada = '$this->chegada', area_atuacao = '$this->area_atuacao' WHERE id = '$this->id'";
+		$sql = "UPDATE acessos SET dc = '$this->dc', turno = '$this->turno', motivo = '$this->motivo', servico = '$this->servico', equipamento = '$this->equipamento', obs = '$this->obs', solicitante = '$this->solicitante', empresa = '$this->empresa', operador = '$this->operador', operador_2 = '$this->operador_2', data = '$this->data', entrada = '$this->entrada', saida = '$this->saida', meio_de_contato = '$this->meio_de_contato', solicitacao_acesso = '$this->solicitacao_acesso', agendamento = '$this->agendamento', chegada = '$this->chegada', area_atuacao = '$this->area_atuacao' WHERE id = '$this->id'";
 
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
