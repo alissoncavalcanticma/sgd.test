@@ -175,9 +175,6 @@
                                 <!-- Form part clear:both -->
 
 
-                                <p style="color:red"><strong>* Falta implementar operador 1 e 2 para campos do BD</strong></p>
-
-
                                 <div class="row row_form"><!-- div row 8-->
                                       <!-- SAÍDA -->
                                       <div class="col-md-3">

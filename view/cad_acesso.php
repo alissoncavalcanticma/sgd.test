@@ -70,7 +70,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                   <div class="row m-t-30" style="margin-top: 10px;">
                   
                       <div class="col-md-12">                          
-                          <div class="table-responsive m-b-40">
+            <div class="table-responsive m-b-40">
                                     
             <!-- Content -->
             
@@ -99,14 +99,16 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                             </div>
 
                         </div> <!----> <!-- END Jumbotron --> 
-        </div>
-          <script type="text/javascript">
-            $('#sbmt').click(function() { 
-            
-          }); 
-          </script>
-    </div>
-<!-- End Content -->
+                        
+            </div>
+                        <script type="text/javascript">
+
+                                $('#sbmt').click(function() { }); 
+                        
+                        </script>
+
+                        </div>
+            <!-- End Content -->
 
 
                                 </div>
