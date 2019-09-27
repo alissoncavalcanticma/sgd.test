@@ -80,7 +80,7 @@ class Usuarios{
 		$array = array();
 		$user = $a;
 		$pass = $b;
-		$sql = "SELECT * FROM usuarios WHERE usuario = :user AND senha = :pass";
+		$sql = "SELECT * FROM usuarios WHERE usuario = :user AND senha = :pass AND status != 'inativo'";
 		$sql = $this->pdo->prepare($sql);
 		$sql->bindValue(":user", $user);
 		$sql->bindValue(":pass", $pass);

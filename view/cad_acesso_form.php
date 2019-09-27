@@ -234,7 +234,7 @@
                                       <!-- OPERADOR 2-->
                                       <div class="col-md-3">
                                                   <label>Operador 2:</label>
-                                                  <select id="operador_2" name="operador_2" class="form-control form-control-sm input-format-center" required oninvalid="setCustomValidity('Selecione o operador')" onchange="try{setCustomValidity('')}catch(e){}">
+                                                  <select id="operador_2" name="operador_2" class="form-control form-control-sm input-format-center">
                                                           <option value=""></option>
                                                           
                                                           <?php foreach($userC->listaUsuarios() as $user): 
@@ -244,13 +244,11 @@
 
                                                             <?php
                                                                 if(!isset($ac['operador_2'])){
-                                                                echo $user['apelido'] == $_SESSION['logon'] ? 'selected' :  '';
+                                                                    //echo $user['apelido'] == $_SESSION['logon'] ? 'selected' :  '';
 
                                                                 }else{
-                                                                //MEXER AQUI, TROCAR O $ac['operador'] POR UMA SAÍDA NOME REFERENTE AO ID DO OPERADOR 
-                                                                $uc = $userC->retornaApelido($ac['operador_2']);
-                                                                //echo $uc['apelido'];
-                                                                echo $user['apelido'] == $uc['apelido'] ? 'selected' :  '';
+                                                                    $uc = $userC->retornaApelido($ac['operador_2']);
+                                                                    echo $user['apelido'] == $uc['apelido'] ? 'selected' :  '';
                                                                 }
                                                             ?>
                                                           > 
