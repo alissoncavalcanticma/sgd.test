@@ -36,9 +36,10 @@
     </script>
     <script src="../assets/vendor/circle-progress/circle-progress.min.js"></script>
     <script src="../assets/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="../assets/vendor/chartjs/Chart.bundle.min.js"></script>
     <script src="../assets/vendor/select2/select2.min.js">
     </script>
+
+    
 
     <!-- Main JS-->
     <script src="../assets/js/main.js"></script>

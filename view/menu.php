@@ -64,7 +64,13 @@
     <script type="text/javascript" src="../assets/vendor/wysihtml5/bootstrap-wysihtml5.js"></script>
     <script type="text/javascript" src="../assets/vendor/wysihtml5/wysihtml5-0.3.0.js"></script>
     -->
-    
+
+    <!-- -->
+    <!-- Charts JS-->
+
+    <script src="../assets/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="../assets/vendor/chartjs/Chart.min.js"></script>
+
 </head>
 
 <body class="">

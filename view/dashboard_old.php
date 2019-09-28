@@ -4,28 +4,6 @@
 
  require '../autoload.php';
 
- /*TRECHO DE TESTE*/
-
-    try{
-        $pdo = new PDO("mysql:dbname=bd_npo_test;host=localhost; charset=utf8", "root", "root");
-        $resultFCA = $pdo->query("SELECT COUNT(*) FROM acessos WHERE dc = fca");
-    
-        //$resultFCA;
-
-    }catch(PDOException $e){
-        echo "ERRO: ".$e->getMessage(); 
-    }
-    
-
-
-
-
-
-  /*TRECHO DE TESTE*/
-
-
-
-
 if (!$_SESSION['logon']){
     header("Location: login.php");
 }
@@ -48,13 +26,11 @@ if (!$_SESSION['logon']){
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12" style="line-height: 35px; margin-top:30px">
-                                <!--
                                 <div class="overview-wrap">
                                     <h2 class="title-1">overview</h2>
                                     <button class="au-btn au-btn-icon au-btn--blue">
                                         <i class="zmdi zmdi-plus"></i>add item</button>
                                 </div>
-                                -->
                             </div>
                         </div>
                         <div class="row m-t-25">
@@ -169,14 +145,24 @@ if (!$_SESSION['logon']){
                             <div class="col-lg-6">
                                 <div class="au-card chart-percent-card">
                                     <div class="au-card-inner">
-                                        <h3 class="title-2 tm-b-5">Acessos</h3>
+                                        <h3 class="title-2 tm-b-5">char by %</h3>
                                         <div class="row no-gutters">
                                             <div class="col-xl-6">
-                                                
+                                                <div class="chart-note-wrap">
+                                                    <div class="chart-note mr-0 d-block">
+                                                        <span class="dot dot--blue"></span>
+                                                        <span>products</span>
+                                                    </div>
+                                                    <div class="chart-note mr-0 d-block">
+                                                        <span class="dot dot--red"></span>
+                                                        <span>services</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-xl">
-                                                <!-- Charts Circle-->
-                                                <canvas id="pie-chart" width="800" height="600"></canvas>
+                                            <div class="col-xl-6">
+                                                <div class="percent-chart">
+                                                    <canvas id="percent-chart"></canvas>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -565,28 +551,6 @@ if (!$_SESSION['logon']){
                                 </div>
                             </div>
                         </div>
-
-                        <script>
-
-                            var fca = <?php echo $resultFCA ?>
-                            new Chart(document.getElementById("pie-chart"), {
-                                type: 'pie',
-                                data: {
-                                labels: ["DC FCA", "DC Supplier Park", "Sala Técnica"],
-                                datasets: [{
-                                    label: "Population (millions)",
-                                    backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
-                                    data: [fca,5267,734]
-                                }]
-                                },
-                                options: {
-                                title: {
-                                    display: true,
-                                    //text: 'Acessos aos Datacenters'
-                                }
-                                }
-                            });
-                        </script>
 <!-- RODAPÉ -->
 <?php include_once 'rodape.php'; ?>
 <!-- RODAPÉ -->
