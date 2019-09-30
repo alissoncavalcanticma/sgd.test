@@ -5,18 +5,12 @@
  require '../autoload.php';
 
  /*TRECHO DE TESTE*/
-
-    try{
-        $pdo = new PDO("mysql:dbname=bd_npo_test;host=localhost; charset=utf8", "root", "root");
-        $resultFCA = $pdo->query("SELECT COUNT(*) FROM acessos WHERE dc = fca");
-    
-        //$resultFCA;
-
-    }catch(PDOException $e){
-        echo "ERRO: ".$e->getMessage(); 
-    }
-    
-
+//Precisa criar o controller da class Results
+ $pdo = new Conexao();
+ $totalCount = new Results($pdo);
+ $qtdFCA = round(($totalCount->qtdAcessos("fca")/9850)*100);
+ $qtdSP = round(($totalCount->qtdAcessos("sp")/9850)*100);
+ $qtdTR = round(($totalCount->qtdAcessos("tr")/9850)*100);
 
 
 
@@ -568,23 +562,45 @@ if (!$_SESSION['logon']){
 
                         <script>
 
-                            var fca = <?php echo $resultFCA ?>
+                            var qtdFCA = <?php echo $qtdFCA ?>;
+                            var qtdSP = <?php echo $qtdSP ?>;
+                            var qtdTR = <?php echo $qtdTR ?>;
+                            
                             new Chart(document.getElementById("pie-chart"), {
                                 type: 'pie',
                                 data: {
-                                labels: ["DC FCA", "DC Supplier Park", "Sala Técnica"],
-                                datasets: [{
-                                    label: "Population (millions)",
-                                    backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
-                                    data: [fca,5267,734]
-                                }]
+                                    labels: ["DC FCA", "DC Supplier Park", "Sala Técnica"],
+                                    datasets: [{
+                                        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+                                        data: [qtdFCA, qtdSP, qtdTR]
+                                    }]
                                 },
                                 options: {
-                                title: {
-                                    display: true,
-                                    //text: 'Acessos aos Datacenters'
+                                    title: {
+                                            display: true,
+                                            //text: 'Acessos aos Datacenters'
+                                        },
+                                    cutoutPercentage: 20,
+                                    plugins: {
+                                        datalabels: {
+                                            formatter: (value, ctx) => {
+                                                    let sum = 0;
+                                                    let dataArr = ctx.chart.data.datasets[0].data;
+                                                    dataArr.map(data => {
+                                                        sum += data;
+                                                    });
+                                                    let percentage = (value*100 / sum).toFixed(2)+"%";
+                                                    return percentage;
+                                            },color: '#fff',
+                                        }
+                                    },
+                                    responsive: true,
+                                    //legend: false,
+                                    tooltips: {
+                                        enabled: false,
+                                    }
                                 }
-                                }
+                                
                             });
                         </script>
 <!-- RODAPÉ -->

@@ -70,6 +70,7 @@
 
     <script src="../assets/vendor/chartjs/Chart.bundle.min.js"></script>
     <script src="../assets/vendor/chartjs/Chart.min.js"></script>
+    <script src="../assets/vendor/chartjs/Chartjs-plugin-datalabels.js"></script>
 
 </head>
 
