@@ -198,7 +198,8 @@
         <aside class="menu-sidebar d-none d-lg-block" style="
     width: 200px">
             <div class="logo">
-                <a href="dashboard.php">
+                <!-- <a href="dashboard.php"> -->
+                <a href="acessos.php">
                     <img src="../assets/images/npo-sistemi.png" alt="Cool Admin" />
                 </a>
             </div>
