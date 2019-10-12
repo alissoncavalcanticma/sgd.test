@@ -67,6 +67,9 @@ class AcessoController{
 			$pdo = new Conexao();
 			$acesso = new Acesso($pdo);
 
+			
+			//die($operador_2);
+
 			$acesso->cadastrarAcesso($dc, $turno, $motivo, $servico, $equipamento, $obs, $solicitante, $empresa, $operador, $operador_2, $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao);
 	}
 
