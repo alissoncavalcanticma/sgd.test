@@ -47,7 +47,7 @@ class AcessoController{
 			$dc = addslashes($_GET['dc']);
 			$turno = addslashes($_GET['turno']);
 			$operador = addslashes($_GET['operador']);
-			$operador_2 = addslashes($_GET['operador_2']);
+			$operador_2 = isset($_GET['operador_2']) ? addslashes($_GET['operador_2']) : 0;
 			$data = explode('/', addslashes($_GET['data']));
 				$data = $data[2].'-'.$data[1].'-'.$data[0];
 			$motivo = addslashes($_GET['motivo']);

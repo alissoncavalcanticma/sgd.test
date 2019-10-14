@@ -59,9 +59,9 @@ class Usuarios{
 	}
 
 
-	public function getUsuarios(){
+	public function getUsuarios($pStatus){
 
-		$sql = "SELECT * FROM usuarios WHERE status != 'inativo'";
+		$sql = "SELECT * FROM usuarios $pStatus";
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
 
@@ -106,7 +106,8 @@ class Usuarios{
 	}
 
 	public function returnApelido($i){
-		$sql = "SELECT * FROM usuarios WHERE id = $i and status != 'inativo'";
+		//$sql = "SELECT * FROM usuarios WHERE id = $i and status != 'inativo'";
+		$sql = "SELECT * FROM usuarios WHERE id = $i";
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
 

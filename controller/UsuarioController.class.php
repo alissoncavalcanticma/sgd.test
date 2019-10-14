@@ -39,9 +39,9 @@ class UsuarioController{
 	public function retornaId(){
 		$this->user->getId();
 	}
-	public function listaUsuarios(){
-
-		return $this->user->getUsuarios();
+	public function listaUsuarios($pSt){
+		$pStatus = $pSt;
+		return $this->user->getUsuarios($pStatus);
 	}
 	public function retornaApelido($id){
 		$i = $id;

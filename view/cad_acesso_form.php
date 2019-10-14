@@ -208,17 +208,30 @@
         <!-- OPERADOR 1-->
         <div class="col-md-3">
             <label>Operador:</label>
-            <select id="operador" name="operador" class="form-control form-control-sm input-format-center" required oninvalid="setCustomValidity('Selecione o operador')" onchange="try{setCustomValidity('')}catch(e){}">
+            <select id="operador" name="operador" class="form-control form-control-sm input-format-center" required oninvalid="setCustomValidity('Selecione o operador')" onchange="try{setCustomValidity('')}catch(e){}"  <?= $_GET['id'] ? 'disabled' : "" ?>  >
                 <option value=""></option>
 
-                <?php foreach ($userC->listaUsuarios() as $user) :
+                <?php 
+                    
+                    if($_GET['id']){
+                        $pesquisaStatus = "";
+                    }else{
+                        $pesquisaStatus = "WHERE status = 'ativo'";
+                    }
+
+                    foreach ($userC->listaUsuarios($pesquisaStatus) as $user) :
+                    
                     ?>
 
                     <option value="<?= $user['id'] ?>" <?php
+
+                                                            //Lógica de add
                                                             if (!isset($ac['operador'])) {
                                                                 echo $user['apelido'] == $_SESSION['logon'] ? 'selected' : '';
-                                                            } else {
-                                                                //MEXER AQUI, TROCAR O $ac['operador'] POR UMA SAÍDA NOME REFERENTE AO ID DO OPERADOR 
+                                                            }
+                                                            //Lógica de Editar
+                                                            else{
+                                                                
                                                                 $uc = $userC->retornaApelido($ac['operador']);
                                                                 //echo $uc['apelido'];
                                                                 echo $user['apelido'] == $uc['apelido'] ? 'selected' : '';
@@ -235,21 +248,41 @@
         <!-- OPERADOR 2-->
         <div class="col-md-3">
             <label>Operador 2:</label>
-            <select id="operador_2" name="operador_2" class="form-control form-control-sm input-format-center">
-                <option value=""></option>
+            <select id="operador_2" name="operador_2" class="form-control form-control-sm input-format-center" <?= $_GET['id'] ? 'disabled' : "" ?> >
+                <option value="0"></option>
 
-                <?php foreach ($userC->listaUsuarios() as $user) :
+                <?php 
+                    
+                    if($_GET['id']){
+                        $pesquisaStatus = "";
+                    }else{
+                        $pesquisaStatus = "WHERE status = 'ativo'";
+                    }
+
+                    foreach ($userC->listaUsuarios($pesquisaStatus) as $user) :
+                    
                     ?>
 
                     <option value="<?= $user['id'] ?>" <?php
-                                                            if (!isset($ac['operador_2'])) {
-                                                                //echo $user['apelido'] == $_SESSION['logon'] ? 'selected' :  '';
 
+                                                            //lógica de add novo registro
+                                                            if (!isset($ac['operador_2'])) {
+                                                                
+                                                                echo $user['apelido'];
+                                                            
+                                                            //lógica de editar registro existente
                                                             } else {
-                                                                $uc = $userC->retornaApelido($ac['operador_2']);
-                                                                echo $user['apelido'] == $uc['apelido'] ? 'selected' : '';
+                                                                if($ac['operador_2'] > 0){
+                                                                    $uc = $userC->retornaApelido($ac['operador_2']);
+                                                                    echo $user['apelido'] == $uc['apelido'] ? 'selected' : '';    
+                                                                }else{
+                                                                    echo "";
+                                                                }
+                                                                //$uc = $userC->retornaApelido($ac['operador_2']);
+                                                                //echo $user['apelido'] == $uc['apelido'] ? 'selected' : '';
                                                             }
-                                                            ?>>
+
+                                                        ?>>
                         <?= $user['apelido']; ?>
 
                     </option>
