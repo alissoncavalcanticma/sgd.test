@@ -91,7 +91,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                             <div class="row">
                   
                                 <div class="col-lg-12" style=" margin: auto;">
-                      
+                                
                                 <div class="div-cad-acesso">
                                   <div class="form-part form-part-button-form" style="padding-top: 10px">
                                     
@@ -110,7 +110,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                         <div class="tab-pane fade show active">
                                                              <p>
                                                                 <?php
-                                                                    include 'checklist_inc.php';
+                                                                    include 'cad_checklist_form.php';
                                                                 ?>
                                                               </p>
                                                         </div>

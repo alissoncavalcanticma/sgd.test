@@ -70,7 +70,7 @@
                                                                     <select id="operador_fca" name="operador_fca" class="form-control input-format-center">
                                                                         <option value=""></option>
                                                         
-                                                                        <?php  foreach($userC->listaUsuarios() as $user): 
+                                                                        <?php  foreach($userC->listaUsuarios("WHERE status = 'ativo'") as $user): 
                                                                          ?>
 
                                                                         <option value="<?= $user['apelido'] ?>" <?php 
@@ -103,7 +103,7 @@
                                                                     <select id="operador_sp" name="operador_sp" class="form-control input-format-center">
                                                                         <option value=""></option>
                                                         
-                                                                        <?php  foreach($userC->listaUsuarios() as $user): 
+                                                                        <?php  foreach($userC->listaUsuarios("WHERE status = 'ativo'") as $user): 
                                                                          ?>
 
                                                                         <option value="<?= $user['apelido'] ?>" <?php 
@@ -133,7 +133,7 @@
                                                                     <select id="operador_tr" name="operador_tr" class="form-control input-format-center">
                                                                         <option value=""></option>
                                                         
-                                                                        <?php  foreach($userC->listaUsuarios() as $user): 
+                                                                        <?php  foreach($userC->listaUsuarios("WHERE status = 'ativo'") as $user): 
                                                                          ?>
 
                                                                         <option value="<?= $user['apelido'] ?>" 
