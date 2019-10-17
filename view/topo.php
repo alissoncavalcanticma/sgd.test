@@ -128,7 +128,7 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="../assets/images/icon/avatar-01.jpg" alt="John Doe" />
+                                            <img src="../assets/images/users/<?= strtolower($_SESSION['logon']) ?>.jpg" />
                                         </div>
                                         <div class="content">
                                             <a class="js-acc-btn" href="#"><?= $_SESSION['logon'] ?></a>
@@ -137,7 +137,7 @@
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="../assets/images/icon/avatar-01.jpg" alt="John Doe" />
+                                                        <img src="../assets/images/users/<?= strtolower($_SESSION['logon']) ?>.jpg" />
                                                     </a>
                                                 </div>
                                                 <div class="content">

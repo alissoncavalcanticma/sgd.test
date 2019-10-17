@@ -54,12 +54,13 @@
                                       <tr>
                                           <!--TH hidden para ordenação -->
                                           <!-- <th style="display:none;">ID</th> -->
+                                          <th>ID</th>
                                           <th>Data</th>
                                           <th>Turno</th>
-                                          <th>Observações DC FCA</th>
-                                          <th>Observações DC SP</th>
-                                          <th>Observações Sala Técnica</th>
-                                          <th>Observações NPO</th>
+                                          <th>OBS DC FCA</th>
+                                          <th>OBS DC SP</th>
+                                          <th>OBS Sala Técnica</th>
+                                          <th>OBS NPO</th>
                                           <th>View</th>
                                       </tr>
                                   </thead>
@@ -67,6 +68,7 @@
                                       <?php foreach ($checklistC->listarChecklists() as $chk) : ?>
 
                                           <tr class="col-md-12">
+                                              <td style="font-weight: bold"><?= $chk['id'] ?></td>
                                               <td style="font-weight: bold"><?= date('d/m/Y', strtotime($chk['data'])); ?></td>
                                               <td style="font-weight: bold"><?= $chk['turno']; ?></td>
                                               <td>
@@ -142,7 +144,8 @@
                       $(document).ready(function() {
                           $('#listarChecklists').DataTable({
                               "order": [
-                                  [0, "desc"]
+                                  [0, "desc"],
+                                  [2, "desc"]
                               ], //or asc 
                               "columnDefs": [{
                                   "targets": 3,

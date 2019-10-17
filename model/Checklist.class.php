@@ -1411,7 +1411,8 @@ class Checklist{
 
     public function getChecks(){
 
-		$sql = "SELECT * FROM `checklists` ORDER BY `data` DESC, `turno` DESC";
+        $sql = "SELECT * FROM `checklists` ORDER BY `data` DESC, `turno` DESC";
+        //$sql = "SELECT * FROM `checklists`";
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
 
