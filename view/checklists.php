@@ -145,7 +145,6 @@
                           $('#listarChecklists').DataTable({
                               "order": [
                                   [0, "desc"],
-                                  [2, "desc"]
                               ], //or asc 
                               "columnDefs": [{
                                   "targets": 3,
