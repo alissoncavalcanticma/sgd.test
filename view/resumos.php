@@ -88,7 +88,7 @@
                                               <td style="margin:2px; padding-left: 5px; padding-right: 10px">
                                                   <div>
                                                       <div style="width: 50%">
-                                                          <a href="cad_checklist.php?id=<?= $chk['id']; ?>">
+                                                          <a href="cad_resumo.php?id=<?= $rsm['id']; ?>">
                                                               <i class="fa fa-search" style=""></i>
 
                                                           </a>

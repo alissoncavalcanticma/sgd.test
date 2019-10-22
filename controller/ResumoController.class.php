@@ -73,10 +73,10 @@ class ResumoController{
 	public function retornaResumo($id){
 			$i = $id;
 			$pdo = new Conexao();
-			$acesso = new Acesso($pdo);
-			return $acesso->getAcesso($i);
-
+			$resumo = new Resumo($pdo);
+			return $resumo->getResumo($i);
 	}
+
 	public function editarResumo($id){
 
 			$i = addslashes($id);

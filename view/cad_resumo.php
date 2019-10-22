@@ -15,7 +15,7 @@ $rsmC = new ResumoController();
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
       $id = $_GET['id'];
-      $rsm = $rsmC->retornaRsm($id);
+      $rsm = $rsmC->retornaResumo($id);
 }
 
 
@@ -117,11 +117,11 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
                                                                             <option value="">Selecione o turno...</option>
 
-                                                                            <option value="1" <?= isset($id) && $rsmC['turno'] == '1' ? "selected"  : ""  ?>>Turno 1</option>
+                                                                            <option value="1" <?= isset($id) && $rsm['turno'] == '1' ? "selected"  : ""  ?>>Turno 1</option>
 
-                                                                            <option value="2" <?= isset($id) && $rsmC['turno'] == '2' ? "selected"  : ""  ?>>Turno 2</option>
+                                                                            <option value="2" <?= isset($id) && $rsm['turno'] == '2' ? "selected"  : ""  ?>>Turno 2</option>
 
-                                                                            <option value="3" <?= isset($id) && $rsmC['turno'] == '3' ? "selected"  : ""  ?>>Turno 3</option>
+                                                                            <option value="3" <?= isset($id) && $rsm['turno'] == '3' ? "selected"  : ""  ?>>Turno 3</option>
                                                                     </select>
                                                                 </div>
                                                                 <!-- END TURNO -->
@@ -148,13 +148,13 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                 <option value="<?= $user['id'] ?>" <?php
 
                                                                                                                         //Lógica de add
-                                                                                                                        if (!isset($ac['operador'])) {
+                                                                                                                        if (!isset($rsm['operador'])) {
                                                                                                                             echo $user['apelido'] == $_SESSION['logon'] ? 'selected' : '';
                                                                                                                         }
                                                                                                                         //Lógica de Editar
                                                                                                                         else{
                                                                                                                             
-                                                                                                                            $uc = $userC->retornaApelido($ac['operador']);
+                                                                                                                            $uc = $userC->retornaApelido($rsm['operador']);
                                                                                                                             //echo $uc['apelido'];
                                                                                                                             echo $user['apelido'] == $uc['apelido'] ? 'selected' : '';
                                                                                                                         }
