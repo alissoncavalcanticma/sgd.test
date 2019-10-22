@@ -12,6 +12,7 @@ class Resumo{
 	public function __construct($pdo){
 
 		$this->pdo = $pdo;
+		$this->pdo->exec('SET NAMES utf8');
 
 	}
 
@@ -55,23 +56,25 @@ class Resumo{
 		return $array;
 	}
 
-	public function insertResumo($data, $turno, $operador, $resumo){
+	public function insertResumo($turno, $operador, $data, $resumo){
 
-		$this->data = $data;
 		$this->turno = $turno;
 		$this->operador = $operador;
-		$this->resumo = $resumo;
+		$this->data = $data;
+		$this->resumo = htmlentities($resumo);
 
-
-		$sql = "INSERT INTO resumos (data, turno, operador, resumo) VALUES ( '$this->data', '$this->turno', '$this->operador', '$this->resumo')";
-
+		$sql = "INSERT INTO resumos (turno, operador, data, resumo) VALUES ('$this->turno', '$this->operador', '$this->data', '$this->resumo')";
 		$sql = $this->pdo->prepare($sql);
+		
 		$sql->execute();
 
 		return true;
+		
+		echo "passou";
+		exit();
 	}
 
-	public function editResumo($id, $data, $turno, $operador, $resumo){
+	public function editResumo($id, $turno, $operador, $data, $resumo){
 
 		$this->id = $id;
 		$this->data = $data;

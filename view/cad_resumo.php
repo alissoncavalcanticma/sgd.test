@@ -9,19 +9,14 @@ if (!$_SESSION['logon']){
 }
 
 $userC = new UsuarioController();
-$checklistC = new ChecklistController();
+$rsmC = new ResumoController();
 
 
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
       $id = $_GET['id'];
-      #$acessoC = new AcessoController();
-      $chk = $checklistC->retornaChecklist($id);
-}else{
-
-    $chk = $checklistC->ultimoRegistro();
+      $rsm = $rsmC->retornaRsm($id);
 }
-
 
 
 ?>
@@ -106,7 +101,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                             
                                             <div style="margin: auto; padding-left: 35px; padding-right: 35px">
 
-                                                    <!-- CHECKLIST -->
+                                                    <!-- RESUMOS -->
                                                         <div class="tab-pane fade show active">
                                                      <p>
                                                     <!-- Form -->
@@ -122,39 +117,52 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
                                                                             <option value="">Selecione o turno...</option>
 
-                                                                            <option value="1" <?= isset($id) && $chk['turno'] == '1' ? "selected"  : ""  ?>>Turno 1</option>
+                                                                            <option value="1" <?= isset($id) && $rsmC['turno'] == '1' ? "selected"  : ""  ?>>Turno 1</option>
 
-                                                                            <option value="2" <?= isset($id) && $chk['turno'] == '2' ? "selected"  : ""  ?>>Turno 2</option>
+                                                                            <option value="2" <?= isset($id) && $rsmC['turno'] == '2' ? "selected"  : ""  ?>>Turno 2</option>
 
-                                                                            <option value="3" <?= isset($id) && $chk['turno'] == '3' ? "selected"  : ""  ?>>Turno 3</option>
+                                                                            <option value="3" <?= isset($id) && $rsmC['turno'] == '3' ? "selected"  : ""  ?>>Turno 3</option>
                                                                     </select>
                                                                 </div>
                                                                 <!-- END TURNO -->
 
                                                                 <!-- OPERADOR -->
-                                                                <div class="col-md-3" style="float: left">
+                                                                <div class="col-md-5" style="float: left; padding-left:110px; margin: auto">
 
-                                                                        <select style="margin-left: 100px; background-color: #E9ECEF; font-weight: bold; font-size: 14px; border: 0px" id="operador_fca" name="operador" class="form-control input-format-center">
-                                                                            <option value=""></option>
-                                                            
-                                                                            <?php  foreach($userC->listaUsuarios() as $user): 
-                                                                             ?>
+                                                                <select id="operador" name="operador" style="background-color: #E9ECEF; font-weight: bold; font-size: 14px; border: 0px" class="form-control text-center" required oninvalid="setCustomValidity('Selecione o operador')" onchange="try{setCustomValidity('')}catch(e){}"  <?= $_GET['id'] ? 'disabled' : "" ?>  >
+                                                                            
+                                                                        <option value=""></option>
 
-                                                                            <option value="<?= $user['nome'] ?>" <?php 
-                                                                                if(isset($id)){
-                                                                                    if($chk['operador'] == $user['nome']){ 
-                                                                                            echo "selected";
-                                                                                        }       
+                                                                            <?php 
+                                                                                
+                                                                                if($_GET['id']){
+                                                                                    $pesquisaStatus = "";
                                                                                 }else{
-                                                                                    if($user['nome'] == $_SESSION['logon']){
-                                                                                            echo "selected";
-                                                                                        }       
-                                                                                }?>>
-                                                                                <?= $user['nome']; ?>
-                                                              
-                                                                            </option>
+                                                                                    $pesquisaStatus = "WHERE status = 'ativo'";
+                                                                                }
 
-                                                                            <?php  endforeach; ?>
+                                                                                foreach ($userC->listaUsuarios($pesquisaStatus) as $user) :
+                                                                                
+                                                                                ?>
+
+                                                                                <option value="<?= $user['id'] ?>" <?php
+
+                                                                                                                        //Lógica de add
+                                                                                                                        if (!isset($ac['operador'])) {
+                                                                                                                            echo $user['apelido'] == $_SESSION['logon'] ? 'selected' : '';
+                                                                                                                        }
+                                                                                                                        //Lógica de Editar
+                                                                                                                        else{
+                                                                                                                            
+                                                                                                                            $uc = $userC->retornaApelido($ac['operador']);
+                                                                                                                            //echo $uc['apelido'];
+                                                                                                                            echo $user['apelido'] == $uc['apelido'] ? 'selected' : '';
+                                                                                                                        }
+                                                                                                                        ?>><?= $user['apelido']; ?>
+
+                                                                                </option>
+
+                                                                            <?php endforeach; ?>
 
                                                                         </select>
                                                                     </div>
@@ -163,17 +171,19 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                 <!-- DATA -->
                                                                 <div class="col-md-3" style="float: right">
                                                                 <?php
-                                                                      date_default_timezone_set('America/Sao_Paulo');
-                                                                       $data = date("d/m/Y", time());
-                                                                       
-                                                                       if(isset($id)){
-                                                                                    $dt = array_reverse(explode('-', $chk['data']));
-                                                                                    $dt = implode('/', $dt);
-                                                                        }
-                                                                  ?>
-                                                                  <input type="datetime"  id="data" name="data"
-                                                                  class="form-control text-center"
-                                                                  value="<?= isset($id) ? $dt : $data ?>" style="font-weight: bold; font-size: 14px; border: 0px" readonly>
+                                                                    date_default_timezone_set('America/Sao_Paulo');
+                                                                    $data = date("d/m/Y", time());
+                                                                ?>
+                                                                <input type="datetime" id="data" name="data" class="form-control form-control-sm input-format-center" 
+                                                                value="<?php
+                                                                            if (isset($ac['data'])) {
+                                                                                $dt = array_reverse(explode('-', $ac['data']));
+                                                                                $dt = implode('/', $dt);
+                                                                                echo $dt;
+                                                                            } else {
+                                                                                echo $data;
+                                                                            }
+                                                                        ?>" style="font-weight: bold; font-size: 14px; border: 0px" readonly>
                                                                 </div>
                                                             
                                                             <!-- END DATA -->
@@ -192,7 +202,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
                                                         <div class="row table-bordered">
 
-                                                                <textarea name="resumo" id="resumo" placeholder="Detalhamento das observações de checklist do DC FCA" class="form-control form-control-textarea" style="width: 100%" ><?= "teste" ?></textarea>
+                                                                <textarea name="resumo" id="resumo" placeholder="Detalhamento das observações de checklist do DC FCA" class="form-control form-control-textarea" style="width: 100%" ></textarea>
                                                         </div>
                                                         <!-- END RESUMO DIÁRIO DE TURNO -->
                                                         

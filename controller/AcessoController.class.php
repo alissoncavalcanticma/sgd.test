@@ -18,7 +18,7 @@ switch ($acao) {
 				$acessoC->cadastrarAcesso();
 
 				header("Location: ../view/cad_acesso.php?msg=Acesso cadastrado com sucesso!");
-		}
+			}
 
 		break;
 	case 'editar':

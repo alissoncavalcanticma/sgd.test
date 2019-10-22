@@ -8,7 +8,7 @@ require '../autoload.php';
 //echo $_GET['data']."</br></br>";
 //echo $_GET['resumo']."</br>";
 
-$resumoC = new ResumoController();
+$rsmC = new ResumoController();
 
 
 if(isset($_GET['acao']) && !empty($_GET['acao'])){
@@ -19,16 +19,12 @@ if(isset($_GET['acao']) && !empty($_GET['acao'])){
 
 switch ($acao) {
 	case 'cadastrar':
-			if (isset($_GET['resumo']) && !empty($_GET['resumo'])){
-				if (isset($_GET['operador']) && !empty($_GET['operador'])){
-					if (isset($_GET['resumo']) && !empty($_GET['resumo'])){
-						
-					}
-				}
-				$acessoC->cadastrarAcesso();
+			if (isset($_GET['operador']) && !empty($_GET['resumo'])){
 
-				header("Location: ../view/cad_acesso.php?msg=Acesso cadastrado com sucesso!");
-		}
+					$rsmC->cadastrarResumo();
+				
+					header("Location: ../view/cad_resumo.php?msg=Resumo cadastrado com sucesso!");
+				}
 
 		break;
 	case 'editar':
@@ -54,11 +50,10 @@ class ResumoController{
 			$operador = addslashes($_GET['operador']);
 			$resumo = addslashes($_GET['resumo']);
 
-
 			$pdo = new Conexao();
 			$resumo = new Resumo($pdo);
 
-			$resumo->insertResumo($data, $turno, $operador, $resumo);
+			$resumo->insertResumo($turno, $operador, $data, $resumo);
 	}
 
 	public function listaResumos(){

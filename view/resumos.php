@@ -63,16 +63,22 @@ $userC = new UsuarioController();
                                              <?php foreach($resumoC->listaResumos() as $rsm): ?>
 
                                                   <tr class="col-md-12">
-                                                    <td style="font-weight: bold"><?= date('d/m/Y', strtotime($rsm['data'])); ?></td>
+                                                    <td style="font-weight: bold">
+                                                        <?= date('d/m/Y', strtotime($rsm['data'])); ?>
+                                                    </td>
 
-                                                    <td style="font-weight: bold"><?= $rsm['turno']; ?></td>
+                                                    <td style="font-weight: bold">
+                                                        <?= $rsm['turno']; ?>
+                                                    </td>
 
                                                     <td>
                                                         <?= $rsm['operador']; ?>
                                                     </td>
+
                                                     <td>
                                                         <?= $rsm['resumo']; ?>
                                                     </td>
+
                                                     <td style="margin:2px; padding-left: 5px; padding-right: 10px">
                                                         <div>
                                                             <div style="width: 50%">
