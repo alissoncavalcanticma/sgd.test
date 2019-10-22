@@ -3,10 +3,12 @@
 require '../autoload.php';
 
 
-//echo $_GET['turno']."</br>";
-//echo $_GET['operador']."</br>";
-//echo $_GET['data']."</br></br>";
-//echo $_GET['resumo']."</br>";
+#echo $_GET['turno']."</br>";
+#echo $_GET['operador']."</br>";
+#echo $_GET['data']."</br></br>";
+#echo $_GET['resumo']."</br>";
+#exit();
+
 
 $rsmC = new ResumoController();
 
@@ -21,7 +23,13 @@ switch ($acao) {
 	case 'cadastrar':
 			if (isset($_GET['operador']) && !empty($_GET['resumo'])){
 
-					$rsmC->cadastrarResumo();
+					$turno = addslashes($_GET['turno']);
+					$operador = addslashes($_GET['operador']);
+					$data = array_reverse(explode('/', addslashes($_GET['data'])));
+						$data = implode('-', $data);
+					$resumo = addslashes($_GET['resumo']);
+
+					$rsmC->cadastrarResumo($turno, $operador, $data, $resumo);
 				
 					header("Location: ../view/cad_resumo.php?msg=Resumo cadastrado com sucesso!");
 				}
@@ -42,18 +50,17 @@ switch ($acao) {
 
 class ResumoController{
 
-	public function cadastrarResumo(){
+	public function cadastrarResumo($turno, $operador, $data, $resumo){
 
-			$data = array_reverse(explode('/', addslashes($_GET['data'])));
-				$data = implode('-', $data);
-			$turno = addslashes($_GET['turno']);
-			$operador = addslashes($_GET['operador']);
-			$resumo = addslashes($_GET['resumo']);
+			$t = $turno;
+			$op = $operador;
+			$dt = $data;
+			$rsm = $resumo;
 
 			$pdo = new Conexao();
 			$resumo = new Resumo($pdo);
 
-			$resumo->insertResumo($turno, $operador, $data, $resumo);
+			$resumo->insertResumo($t, $op, $dt, $rsm);
 	}
 
 	public function listaResumos(){
@@ -66,10 +73,10 @@ class ResumoController{
 	public function retornaResumo($id){
 			$i = $id;
 			$pdo = new Conexao();
-			$acesso = new Acesso($pdo);
-			return $acesso->getAcesso($i);
-
+			$resumo = new Resumo($pdo);
+			return $resumo->getResumo($i);
 	}
+
 	public function editarResumo($id){
 
 			$i = addslashes($id);
