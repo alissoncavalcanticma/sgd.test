@@ -202,7 +202,15 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
                                                         <div class="row table-bordered">
 
-                                                                <textarea name="resumo" id="resumo" placeholder="Detalhamento das observações de checklist do DC FCA" class="form-control form-control-textarea" style="width: 100%" ></textarea>
+                                                                <textarea 
+                                                                   
+                                                                    name="resumo" 
+                                                                    id="resumo"
+                                                                    placeholder="Resumo do turno" 
+                                                                    class="form-control form-control-textarea" 
+                                                                    style="width: 100%"
+                                                                  
+                                                                 ></textarea>
                                                         </div>
                                                         <!-- END RESUMO DIÁRIO DE TURNO -->
                                                         
@@ -251,7 +259,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             
           }); 
           </script>
-            <script>
+           <script>
                 CKEDITOR.replace('resumo', {
                   // Define the toolbar groups as it is a more accessible solution.
                   toolbarGroups: [
@@ -279,6 +287,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                   removeButtons: 'Format,Save,NewPage,Preview,Print,Font,Strike,Subscript,Superscript,Anchor,Styles,Specialchar'
                 });
         </script>
+     
     </div>
 <!-- End Content -->
 

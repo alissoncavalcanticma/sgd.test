@@ -62,7 +62,11 @@ class Resumo{
 		$this->turno = $turno;
 		$this->operador = $operador;
 		$this->data = $data;
-		$this->resumo = htmlentities($resumo);
+		//$this->resumo = htmlspecialchars($resumo);
+		$this->resumo = $resumo;
+
+		//echo $this->resumo;
+		//exit();
 
 		$sql = "INSERT INTO resumos (turno, operador, data, resumo) VALUES ('$this->turno', '$this->operador', '$this->data', '$this->resumo')";
 		$sql = $this->pdo->prepare($sql);
@@ -71,8 +75,8 @@ class Resumo{
 
 		return true;
 		
-		echo "passou";
-		exit();
+		//echo "passou";
+		//exit();
 	}
 
 	public function editResumo($id, $turno, $operador, $data, $resumo){
