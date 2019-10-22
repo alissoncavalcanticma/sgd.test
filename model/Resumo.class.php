@@ -1,8 +1,9 @@
 <?php
 
 class Resumo{
+	
 	private $pdo;
-
+	
 	private $id;
 	private $turno;
 	private $operador;
