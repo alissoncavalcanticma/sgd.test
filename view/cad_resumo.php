@@ -176,8 +176,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                 ?>
                                                                 <input type="datetime" id="data" name="data" class="form-control form-control-sm input-format-center" 
                                                                 value="<?php
-                                                                            if (isset($ac['data'])) {
-                                                                                $dt = array_reverse(explode('-', $ac['data']));
+                                                                            if (isset($rsm['data'])) {
+                                                                                $dt = array_reverse(explode('-', $rsm['data']));
                                                                                 $dt = implode('/', $dt);
                                                                                 echo $dt;
                                                                             } else {
@@ -210,7 +210,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                     class="form-control form-control-textarea" 
                                                                     style="width: 100%"
                                                                   
-                                                                 ></textarea>
+                                                                 ><?= isset($rsm['resumo']) ? $rsm['resumo'] : "" ?></textarea>
                                                         </div>
                                                         <!-- END RESUMO DIÁRIO DE TURNO -->
                                                         

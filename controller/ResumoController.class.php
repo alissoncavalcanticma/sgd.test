@@ -38,9 +38,9 @@ switch ($acao) {
 	case 'editar':
 			if (isset($_GET['id']) && !empty($_GET['id'])){
 				
-				$acessoC->editarAcesso($_GET['id']);
+				$rsmC->editarResumo($_GET['id']);
 
-				header("Location: ../view/cad_acesso.php?msg=Acesso editado com sucesso!&id=".$_GET['id']);
+				header("Location: ../view/cad_resumo.php?msg=Resumo editado com sucesso!&id=".$_GET['id']);
 			}
 		break;
 	default:
