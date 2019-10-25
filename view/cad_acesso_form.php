@@ -212,14 +212,14 @@
                 <option value=""></option>
 
                 <?php 
-                    
+                    /*
                     if($_GET['id']){
                         $pesquisaStatus = "";
                     }else{
                         $pesquisaStatus = "WHERE status = 'ativo'";
                     }
-
-                    foreach ($userC->listaUsuarios($pesquisaStatus) as $user) :
+                    */
+                    foreach ($userC->listaUsuarios("") as $user) :
                     
                     ?>
 
