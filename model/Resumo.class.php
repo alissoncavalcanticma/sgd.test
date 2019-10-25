@@ -69,8 +69,8 @@ class Resumo{
 		//exit();
 
 		$sql = "INSERT INTO resumos (turno, operador, data, resumo) VALUES ('$this->turno', '$this->operador', '$this->data', '$this->resumo')";
-		$sql = $this->pdo->prepare($sql);
 		
+		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
 
 		return true;
@@ -82,18 +82,29 @@ class Resumo{
 	public function editResumo($id, $turno, $operador, $data, $resumo){
 
 		$this->id = $id;
-		$this->data = $data;
 		$this->turno = $turno;
 		$this->operador = $operador;
+		$this->data = $data;
 		$this->resumo = $resumo;
 
+		//echo $this->operador;
+		//exit();
 
-		$sql = "UPDATE acessos SET data = '$this->data', turno = '$this->turno', operador = '$this->operador', resumo = '$this->resumo' WHERE id = '$this->id'";
+		$sql = "UPDATE `resumos` SET turno = '$this->turno', operador = '$this->operador', data = '$this->data', resumo = '$this->resumo' WHERE id = '$this->id'";
 
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
 
 		return true;
+
+		/**
+		 * $sql = "UPDATE acessos SET dc = '$this->dc', turno = '$this->turno', motivo = '$this->motivo', servico = '$this->servico', equipamento = '$this->equipamento', obs = '$this->obs', solicitante = '$this->solicitante', empresa = '$this->empresa', operador = '$this->operador', operador_2 = '$this->operador_2', data = '$this->data', entrada = '$this->entrada', saida = '$this->saida', meio_de_contato = '$this->meio_de_contato', solicitacao_acesso = '$this->solicitacao_acesso', agendamento = '$this->agendamento', chegada = '$this->chegada', area_atuacao = '$this->area_atuacao' WHERE id = '$this->id'";
+
+		*  $sql = $this->pdo->prepare($sql);
+		*  $sql->execute();
+
+		*  return true;
+		 */
 	}
 
 	public function deletarResumo($id){

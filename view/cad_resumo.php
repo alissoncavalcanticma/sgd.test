@@ -9,12 +9,11 @@ if (!$_SESSION['logon']){
 }
 
 $userC = new UsuarioController();
-$rsmC = new ResumoController();
-
 
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
       $id = $_GET['id'];
+      $rsmC = new ResumoController();
       $rsm = $rsmC->retornaResumo($id);
 }
 
@@ -135,6 +134,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
                                                                             <?php 
                                                                                 
+                                                                                
                                                                                 if($_GET['id']){
                                                                                     $pesquisaStatus = "";
                                                                                 }else{
@@ -146,28 +146,30 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                 ?>
 
                                                                                 <option value="<?= $user['id'] ?>" <?php
-
-                                                                                                                        //Lógica de add
-                                                                                                                        if (!isset($rsm['operador'])) {
-                                                                                                                            echo $user['apelido'] == $_SESSION['logon'] ? 'selected' : '';
-                                                                                                                        }
-                                                                                                                        //Lógica de Editar
-                                                                                                                        else{
-                                                                                                                            
-                                                                                                                            $uc = $userC->retornaApelido($rsm['operador']);
-                                                                                                                            //echo $uc['apelido'];
-                                                                                                                            echo $user['apelido'] == $uc['apelido'] ? 'selected' : '';
-                                                                                                                        }
-                                                                                                                        ?>><?= $user['apelido']; ?>
-
+        
+                                                                                    //Lógica de edit
+                                                                                    if(isset($id)){
+                                                                                        $uc = $userC->retornaApelido($rsm['operador']);
+                                                                                        if($user['apelido'] == $uc['apelido']){
+                                                                                            echo "selected";
+                                                                                        }
+                                                                                    //Lógica de add
+                                                                                    }else{
+                                                                                        if($user['apelido'] == $_SESSION['logon']){
+                                                                                            echo "selected";
+                                                                                        }
+                                                                                    }
+                                                                                    ?>><?= $user['apelido']; ?>
+                                                                                    
                                                                                 </option>
 
                                                                             <?php endforeach; ?>
 
                                                                         </select>
                                                                     </div>
+                                                                    <!-- <input type="hidden" name="operador" value='<?= $user['id']; ?>'/> -->
                                                                 <!-- END OPERADOR -->
-
+                                                                
                                                                 <!-- DATA -->
                                                                 <div class="col-md-3" style="float: right">
                                                                 <?php
@@ -176,8 +178,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                 ?>
                                                                 <input type="datetime" id="data" name="data" class="form-control form-control-sm input-format-center" 
                                                                 value="<?php
-                                                                            if (isset($ac['data'])) {
-                                                                                $dt = array_reverse(explode('-', $ac['data']));
+                                                                            if (isset($rsm['data'])) {
+                                                                                $dt = array_reverse(explode('-', $rsm['data']));
                                                                                 $dt = implode('/', $dt);
                                                                                 echo $dt;
                                                                             } else {
@@ -210,7 +212,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                     class="form-control form-control-textarea" 
                                                                     style="width: 100%"
                                                                   
-                                                                 ></textarea>
+                                                                 ><?= isset($rsm['resumo']) ? $rsm['resumo'] : "" ?></textarea>
                                                         </div>
                                                         <!-- END RESUMO DIÁRIO DE TURNO -->
                                                         

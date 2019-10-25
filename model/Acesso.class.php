@@ -101,8 +101,7 @@ class Acesso{
 
 	}
 
-	public function cadastrarAcesso($dc, $turno,  $motivo, $servico, $equipamento, $obs, 
-		$solicitante, $empresa, $operador, $operador_2, $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao){
+	public function cadastrarAcesso($dc, $turno,  $motivo, $servico, $equipamento, $obs, $solicitante, $empresa, $operador, $operador_2, $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao){
 
 		$this->dc = $dc;
 		$this->turno = $turno;
