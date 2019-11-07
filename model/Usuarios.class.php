@@ -107,19 +107,19 @@ class Usuarios{
 
 	public function returnApelido($i){
 		//$sql = "SELECT * FROM usuarios WHERE id = $i and status != 'inativo'";
-		$sql = "SELECT * FROM usuarios WHERE id = $i";
+		$sql = "SELECT apelido FROM usuarios WHERE id = $i";
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
 
-		$array = array();
+		//$array = array();
 
 		if($sql->rowCount() > 0){
-			$array = $sql->fetch();
+			$apelido = $sql->fetch();
 
-			return $array;
+			return $apelido;
 		}
 
-		return $array;
+		return $apelido;
 	}
 }
 

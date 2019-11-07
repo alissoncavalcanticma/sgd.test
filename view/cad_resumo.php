@@ -128,7 +128,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                 <!-- OPERADOR -->
                                                                 <div class="col-md-5" style="float: left; padding-left:110px; margin: auto">
 
-                                                                <select id="operador" name="operador" style="background-color: #E9ECEF; font-weight: bold; font-size: 14px; border: 0px" class="form-control text-center" required oninvalid="setCustomValidity('Selecione o operador')" onchange="try{setCustomValidity('')}catch(e){}"  <?= $_GET['id'] ? 'disabled' : "" ?>  >
+                                                                <select name="operador" style="background-color: #E9ECEF; font-weight: bold; font-size: 14px; border: 0px" class="form-control text-center" required oninvalid="setCustomValidity('Selecione o operador')" onchange="try{setCustomValidity('')}catch(e){}"  <?= isset($_GET['id']) ? 'disabled' : '' ?>  >
                                                                             
                                                                         <option value=""></option>
 
@@ -140,26 +140,31 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                 }else{
                                                                                     $pesquisaStatus = "WHERE status = 'ativo'";
                                                                                 }
-
+                                                                                
                                                                                 foreach ($userC->listaUsuarios($pesquisaStatus) as $user) :
                                                                                 
                                                                                 ?>
-
+<?php //echo $user['id']; exit(); ?>        
                                                                                 <option value="<?= $user['id'] ?>" <?php
         
                                                                                     //Lógica de edit
                                                                                     if(isset($id)){
-                                                                                        $uc = $userC->retornaApelido($rsm['operador']);
-                                                                                        if($user['apelido'] == $uc['apelido']){
+                                                                                        if($rsm['operador'] == $user['apelido']){ 
                                                                                             echo "selected";
-                                                                                        }
+                                                                                        }    
+                                                                                        //$uc = $userC->retornaApelido($rsm['operador']);
+                                                                                        //if($user['apelido'] == $uc['apelido']){
+                                                                                        //    echo "selected";
+                                                                                        //}
                                                                                     //Lógica de add
                                                                                     }else{
                                                                                         if($user['apelido'] == $_SESSION['logon']){
                                                                                             echo "selected";
                                                                                         }
                                                                                     }
-                                                                                    ?>><?= $user['apelido']; ?>
+                                                                                    ?>
+                                                                                    >
+                                                                                    <?= isset($_GET['id']) ? $uc['apelido'] : $user['apelido']; ?>
                                                                                     
                                                                                 </option>
 
@@ -214,6 +219,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                   
                                                                  ><?= isset($rsm['resumo']) ? $rsm['resumo'] : "" ?></textarea>
                                                         </div>
+                                                        <?php 
+                                                            
+                                                            echo $user['id']."<br>";
+                                                            echo $uc['apelido']."<br>";
+                                                            echo $rsm['operador']."<br>"; 
+                                                            
+                                                        ?><br>
+                                                        
                                                         <!-- END RESUMO DIÁRIO DE TURNO -->
                                                         
                                                         

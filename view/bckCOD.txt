@@ -1,0 +1,24 @@
+<select id="operador" name="operador" class="form-control input-format-center">
+        <option value=""></option>
+
+        <?php  foreach($userC->listaUsuarios("WHERE status = 'ativo'") as $user): 
+            ?>
+
+        <option value="<?= $user['apelido'] ?>" <?php 
+
+            if(isset($id)){
+                if($rsm['operador'] == $user['apelido']){ 
+                        echo "selected";
+                    }       
+            }else{
+                if($user['apelido'] == $_SESSION['logon']){
+                        echo "selected";
+                    }       
+            }?>>
+            <?= $user['apelido']; ?>
+
+        </option>
+
+        <?php  endforeach; ?>
+
+</select>
