@@ -62,6 +62,8 @@
 
                 <option value="SP" <?= isset($ac['dc']) && $ac['dc'] == 'SP' ? "selected"  : ""  ?>>SP</option>
 
+                <option value="DR" <?= isset($ac['dc']) && $ac['dc'] == 'DR' ? "selected"  : ""  ?>>DR</option>
+
                 <option value="TR" <?= isset($ac['dc']) && $ac['dc'] == 'TR' ? "selected"  : ""  ?>>TR</option>
 
             </select>
