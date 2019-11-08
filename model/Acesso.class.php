@@ -130,7 +130,7 @@ class Acesso{
 	}
 
 	public function editAccess($i, $dc, $turno,  $motivo, $servico, $equipamento, $obs,
-		$solicitante, $empresa, $operador, $operador_2, $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao){
+		$solicitante, $empresa, /*$operador, $operador_2,*/ $data, $entrada, $saida, $meio_de_contato, $solicitacao_acesso, $agendamento, $chegada, $area_atuacao){
 
 		$this->id = $i;
 		$this->dc = $dc;
@@ -141,8 +141,8 @@ class Acesso{
 		$this->obs = $obs;
 		$this->solicitante = $solicitante;
 		$this->empresa =  $empresa;
-		$this->operador = $operador;
-		$this->operador_2 = $operador_2;
+		//$this->operador = $operador;
+		//$this->operador_2 = $operador_2;
 		$this->data = $data;
 		$this->entrada = $entrada;
 		$this->saida = $saida;
@@ -152,7 +152,7 @@ class Acesso{
 		$this->chegada = $chegada;
 		$this->area_atuacao = $area_atuacao;
 
-		$sql = "UPDATE acessos SET dc = '$this->dc', turno = '$this->turno', motivo = '$this->motivo', servico = '$this->servico', equipamento = '$this->equipamento', obs = '$this->obs', solicitante = '$this->solicitante', empresa = '$this->empresa', operador = '$this->operador', operador_2 = '$this->operador_2', data = '$this->data', entrada = '$this->entrada', saida = '$this->saida', meio_de_contato = '$this->meio_de_contato', solicitacao_acesso = '$this->solicitacao_acesso', agendamento = '$this->agendamento', chegada = '$this->chegada', area_atuacao = '$this->area_atuacao' WHERE id = '$this->id'";
+		$sql = "UPDATE acessos SET dc = '$this->dc', turno = '$this->turno', motivo = '$this->motivo', servico = '$this->servico', equipamento = '$this->equipamento', obs = '$this->obs', solicitante = '$this->solicitante', empresa = '$this->empresa', /*operador = '$this->operador', operador_2 = '$this->operador_2',*/ data = '$this->data', entrada = '$this->entrada', saida = '$this->saida', meio_de_contato = '$this->meio_de_contato', solicitacao_acesso = '$this->solicitacao_acesso', agendamento = '$this->agendamento', chegada = '$this->chegada', area_atuacao = '$this->area_atuacao' WHERE id = '$this->id'";
 
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
