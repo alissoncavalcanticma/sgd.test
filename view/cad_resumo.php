@@ -128,7 +128,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                 <!-- OPERADOR -->
                                                                 <div class="col-md-5" style="float: left; padding-left:110px; margin: auto">
 
-                                                                <select name="operador" style="background-color: #E9ECEF; font-weight: bold; font-size: 14px; border: 0px" class="form-control text-center" required oninvalid="setCustomValidity('Selecione o operador')" onchange="try{setCustomValidity('')}catch(e){}"  <?= isset($_GET['id']) ? 'disabled' : '' ?>  >
+                                                                <select id="operador" name="operador" style="background-color: #E9ECEF; font-weight: bold; font-size: 14px; border: 0px" class="form-control text-center" required oninvalid="setCustomValidity('Selecione o operador')" onchange="try{setCustomValidity('')}catch(e){}" <?php if(isset($_GET['id'])){ echo "disabled"; } ?>>
                                                                             
                                                                         <option value=""></option>
 
@@ -149,7 +149,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         
                                                                                     //Lógica de edit
                                                                                     if(isset($id)){
-                                                                                        if($rsm['operador'] == $user['apelido']){ 
+                                                                                        if($rsm['operador'] == $user['id']){ 
                                                                                             echo "selected";
                                                                                         }    
                                                                                         //$uc = $userC->retornaApelido($rsm['operador']);
@@ -162,17 +162,20 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                             echo "selected";
                                                                                         }
                                                                                     }
+                                                                                    ?>><?php if(isset($_GET['id'])){
+                                                                                        $uc = $userC->retornaApelido($rsm['operador']);
+                                                                                        echo $uc['apelido'];
+                                                                                    }else{
+                                                                                        echo $user['apelido']; 
+                                                                                    }
                                                                                     ?>
-                                                                                    >
-                                                                                    <?= isset($_GET['id']) ? $uc['apelido'] : $user['apelido']; ?>
-                                                                                    
                                                                                 </option>
 
                                                                             <?php endforeach; ?>
 
                                                                         </select>
                                                                     </div>
-                                                                    <!-- <input type="hidden" name="operador" value='<?= $user['id']; ?>'/> -->
+
                                                                 <!-- END OPERADOR -->
                                                                 
                                                                 <!-- DATA -->
@@ -221,11 +224,12 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                         </div>
                                                         <?php 
                                                             
-                                                            echo $user['id']."<br>";
-                                                            echo $uc['apelido']."<br>";
-                                                            echo $rsm['operador']."<br>"; 
+                                                            //echo $user['id']."<br>";
+                                                            //echo $uc['apelido']."<br>";
+                                                            //echo $rsm['operador']."<br>"; 
                                                             
-                                                        ?><br>
+                                                        ?>
+                                                        <br>
                                                         
                                                         <!-- END RESUMO DIÁRIO DE TURNO -->
                                                         

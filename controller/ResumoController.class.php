@@ -40,15 +40,15 @@ switch ($acao) {
 
 				$id = addslashes($_GET['id']);
 				$turno = addslashes($_GET['turno']);
-				$operador = $_GET['operador'];
+				//$operador = $_GET['operador'];
 				$data = array_reverse(explode('/', addslashes($_GET['data'])));
 					$data = implode('-', $data);
 				$resumo = addslashes($_GET['resumo']);
 
-				echo $operador;
-				exit();
+				//echo $operador;
+				//exit();
 				
-				$rsmC->editarResumo($id, $turno, $operador, $data, $resumo);
+				$rsmC->editarResumo($id, $turno, /*$operador,*/ $data, $resumo);
 
 				header("Location: ../view/cad_resumo.php?msg=Resumo editado com sucesso!&id=".$id);
 			}
@@ -87,18 +87,18 @@ class ResumoController{
 			return $resumo->getResumo($i);
 	}
 
-	public function editarResumo($id, $turno, $operador, $data, $resumo){
+	public function editarResumo($id, $turno, /*$operador,*/ $data, $resumo){
 
 			$i = $id;
 			$t = $turno;
-			$op = $operador;
+			//$op = $operador;
 			$dt = $data;
 			$rsm = $resumo;
 
 			$pdo = new Conexao();
 			$resumo = new Resumo($pdo);
 
-			$resumo->editResumo($i, $t, $op, $dt, $rsm);
+			$resumo->editResumo($i, $t, /*$op,*/ $dt, $rsm);
 	}
 }
 

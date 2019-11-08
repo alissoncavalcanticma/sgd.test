@@ -79,18 +79,18 @@ class Resumo{
 		//exit();
 	}
 
-	public function editResumo($id, $turno, $operador, $data, $resumo){
+	public function editResumo($id, $turno, /*$operador,*/ $data, $resumo){
 
 		$this->id = $id;
 		$this->turno = $turno;
-		$this->operador = $operador;
+		//$this->operador = $operador;
 		$this->data = $data;
 		$this->resumo = $resumo;
 
 		//echo $this->operador;
 		//exit();
 
-		$sql = "UPDATE `resumos` SET turno = '$this->turno', operador = '$this->operador', data = '$this->data', resumo = '$this->resumo' WHERE id = '$this->id'";
+		$sql = "UPDATE `resumos` SET turno = '$this->turno', /*operador = '$this->operador',*/ data = '$this->data', resumo = '$this->resumo' WHERE id = '$this->id'";
 
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
