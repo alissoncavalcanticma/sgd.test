@@ -91,6 +91,7 @@ class Usuarios{
 			session_start();
 			$_SESSION['logon'] = $array['apelido'];
 			$_SESSION['logon_email'] = $array['email'];
+			$_SESSION['logon_nome'] = $array['nome_completo'];
 			return true;
 		}else{
 			return false;

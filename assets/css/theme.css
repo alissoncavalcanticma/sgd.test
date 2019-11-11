@@ -1531,6 +1531,10 @@ section {
     z-index: 3;
 }
 
+.pers {
+    min-width: 355px;
+}
+
 .account-dropdown .info {
     padding: 25px;
     border-top: 1px solid #f5f5f5;

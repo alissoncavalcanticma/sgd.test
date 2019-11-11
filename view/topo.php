@@ -140,7 +140,7 @@
                                         <div class="content">
                                             <a class="js-acc-btn" href="#"><?= $_SESSION['logon'] ?></a>
                                         </div>
-                                        <div class="account-dropdown js-dropdown">
+                                        <div class="account-dropdown js-dropdown pers">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
@@ -149,7 +149,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#"><?= $_SESSION['logon'] ?></a>
+                                                        <a href="#"><?= $_SESSION['logon_nome'] ?></a>
                                                     </h5>
                                                     <span class="email"><?= $_SESSION['logon_email'] ?></span>
                                                 </div>
