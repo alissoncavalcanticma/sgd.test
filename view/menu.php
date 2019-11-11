@@ -226,6 +226,7 @@
                             <a href="resumos.php">
                                 <i class="fa fa-book"></i>Resumo</a>
                         </li>
+                        <!--
                         <li>
                             <a href="#">
                                 <i class="fa fa-bell"></i>Chamados</a>
@@ -238,6 +239,7 @@
                             <a href="#">
                                 <i class="fa fa-exclamation"></i>Incidentes</a>
                         </li>
+                        -->
                         <!--
                         <li>
                             <a href="../chart.html">
