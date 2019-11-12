@@ -61,59 +61,67 @@
                   </div>
                   <div class="row m-t-30" style="margin-top: 10px;">
                       <div class="col-md-12">
-                          <!-- DATA TABLE-->
+                          
+                      <!-- DATA TABLE-->
                           <div class="table-responsive m-b-40">
-                              <table id="listarResumo" class="table table-hover table-borderless table-data3 table-data3-add">
-                                  <thead>
-                                      <tr>
-                                          <th>Data</th>
-                                          <th>Turno</th>
-                                          <th>Operador</th>
-                                          <th>Resumo</th>
-                                          <th>View</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <?php foreach ($resumoC->listaResumos() as $rsm) : ?>
 
-                                          <tr class="col-md-12">
+                                <div id="contentLoading">
+                                    <div id="loading"></div>
+                                </div>
 
-                                              <td style="font-weight: bold">
-                                                  <?= date('d/m/Y', strtotime($rsm['data'])); ?>
-                                              </td>
+                                <div class="jumbotron" style="padding:10px">
+                                    <table id="listarResumo" class="table table-hover table-borderless table-data3 table-data3-add">
+                                    <thead>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>Turno</th>
+                                            <th>Operador</th>
+                                            <th>Resumo</th>
+                                            <th>View</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($resumoC->listaResumos() as $rsm) : ?>
 
-                                              <td style="font-weight: bold">
-                                                  <?= $rsm['turno']; ?>
-                                              </td>
+                                            <tr class="col-md-12">
 
-                                              <td>
-                                                    <?php
-                                                        
-                                                            $uc = $userC->retornaApelido($rsm['operador']);
-                                                            echo $uc['apelido'];
+                                                <td style="font-weight: bold">
+                                                    <?= date('d/m/Y', strtotime($rsm['data'])); ?>
+                                                </td>
+
+                                                <td style="font-weight: bold">
+                                                    <?= $rsm['turno']; ?>
+                                                </td>
+
+                                                <td>
+                                                        <?php
                                                             
-                                                    ?>
-                                              </td>
+                                                                $uc = $userC->retornaApelido($rsm['operador']);
+                                                                echo $uc['apelido'];
+                                                                
+                                                        ?>
+                                                </td>
 
-                                              <td>
-                                                  <?= $rsm['resumo']; ?>
-                                              </td>
+                                                <td>
+                                                    <?= $rsm['resumo']; ?>
+                                                </td>
 
-                                              <td style="margin:2px; padding-left: 5px; padding-right: 10px">
-                                                  <div>
-                                                      <div style="width: 50%">
-                                                          <a href="cad_resumo.php?id=<?= $rsm['id']; ?>">
-                                                              <i class="fa fa-search" style=""></i>
+                                                <td style="margin:2px; padding-left: 5px; padding-right: 10px">
+                                                    <div>
+                                                        <div style="width: 50%">
+                                                            <a href="cad_resumo.php?id=<?= $rsm['id']; ?>">
+                                                                <i class="fa fa-search" style=""></i>
 
-                                                          </a>
-                                                      </div>
-                                                  </div>
-                                              </td>
-                                          </tr>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
 
-                                      <?php endforeach; ?>
-                                  </tbody>
-                              </table>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                              </div>
                           </div>
 
                           <!-- END DATA TABLE-->
