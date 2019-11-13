@@ -11,6 +11,7 @@ require '../autoload.php';
 
 
 $rsmC = new ResumoController();
+$userC = new UsuarioController();
 
 
 if(isset($_GET['acao']) && !empty($_GET['acao'])){
@@ -53,8 +54,13 @@ switch ($acao) {
 				header("Location: ../view/cad_resumo.php?msg=Resumo editado com sucesso!&id=".$id);
 			}
 		break;
+	case 'listar':
+			$rsmC->listaResumos();
+		break;
+	case 'listarPesquisa':
+			//$rsmC->listarPesquisa($_GET['pag'], $_GET['maximo']);
+		break;
 	default:
-		
 		break;
 }
 
@@ -77,7 +83,106 @@ class ResumoController{
 
 			$pdo = new Conexao();
 			$resumo = new Resumo($pdo);
-			return $resumo->getResumos();
+
+			//pegando tipo de consulta: listagem ou contador
+			$tipo = $_GET['tipo'];
+			//se o tipo for listagem
+			if($tipo =='listagem'){
+
+				$pag = $_GET['pag'];
+				$maximo = $_GET['maximo'];
+
+				$inicio = ($pag * $maximo) - $maximo; //Variável para LIMIT da sql
+
+				$rs = array();
+				$sql = $resumo->getResumos($inicio, $maximo);
+
+				//return $resumo->getResumos();
+				
+				?>
+					<table id="listarResumos" class="table table-hover table-borderless table-data3 table-data3-add">
+						<thead>
+							<tr>
+								<th>Data</th>
+								<th>Turno</th>
+								<th>Operador</th>
+								<th>Resumo</th>
+								<th>View</th>
+							</tr>
+						</thead>
+						<tbody>
+				<?php
+
+				if (count($sql) > 0){
+
+					foreach($sql as $rs):
+				
+				?>
+
+					<tr class="col-md-12">
+
+						<td style="font-weight: bold">
+							<?= date('d/m/Y', strtotime($rs['data'])); ?>
+						</td>
+
+						<td style="font-weight: bold">
+							<?= $rs['turno']; ?>
+						</td>
+
+						<td>
+								<?php
+									
+										$uc = $userC->retornaApelido($rs['operador']);
+										echo $uc['apelido'];
+										
+								?>
+						</td>
+
+						<td>
+							<?= $rs['resumo']; ?>
+						</td>
+
+						<td style="margin:2px; padding-left: 5px; padding-right: 10px">
+							<div>
+								<div style="width: 50%">
+									<a href="cad_resumo.php?id=<?= $rs['id']; ?>">
+										<i class="fa fa-search" style=""></i>
+
+									</a>
+								</div>
+							</div>
+						</td>
+					</tr>
+					
+					<?php
+					
+					endforeach;
+
+		}else{
+
+			//Se não retornar nada
+			echo("Nenhum registro encontrado");
+		}
+
+		?>
+					</tbody>
+				</table>
+
+				<?php
+
+
+		//se o tipo for contador
+		}else if($tipo == 'contador'){
+			$sql = "SELECT * FROM resumos"; //consulta no BD
+					$sql = $pdo->prepare($sql);
+					$sql->execute();
+					$contador = $sql->rowCount(); //Pegando Quantidade de itens
+
+					echo $contador;
+		}else{
+
+			echo "Solicitação inválida";
+		}
 	}
 
 	public function retornaResumo($id){

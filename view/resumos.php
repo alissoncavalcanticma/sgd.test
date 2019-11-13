@@ -71,7 +71,7 @@
 
                                 <div class="jumbotron" style="padding:10px">
                                     
-                                    <table id="listarResumo" class="table table-hover table-borderless table-data3 table-data3-add">
+                                    <table id="listarResumos" class="table table-hover table-borderless table-data3 table-data3-add">
                                         <thead>
                                             <tr>
                                                 <th>Data</th>
