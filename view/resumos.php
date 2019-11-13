@@ -129,6 +129,9 @@
 
                       </div>
                   </div>
+
+                  <script type="text/javascript" src="../assets/js/paginador.js"></script>
+                  
                   <!-- RODAPÉ -->
                   <?php include_once 'rodape.php'; ?>
                   <!-- RODAPÉ -->
