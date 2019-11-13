@@ -36,7 +36,6 @@ switch ($acao) {
 			$acessoC->listarPesquisa($_GET['pag'], $_GET['maximo']);
 		break;
 	default:
-		
 		break;
 }
 
