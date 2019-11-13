@@ -40,9 +40,11 @@ class Resumo{
 		return $array;
 	}
 
-	public function getResumos(){
+	public function getResumos($ini, $max){
 
-		$sql = "SELECT * FROM resumos ORDER BY id DESC";
+		$inicio = $ini;
+		$maximo = $max;
+		$sql = "SELECT * FROM resumos ORDER BY id DESC LIMIT $inicio, $maximo"; //consulta no BD
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
 
