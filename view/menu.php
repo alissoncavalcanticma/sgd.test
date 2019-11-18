@@ -45,8 +45,9 @@
     <script type="text/javascript" src="../assets/vendor/DataTables/DataTables-1.10.18/js/jquery.dataTables.js"></script>
     <script type="text/javascript" src="../assets/vendor/DataTables/DataTables-1.10.18/js/dataTables.bootstrap4.js"></script>
 
-    <!-- Paginador -->
+    <!-- Paginador
     <script type="text/javascript" src="../assets/js/paginador.js"></script>
+     -->
     
     <!-- SnackBar -->
     <link rel="stylesheet" type="text/css" href="../assets/vendor/snackbar/dist/snackbar.min.css" /> 
