@@ -59,6 +59,28 @@ class Resumo{
 		return $array;
 	}
 
+	public function getPesquisa($ini, $max, $pesquisa){
+
+		$inicio = $ini;
+		$maximo = $max;
+		$param = $pesquisa;
+		//$sql="SELECT * FROM acessos ORDER BY id DESC LIMIT $inicio, $maximo"; //consulta no BD
+		$sql = "SELECT * FROM resumos WHERE id LIKE '%$param%' OR turno LIKE '%$param%' OR operador LIKE '%$param%' OR data LIKE '%$param%' OR resumo LIKE '%$param%' ORDER BY id DESC LIMIT $inicio, $maximo";
+		$sql = $this->pdo->prepare($sql);
+		$sql->execute();
+
+		$array = array();
+
+		if($sql->rowCount() > 0){
+			$array = $sql->fetchAll();
+
+			return $array;
+		}
+
+		return $array;
+
+	}
+
 	public function insertResumo($turno, $operador, $data, $resumo){
 
 		$this->turno = $turno;
@@ -81,7 +103,7 @@ class Resumo{
 		//exit();
 	}
 
-	public function editResumo($id, $turno, /*$operador,*/ $data, $resumo){
+	public function editResumo($id, $turno, $data, $resumo){
 
 		$this->id = $id;
 		$this->turno = $turno;
@@ -92,7 +114,7 @@ class Resumo{
 		//echo $this->operador;
 		//exit();
 
-		$sql = "UPDATE `resumos` SET turno = '$this->turno', /*operador = '$this->operador',*/ data = '$this->data', resumo = '$this->resumo' WHERE id = '$this->id'";
+		$sql = "UPDATE `resumos` SET turno = '$this->turno', data = '$this->data', resumo = '$this->resumo' WHERE id = '$this->id'";
 
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
