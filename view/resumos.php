@@ -72,56 +72,12 @@
                                 <div class="jumbotron" style="padding:10px">
                                     
                                     <table id="listarResumos" class="table table-hover table-borderless table-data3 table-data3-add">
-                                        <thead>
-                                            <tr>
-                                                <th>Data</th>
-                                                <th>Turno</th>
-                                                <th>Operador</th>
-                                                <th>Resumo</th>
-                                                <th>View</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php foreach ($resumoC->listaResumos() as $rsm) : ?>
+                                        
+                                        <div id="tbody">
+                                        </div>
+                                        <br>
 
-                                                <tr class="col-md-12">
-
-                                                    <td style="font-weight: bold">
-                                                        <?= date('d/m/Y', strtotime($rsm['data'])); ?>
-                                                    </td>
-
-                                                    <td style="font-weight: bold">
-                                                        <?= $rsm['turno']; ?>
-                                                    </td>
-
-                                                    <td>
-                                                            <?php
-                                                                
-                                                                    $uc = $userC->retornaApelido($rsm['operador']);
-                                                                    echo $uc['apelido'];
-                                                                    
-                                                            ?>
-                                                    </td>
-
-                                                    <td>
-                                                        <?= $rsm['resumo']; ?>
-                                                    </td>
-
-                                                    <td style="margin:2px; padding-left: 5px; padding-right: 10px">
-                                                        <div>
-                                                            <div style="width: 50%">
-                                                                <a href="cad_resumo.php?id=<?= $rsm['id']; ?>">
-                                                                    <i class="fa fa-search" style=""></i>
-
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                            <?php endforeach; ?>
-                                        </tbody>
-                                </table>
+                                    </table>
                               </div>
                           </div>
 
@@ -130,7 +86,7 @@
                       </div>
                   </div>
 
-                  <script type="text/javascript" src="../assets/js/paginador.js"></script>
+                  <script type="text/javascript" src="../assets/js/paginadorResumos.js"></script>
                   
                   <!-- RODAPÉ -->
                   <?php include_once 'rodape.php'; ?>

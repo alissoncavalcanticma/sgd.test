@@ -89,7 +89,7 @@ $userC = new UsuarioController();
                         </div>
 
 
-<script type="text/javascript" src="../assets/js/paginador.js"></script>
+<script type="text/javascript" src="../assets/js/paginadorAcessos.js"></script>
 
                         <!--
         <script type="text/javascript">
