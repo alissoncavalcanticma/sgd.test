@@ -185,6 +185,155 @@ class ResumoController{
 		}
 	}
 
+	public function listarPesquisa($pg, $max){
+
+		$pdo = new Conexao();
+		$resumo = new Resumo($pdo);
+
+		//pegando tipo de consulta: listagem ou contador
+		$tipo = $_GET['tipo'];
+
+		$pag = $pg;
+		$maximo = $max;
+		$inicio = ($pag * $maximo) - $maximo; //Variável para LIMIT da sql
+
+			if(isset($_GET['search'])){
+				$pesquisa = $_GET['search'];
+
+			}else{
+				$pesquisa = null;
+			}
+
+		
+
+		//se o tipo for listagem
+		if($tipo =='listagem'){
+
+			$rs = array();
+			$sql = $resumo->getPesquisa($inicio, $maximo, $pesquisa);
+
+			//var_dump($sql);exit;
+
+			?>
+				<table id="listarResumos" class="table table-hover table-borderless table-data3 table-data3-add">
+						<thead>
+							<tr>
+								<th>Data</th>
+								<th>Turno</th>
+								<th>Operador</th>
+								<th>Resumo</th>
+								<th>View</th>
+							</tr>
+						</thead>
+						<tbody>
+				<?php
+
+				if (count($sql) > 0){
+
+					foreach($sql as $rs):
+				
+				?>
+
+					<tr class="col-md-12">
+
+						<td style="font-weight: bold">
+							<?= date('d/m/Y', strtotime($rs['data'])); ?>
+						</td>
+
+						<td style="font-weight: bold">
+							<?= $rs['turno']; ?>
+						</td>
+
+						<td>
+								<?php
+									
+										$uc = $userC->retornaApelido($rs['operador']);
+										echo $uc['apelido'];
+										
+								?>
+						</td>
+
+						<td>
+							<?= $rs['resumo']; ?>
+						</td>
+
+						<td style="margin:2px; padding-left: 5px; padding-right: 10px">
+							<div>
+								<div style="width: 50%">
+									<a href="cad_resumo.php?id=<?= $rs['id']; ?>">
+										<i class="fa fa-search" style=""></i>
+
+									</a>
+								</div>
+							</div>
+						</td>
+					</tr>
+					
+					<?php
+					
+					endforeach;
+
+		}else{
+
+			//Se não retornar nada
+			echo("Nenhum registro encontrado");
+		}
+
+		?>
+					</tbody>
+				</table>
+
+			<?php
+
+
+			//se o tipo for contador
+			//
+			//se o tipo for contador
+			}
+			/*else if($tipo == 'contador'){
+				if(isset($_GET['search'])){
+					$param = $_GET['search'];
+				}else{
+					$param = null;
+				}
+				$sql = "SELECT * FROM acessos WHERE id LIKE '%$param%' OR dc LIKE '%$param%' OR turno LIKE '%$param%' OR motivo LIKE '%$param%' OR solicitante LIKE '%$param%' OR empresa LIKE '%$param%' OR operador LIKE '%$param%' OR data LIKE '%$param%' OR entrada LIKE '%$param%' OR saida LIKE '%$param%' ORDER BY id DESC LIMIT $inicio, $maximo"; //consulta no BD
+				$sql = $pdo->prepare($sql);
+				$sql->execute();
+				$contador = $sql->rowCount(); //Pegando Quantidade de itens
+
+				echo $contador;
+
+			}else{
+
+				echo "Solicitação inválida";
+			}*/
+
+
+
+			/*
+			}else if($tipo == 'contador'){
+
+				if(isset($_GET['search'])){
+					$pesquisa = $_GET['search'];
+				}else{
+					$pesquisa = null;
+				}
+				$sql = $acesso->getPesquisa($inicio, $maximo, $pesquisa);
+				//$sql = "SELECT * FROM acessos"; //consulta no BD
+				$sql = $pdo->prepare($sql);
+				$sql->execute();
+				$contador = $sql->rowCount(); //Pegando Quantidade de itens
+
+				echo $contador;
+
+			}else{
+
+				echo "Solicitação inválida";
+			}*/
+		}
+//}
+
+
 	public function retornaResumo($id){
 			$i = $id;
 			$pdo = new Conexao();
@@ -192,7 +341,7 @@ class ResumoController{
 			return $resumo->getResumo($i);
 	}
 
-	public function editarResumo($id, $turno, /*$operador,*/ $data, $resumo){
+	public function editarResumo($id, $turno, $data, $resumo){
 
 			$i = $id;
 			$t = $turno;
@@ -203,7 +352,7 @@ class ResumoController{
 			$pdo = new Conexao();
 			$resumo = new Resumo($pdo);
 
-			$resumo->editResumo($i, $t, /*$op,*/ $dt, $rsm);
+			$resumo->editResumo($i, $t, $dt, $rsm);
 	}
 }
 
