@@ -1,5 +1,5 @@
 var pagina = 1; //página inicial - DEIXE SEMPRE 1
-var numitens = 10; //quantidade de itens a ser mostrado por página
+var numitens = 9; //quantidade de itens a ser mostrado por página
 
 $(document).ready(function() {
 
@@ -81,12 +81,16 @@ function contador() {
         //url:'getitens.php',
         url: '../controller/ResumoController.class.php',
         success: function(retorno_pg) {
-            paginador(retorno_pg)
+            //paginador(retorno_pg)
         }
     })
 }
 
 function paginador(cont) {
+
+    //console.log(cont);
+    //console.log(numitens);
+    //console.log(pagina);
 
     if (cont <= numitens) { //Verificando se há mais de uma página
 
@@ -103,21 +107,22 @@ function paginador(cont) {
 
         var qtdpaginas = Math.ceil(cont / numitens); //arredondando divisão fracionada para cima
 
-        /*for(var i=1;i<=qtdpaginas;i++){
+        /*for (var i = 1; i <= qtdpaginas; i++) {
 
-        	if(pagina==i){
+            if (pagina == i) {
 
-        		$('#listarAcessos tr').append('<td  style="background: #6495ED"><a href="#" onclick="getitens('+i+', '+numitens+')">'+i+'</a></td>')
+                $('#listarAcessos tr').append('<td  style="background: #6495ED"><a href="#" onclick="getitens(' + i + ', ' + numitens + ')">' + i + '</a></td>')
 
-        	}else{
+            } else {
 
-        		$('#listarAcessos tr').append('<td><a href="#" onclick="getitens('+i+', '+numitens+')">'+i+'</a></td>')
-        		}
+                $('#listarAcessos tr').append('<td><a href="#" onclick="getitens(' + i + ', ' + numitens + ')">' + i + '</a></td>')
+            }
         }*/
         if (pagina != qtdpaginas) {
             $('#listarResumos tr').append('<td><a class="page-link" aria-label="Next" href="#" onclick="getitens(' + (pagina + 1) + ', ' + numitens + ')"> >> </a></td>')
         }
         //console.log(cont);
+        console.log("teste");
     }
 }
 

@@ -51,7 +51,7 @@ $userC = new UsuarioController();
                                                 <fieldset>
                                                         <div class="input-prepend">
                                                             <span class="add-on"><i class="icon-search"></i></span>
-                                                            <input type="text" name="search" id="search" tabindex="1" placeholder="  Pesquisar..."/>
+                                                            <input type="text" name="search" id="search" tabindex="1" placeholder="Pesquisar..."/>
                                                         </div>
                                                 </fieldset>
                                         </form>

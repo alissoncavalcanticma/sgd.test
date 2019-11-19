@@ -83,6 +83,7 @@ class ResumoController{
 
 			$pdo = new Conexao();
 			$resumo = new Resumo($pdo);
+			$userC = new UsuarioController();
 
 			//pegando tipo de consulta: listagem ou contador
 			$tipo = $_GET['tipo'];
@@ -189,6 +190,7 @@ class ResumoController{
 
 		$pdo = new Conexao();
 		$resumo = new Resumo($pdo);
+		$userC = new UsuarioController();
 
 		//pegando tipo de consulta: listagem ou contador
 		$tipo = $_GET['tipo'];
