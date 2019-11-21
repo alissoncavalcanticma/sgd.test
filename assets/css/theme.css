@@ -13432,6 +13432,7 @@ section {
     padding: 8px 15px;
     padding-right: 5px;
     padding-left: 10px;
+    max-width: 500px;
 }
 
 .dt3 thead {
@@ -13464,6 +13465,7 @@ section {
     padding: 18px 15px;
     padding-right: 3px;
     padding-left: 13px;
+    word-wrap: break-word;
 }
 
 .dt3 thead tr td:last-child {
