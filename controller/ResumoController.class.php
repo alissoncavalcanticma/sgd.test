@@ -101,7 +101,7 @@ class ResumoController{
 				//return $resumo->getResumos();
 				
 				?>
-					<table class="table display table-hover table-borderless table-responsive table-data3 minha-tabela" style="font-size: 13px">
+					<table class="table display table-striped table-condensed table-borderless table-responsive dt3 minha-tabela" style="font-size: 13px">
 						<thead>
 							<tr>
 								<th>Data</th>
@@ -145,7 +145,7 @@ class ResumoController{
 
 						<td style="margin:2px; padding-left: 5px; padding-right: 10px">
 							<div>
-								<div style="width: 50%">
+								<div style="padding-left:30%; padding-right:30%">
 									<a href="cad_resumo.php?id=<?= $rs['id']; ?>">
 										<i class="fa fa-search" style=""></i>
 
