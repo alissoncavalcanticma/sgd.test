@@ -58,7 +58,7 @@ switch ($acao) {
 			$rsmC->listaResumos();
 		break;
 	case 'listarPesquisa':
-			//$rsmC->listarPesquisa($_GET['pag'], $_GET['maximo']);
+			$rsmC->listarPesquisa($_GET['pag'], $_GET['maximo']);
 		break;
 	default:
 		break;
@@ -101,7 +101,7 @@ class ResumoController{
 				//return $resumo->getResumos();
 				
 				?>
-					<table id="listarResumos" class="table table-hover table-borderless table-data3 table-data3-add">
+					<table class="table display table-hover table-borderless table-responsive table-data3 minha-tabela" style="font-size: 13px">
 						<thead>
 							<tr>
 								<th>Data</th>
@@ -217,7 +217,7 @@ class ResumoController{
 			//var_dump($sql);exit;
 
 			?>
-				<table id="listarResumos" class="table table-hover table-borderless table-data3 table-data3-add">
+				<table class="table display table-hover table-borderless table-responsive table-data3 minha-tabela" style="font-size: 13px">
 						<thead>
 							<tr>
 								<th>Data</th>

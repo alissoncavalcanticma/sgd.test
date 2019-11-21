@@ -81,20 +81,20 @@ function contador() {
         //url:'getitens.php',
         url: '../controller/ResumoController.class.php',
         success: function(retorno_pg) {
-            //paginador(retorno_pg)
+            paginador(retorno_pg);
         }
     })
 }
 
 function paginador(cont) {
 
-    //console.log(cont);
-    //console.log(numitens);
-    //console.log(pagina);
+    console.log(cont);
+    console.log(numitens);
+    console.log(pagina);
 
     if (cont <= numitens) { //Verificando se há mais de uma página
 
-        $('#listarResumos').html('<tr><td>Apenas uma Página<td><tr>');
+        $('#listarResumos').html("<tr><td><i style='color:#666666'>Apenas uma Página</><td><tr>");
 
     } else {
 
@@ -122,7 +122,7 @@ function paginador(cont) {
             $('#listarResumos tr').append('<td><a class="page-link" aria-label="Next" href="#" onclick="getitens(' + (pagina + 1) + ', ' + numitens + ')"> >> </a></td>')
         }
         //console.log(cont);
-        console.log("teste");
+        console.log("Chegou ao fim!");
     }
 }
 
@@ -164,7 +164,7 @@ function paginadorPesquisa(cont, valores, pagina, maximo) {
     numitens = maximo;
     if (cont <= numitens) { //Verificando se há mais de uma página
 
-        $('#listarResumos').html('<tr><td>Apenas uma Página<td><tr>');
+        $('#listarResumos').html("<tr><td><i style='color:#666666'>Apenas uma Página</i><td><tr>");
 
     } else {
 
