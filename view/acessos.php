@@ -72,7 +72,7 @@ $userC = new UsuarioController();
                                                 <div id="loading"></div>
                                             </div>
 
-                                            <div class="jumbotron" style="padding:10px">
+                                            <div class="jumbotron" style="padding:5px">
                                                 <table id='listarAcessos' class='table display table-hover table-borderless table-responsive table-data3'>
                                                        
                                                         <div id="tbody">
