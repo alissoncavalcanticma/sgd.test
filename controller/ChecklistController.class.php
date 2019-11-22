@@ -32,7 +32,7 @@ switch ($acao) {
 			$checklistC->listarChecklists();
 		break;
 	case 'listarPesquisa':
-			//$checklistC->listarPesquisa($_GET['pag'], $_GET['maximo']);
+			$checklistC->listarPesquisa($_GET['pag'], $_GET['maximo']);
 		break;
 	default:
 		
@@ -297,6 +297,144 @@ class ChecklistController{
 			echo "Solicitação inválida";
 			
 			}
+	}
+
+	public function listarPesquisa($pg, $max){
+
+		$pdo = new Conexao();
+		$checklist = new Checklist($pdo);
+		$userC = new UsuarioController();
+
+		//pegando tipo de consulta: listagem ou contador
+		$tipo = $_GET['tipo'];
+
+		$pag = $pg;
+		$maximo = $max;
+		$inicio = ($pag * $maximo) - $maximo; //Variável para LIMIT da sql
+
+			if(isset($_GET['search'])){
+				$pesquisa = $_GET['search'];
+
+			}else{
+				$pesquisa = null;
+			}
+
+		
+
+		//se o tipo for listagem
+		if($tipo =='listagem'){
+			
+			$chk = array();
+			$sql = $checklist->getPesquisa($inicio, $maximo, $pesquisa);
+
+			?>
+
+					<table class="table display table-striped table-condensed table-borderless table-responsive dt3 minha-tabela" style="font-size: 13px; width: 100%">
+						<thead>
+						<tr>
+							<!--TH hidden para ordenação -->
+							<!-- <th style="display:none;">ID</th> -->
+							<th>ID</th>
+							<th>Data</th>
+							<th>Turno</th>
+							<th>OBS DC FCA</th>
+							<th>OBS DC SP</th>
+							<th>OBS Sala Técnica</th>
+							<th>OBS NPO</th>
+							<th>View</th>
+						</tr>
+					</thead>
+					<tbody>
+
+				<?php
+
+					if (count($sql) > 0){
+
+					foreach($sql as $chk):
+
+				?>
+
+					<tr class="col-md-12">
+							<td style="font-weight: bold"><?= $chk['id'] ?></td>
+							<td style="font-weight: bold"><?= date('d/m/Y', strtotime($chk['data'])); ?></td>
+							<td style="font-weight: bold"><?= $chk['turno']; ?></td>
+							<td>
+								<ul style="line-height:15px">
+									<?php
+
+										$result = explode(';', $chk['obs_fca']);
+										foreach ($result as $value) {
+											echo "<li>" . $value . "</li>";
+										}
+
+										?>
+								</ul>
+							</td>
+							<td>
+								<ul style="line-height:15px">
+									<?php
+
+										$result = explode(';', $chk['obs_sp']);
+										foreach ($result as $value) {
+											echo "<li>" . $value . "</li>";
+										}
+
+										?>
+								</ul>
+							</td>
+							<td>
+								<ul style="line-height:15px">
+									<?php
+
+										$result = explode(';', $chk['obs_tr']);
+										foreach ($result as $value) {
+											echo "<li>" . $value . "</li>";
+										}
+
+										?>
+								</ul>
+							</td>
+							<td>
+								<ul style="line-height:15px">
+									<?php
+
+										$result = explode(';', $chk['obs_npo']);
+										foreach ($result as $value) {
+											echo "<li>" . $value . "</li>";
+										}
+
+										?>
+								</ul>
+							</td>
+							<td style="margin:2px; padding-left: 5px; padding-right: 10px">
+								<div>
+									<div style="width: 50%">
+										<a href="cad_checklist.php?id=<?= $chk['id']; ?>">
+											<i class="fa fa-search" style=""></i>
+
+										</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+
+						<?php
+					
+					endforeach;
+
+		}else{
+
+			//Se não retornar nada
+			echo("Nenhum registro encontrado");
+		}
+
+		?>
+					</tbody>
+				</table>
+
+			<?php
+
+		}
 	}
 
 	
