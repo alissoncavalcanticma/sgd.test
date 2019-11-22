@@ -3,6 +3,7 @@
 require '../autoload.php';
 
 $checklistC = new ChecklistController();
+$userC = new UsuarioController();
 
 
 if(isset($_GET['acao']) && !empty($_GET['acao'])){
@@ -26,6 +27,12 @@ switch ($acao) {
 
 				header("Location: ../view/cad_checklist.php?msg=Checklist editado com sucesso!&id=".$_GET['id']);
 			}
+		break;
+	case 'listar':
+			$checklistC->listarChecklists();
+		break;
+	case 'listarPesquisa':
+			//$checklistC->listarPesquisa($_GET['pag'], $_GET['maximo']);
 		break;
 	default:
 		
@@ -154,7 +161,21 @@ class ChecklistController{
 
 			$pdo = new Conexao();
 			$checklist = new Checklist($pdo);
-			return $checklist->getChecks();
+			
+			//pegando tipo de consulta: listagem ou contador
+			$tipo = $_GET['tipo'];
+			//se o tipo for listagem
+			if($tipo =='listagem'){
+
+				$pag = $_GET['pag'];
+				$maximo = $_GET['maximo'];
+
+				$inicio = ($pag * $maximo) - $maximo; //Variável para LIMIT da sql
+
+				$chk = array();
+				$sql = $checklist->getChecks($inicio, $maximo);
+			
+				//return $checklist->getChecks();
 	}
 
 	public function editarChecklist($id){
