@@ -1426,6 +1426,28 @@ class Checklist{
 		}
 
 		return $array;
+    }
+    
+    public function getPesquisa($ini, $max, $pesquisa){
+
+		$inicio = $ini;
+		$maximo = $max;
+		$param = $pesquisa;
+		//$sql="SELECT * FROM acessos ORDER BY id DESC LIMIT $inicio, $maximo"; //consulta no BD
+		$sql = "SELECT * FROM checklists WHERE id LIKE '%$param%' OR data LIKE '%$param%' OR turno LIKE '%$param%' OR obs_fca LIKE '%$param%' OR obs_sp LIKE '%$param%' OR obs_tr LIKE '%$param%' OR obs_npo LIKE '%$param%' ORDER BY id DESC LIMIT $inicio, $maximo";
+		$sql = $this->pdo->prepare($sql);
+		$sql->execute();
+
+		$array = array();
+
+		if($sql->rowCount() > 0){
+			$array = $sql->fetchAll();
+
+			return $array;
+		}
+
+		return $array;
+
 	}
 
 	public function insertCheck($turno, $data, $operador_fca, $operador_sp, $operador_tr, $entrada_fca,
