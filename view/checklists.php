@@ -140,6 +140,7 @@
 
                       </div>
                   </div>
+                  <!--
                   <script>
                       $(document).ready(function() {
                           $('#listarChecklists').DataTable({
@@ -168,6 +169,7 @@
                           });
                       });
                   </script>
+                    -->
                   <!-- RODAPÉ -->
                   <?php include_once 'rodape.php'; ?>
                   <!-- RODAPÉ -->
