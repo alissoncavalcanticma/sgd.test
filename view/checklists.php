@@ -40,101 +40,48 @@
                               Checklist's
                           </div>
 
-                          <div style="float: right; font-size: 2px">
-                              <button style="font-size: 14px" class="btn btn-success" onclick="window.open('cad_checklist.php', '_self')"> <i class="fa fa-plus"></i> ADD</button>
-                          </div>
+                          <div style="float: right">
+                                    <div style="float: right;">
+                                        <div style="float:left">
+                                        <form name="form_search" id="form_search" method="post" action="">
+                                                <fieldset>
+                                                        <div class="input-prepend">
+                                                            <span class="add-on"><i class="icon-search"></i></span>
+                                                            <input type="text" name="search" id="search" tabindex="1" placeholder="Pesquisar..."/>
+                                                        </div>
+                                                </fieldset>
+                                        </form>
+                                        </div>
+                                        <div style="float:right">
+                                            <button style="font-size: 14px" class="btn btn-success" onclick="window.open('cad_checklist.php', '_self')"> <i class="fa fa-plus"></i> ADD</button>
+                                        </div>
+                                    </div>
+                            </div>
                       </div>
                   </div>
                   <div class="row m-t-30" style="margin-top: 10px;">
                       <div class="col-md-12">
                           <!-- DATA TABLE-->
                           <div class="table-responsive m-b-40">
-                              <table id="listarChecklists" class="table table-hover table-responsive table-borderless table-data3" style="display: table">
-                                  <thead>
-                                      <tr>
-                                          <!--TH hidden para ordenação -->
-                                          <!-- <th style="display:none;">ID</th> -->
-                                          <th>ID</th>
-                                          <th>Data</th>
-                                          <th>Turno</th>
-                                          <th>OBS DC FCA</th>
-                                          <th>OBS DC SP</th>
-                                          <th>OBS Sala Técnica</th>
-                                          <th>OBS NPO</th>
-                                          <th>View</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <?php foreach ($checklistC->listarChecklists() as $chk) : ?>
 
-                                          <tr class="col-md-12">
-                                              <td style="font-weight: bold"><?= $chk['id'] ?></td>
-                                              <td style="font-weight: bold"><?= date('d/m/Y', strtotime($chk['data'])); ?></td>
-                                              <td style="font-weight: bold"><?= $chk['turno']; ?></td>
-                                              <td>
-                                                  <ul style="line-height:15px">
-                                                      <?php
+                                <div id="contentLoading">
+                                    <div id="loading"></div>
+                                </div>
 
-                                                            $result = explode(';', $chk['obs_fca']);
-                                                            foreach ($result as $value) {
-                                                                echo "<li>" . $value . "</li>";
-                                                            }
+                            <div class="jumbotron" style="padding:5px">
 
-                                                            ?>
-                                                  </ul>
-                                              </td>
-                                              <td>
-                                                  <ul style="line-height:15px">
-                                                      <?php
-
-                                                            $result = explode(';', $chk['obs_sp']);
-                                                            foreach ($result as $value) {
-                                                                echo "<li>" . $value . "</li>";
-                                                            }
-
-                                                            ?>
-                                                  </ul>
-                                              </td>
-                                              <td>
-                                                  <ul style="line-height:15px">
-                                                      <?php
-
-                                                            $result = explode(';', $chk['obs_tr']);
-                                                            foreach ($result as $value) {
-                                                                echo "<li>" . $value . "</li>";
-                                                            }
-
-                                                            ?>
-                                                  </ul>
-                                              </td>
-                                              <td>
-                                                  <ul style="line-height:15px">
-                                                      <?php
-
-                                                            $result = explode(';', $chk['obs_npo']);
-                                                            foreach ($result as $value) {
-                                                                echo "<li>" . $value . "</li>";
-                                                            }
-
-                                                            ?>
-                                                  </ul>
-                                              </td>
-                                              <td style="margin:2px; padding-left: 5px; padding-right: 10px">
-                                                  <div>
-                                                      <div style="width: 50%">
-                                                          <a href="cad_checklist.php?id=<?= $chk['id']; ?>">
-                                                              <i class="fa fa-search" style=""></i>
-
-                                                          </a>
-                                                      </div>
-                                                  </div>
-                                              </td>
-                                          </tr>
-
-                                      <?php endforeach; ?>
-                                  </tbody>
+                              <table id="listarChecklists" class='table display table-hover table-borderless table-responsive table-data3' style="display: table">
+                                
+                                    <div id="tbody">
+                                    </div>
+                                    <br>
+                              
                               </table>
+                            
+                            </div>
+
                           </div>
+                          <hr />
 
                           <!-- END DATA TABLE-->
 
