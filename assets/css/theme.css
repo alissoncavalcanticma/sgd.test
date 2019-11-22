@@ -13432,12 +13432,12 @@ section {
     padding: 8px 15px;
     padding-right: 5px;
     padding-left: 10px;
-    max-width: 500px;
 }
 
 .dt3 thead {
     background-color: #1376C6;
     color: #fff;
+    table-layout: fixed
 }
 
 .dt3 thead th {
@@ -13459,6 +13459,15 @@ section {
 }
 
 .dt3 tbody td {
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 13px;
+    color: #000000;
+    padding: 18px 15px;
+    padding-right: 3px;
+    padding-left: 13px;
+}
+
+.dt3 tbody tr {
     border-bottom: 1px solid #f5f5f5;
     font-size: 13px;
     color: #000000;

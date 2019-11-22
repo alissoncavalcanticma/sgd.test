@@ -101,14 +101,14 @@ class ResumoController{
 				//return $resumo->getResumos();
 				
 				?>
-					<table class="table display table-striped table-condensed table-borderless table-responsive dt3 minha-tabela" style="font-size: 13px">
+					<table class="table display table-striped table-condensed table-borderless table-responsive dt3 minha-tabela" style="font-size: 13px; width: 100%">
 						<thead>
 							<tr>
 								<th>Data</th>
 								<th>Turno</th>
 								<th>Operador</th>
 								<th>Resumo</th>
-								<th>View</th>
+								<th>Actions</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -217,14 +217,14 @@ class ResumoController{
 			//var_dump($sql);exit;
 
 			?>
-				<table class="table display table-hover table-borderless table-responsive table-data3 minha-tabela" style="font-size: 13px">
+				<table class="table display table-striped table-condensed table-borderless table-responsive dt3 minha-tabela" style="font-size: 13px; width: 100%">
 						<thead>
 							<tr>
 								<th>Data</th>
 								<th>Turno</th>
 								<th>Operador</th>
 								<th>Resumo</th>
-								<th>View</th>
+								<th>Actions</th>
 							</tr>
 						</thead>
 						<tbody>
