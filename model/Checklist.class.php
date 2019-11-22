@@ -1409,10 +1409,11 @@ class Checklist{
         return $this;
     }
 
-    public function getChecks(){
+    public function getChecks($ini, $max){
 
-        $sql = "SELECT * FROM `checklists` ORDER BY `data` DESC, `turno` DESC";
-        //$sql = "SELECT * FROM `checklists`";
+        $inicio = $ini;
+		$maximo = $max;
+        $sql = "SELECT * FROM `checklists` ORDER BY `data` DESC, `turno` DESC LIMIT $inicio, $maximo"; //consulta no BD
 		$sql = $this->pdo->prepare($sql);
 		$sql->execute();
 
