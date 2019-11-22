@@ -176,7 +176,130 @@ class ChecklistController{
 				$sql = $checklist->getChecks($inicio, $maximo);
 			
 				//return $checklist->getChecks();
+
+				?>
+					<table class="table display table-striped table-condensed table-borderless table-responsive dt3 minha-tabela" style="font-size: 13px; width: 100%">
+						<thead>
+						<tr>
+							<!--TH hidden para ordenação -->
+							<!-- <th style="display:none;">ID</th> -->
+							<th>ID</th>
+							<th>Data</th>
+							<th>Turno</th>
+							<th>OBS DC FCA</th>
+							<th>OBS DC SP</th>
+							<th>OBS Sala Técnica</th>
+							<th>OBS NPO</th>
+							<th>View</th>
+						</tr>
+					</thead>
+					<tbody>
+
+				<?php
+
+					if (count($sql) > 0){
+
+					foreach($sql as $chk):
+
+				?>
+
+					<tr class="col-md-12">
+							<td style="font-weight: bold"><?= $chk['id'] ?></td>
+							<td style="font-weight: bold"><?= date('d/m/Y', strtotime($chk['data'])); ?></td>
+							<td style="font-weight: bold"><?= $chk['turno']; ?></td>
+							<td>
+								<ul style="line-height:15px">
+									<?php
+
+										$result = explode(';', $chk['obs_fca']);
+										foreach ($result as $value) {
+											echo "<li>" . $value . "</li>";
+										}
+
+										?>
+								</ul>
+							</td>
+							<td>
+								<ul style="line-height:15px">
+									<?php
+
+										$result = explode(';', $chk['obs_sp']);
+										foreach ($result as $value) {
+											echo "<li>" . $value . "</li>";
+										}
+
+										?>
+								</ul>
+							</td>
+							<td>
+								<ul style="line-height:15px">
+									<?php
+
+										$result = explode(';', $chk['obs_tr']);
+										foreach ($result as $value) {
+											echo "<li>" . $value . "</li>";
+										}
+
+										?>
+								</ul>
+							</td>
+							<td>
+								<ul style="line-height:15px">
+									<?php
+
+										$result = explode(';', $chk['obs_npo']);
+										foreach ($result as $value) {
+											echo "<li>" . $value . "</li>";
+										}
+
+										?>
+								</ul>
+							</td>
+							<td style="margin:2px; padding-left: 5px; padding-right: 10px">
+								<div>
+									<div style="width: 50%">
+										<a href="cad_checklist.php?id=<?= $chk['id']; ?>">
+											<i class="fa fa-search" style=""></i>
+
+										</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+
+						<?php
+					
+						endforeach;
+
+			}else{
+
+				//Se não retornar nada
+				echo("Nenhum registro encontrado");
+			}
+	
+			?>
+
+					</tbody>
+				</table>
+
+			<?php
+
+			//se o tipo for contador
+			}else if($tipo == 'contador'){
+			$sql = "SELECT * FROM checklists"; //consulta no BD
+					$sql = $pdo->prepare($sql);
+					$sql->execute();
+					$contador = $sql->rowCount(); //Pegando Quantidade de itens
+
+					echo $contador;
+			}else{
+
+			echo "Solicitação inválida";
+			
+			}
 	}
+
+	
 
 	public function editarChecklist($id){
 
