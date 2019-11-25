@@ -307,7 +307,7 @@
                                                             <!-- END ORGAN. SALA FCA -->
                                                             <!-- ORGAN. SALA SP -->
                                                             <div class="col-md-2 table-bordered">
-                                                                <div class="input-format-center">
+                                                                <div class="input-format-ceter">
                                                                     <input type="checkbox" name="org_sp" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_sp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
