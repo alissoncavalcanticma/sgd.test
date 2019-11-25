@@ -141,7 +141,7 @@
 
                                                                         <option value="<?= $user['apelido'] ?>" <?php 
                                                                             if(isset($id)){
-                                                                                if($chk['operador_sp'] == $user['apelido']){ 
+                                                                                if($chk['operador_dr'] == $user['apelido']){ 
                                                                                         echo "selected";
                                                                                     }       
                                                                             }else{
@@ -202,7 +202,7 @@
                                                                 Hora:
                                                             </div>
                                                             <!-- HORA FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div style="width: 50%; float: left">
                                                                     <label style="font-size: 12px">Entrada:</label>
                                                                     <input name="entrada_fca" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['entrada_fca'] : '' ?>">
@@ -214,7 +214,7 @@
                                                             </div>
                                                             <!-- END HORA FCA -->
                                                             <!-- HORA SP -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div style="width: 50%; float: left">
                                                                     <label style="font-size: 12px">Entrada:</label>
                                                                     <input name="entrada_sp" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['entrada_sp'] : '' ?>">
@@ -225,8 +225,20 @@
                                                                 </div>
                                                             </div>
                                                             <!-- END HORA SP -->
+                                                            <!-- HORA DR -->
+                                                            <div class="col-md-2 table-bordered">
+                                                                <div style="width: 50%; float: left">
+                                                                    <label style="font-size: 12px">Entrada:</label>
+                                                                    <input name="entrada_dr" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['entrada_dr'] : '' ?>">
+                                                                </div>
+                                                                <div style="width: 50%; float: right">
+                                                                    <label style="font-size: 12px">Saída:</label>
+                                                                    <input name="saida_dr" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['saida_dr'] : '' ?>">
+                                                                </div>
+                                                            </div>
+                                                            <!-- END HORA DR -->
                                                             <!-- HORA TR -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div style="width: 50%; float: left">
                                                                     <label style="font-size: 12px">Entrada:</label>
                                                                     <input name="entrada_tr" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['entrada_tr'] : '' ?>">
