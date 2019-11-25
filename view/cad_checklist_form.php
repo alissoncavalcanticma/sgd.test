@@ -3,7 +3,7 @@
 
                                                         <div class="row" style="margin-bottom: 7px">
                                                             
-                                                            <div class="col-md-12" style="background-color: #E9ECEF">
+                                                            <div class="col-md-11" style="background-color: #E9ECEF">
                                                             
                                                             <!-- TURNO -->
                                                                 <div class="col-md-3" style="float: left">
@@ -263,21 +263,28 @@
                                                                 Rack's:
                                                             </div>
                                                             <!-- RACK'S FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input style="line-height: 0.5; text-align: center;" type="checkbox" name="racks_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['racks_fca'] == 1 ? "checked" : ""; ?> style="padding-top: 0px">
                                                                 </div>
                                                             </div>
                                                             <!-- END RACK'S FCA -->
                                                             <!-- RACK'S SP -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="racks_sp" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['racks_sp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END RACK'S SP -->
+                                                            <!-- RACK'S DR -->
+                                                            <div class="col-md-2 table-bordered">
+                                                                <div class="input-format-center">
+                                                                    <input type="checkbox" name="racks_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['racks_sp'] == 1 ? "checked" : ""; ?>>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END RACK'S DR -->
                                                             <!-- RACK'S TR -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="racks_tr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['racks_tr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
@@ -292,21 +299,28 @@
                                                                 Organização da Sala:
                                                             </div>
                                                             <!-- ORGAN. SALA FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="org_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END ORGAN. SALA FCA -->
                                                             <!-- ORGAN. SALA SP -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="org_sp" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_sp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END ORGAN. SALA SP -->
+                                                            <!-- ORGAN. SALA DR -->
+                                                            <div class="col-md-2 table-bordered">
+                                                                <div class="input-format-center">
+                                                                    <input type="checkbox" name="org_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_sp'] == 1 ? "checked" : ""; ?>>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END ORGAN. SALA DR -->
                                                             <!-- ORGAN. SALA TR -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="org_tr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_tr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
