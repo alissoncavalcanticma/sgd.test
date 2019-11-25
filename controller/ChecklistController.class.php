@@ -188,6 +188,7 @@ class ChecklistController{
 							<th>Turno</th>
 							<th>OBS DC FCA</th>
 							<th>OBS DC SP</th>
+							<th>OBS DC DR</th>
 							<th>OBS Sala Técnica</th>
 							<th>OBS NPO</th>
 							<th>View</th>
@@ -224,6 +225,18 @@ class ChecklistController{
 									<?php
 
 										$result = explode(';', $chk['obs_sp']);
+										foreach ($result as $value) {
+											echo "<li>" . $value . "</li>";
+										}
+
+										?>
+								</ul>
+							</td>
+							<td>
+								<ul style="line-height:15px">
+									<?php
+
+										$result = explode(';', $chk['obs_dr']);
 										foreach ($result as $value) {
 											echo "<li>" . $value . "</li>";
 										}

@@ -1,5 +1,5 @@
 var pagina = 1; //página inicial - DEIXE SEMPRE 1
-var numitens = 9; //quantidade de itens a ser mostrado por página
+var numitens = 10; //quantidade de itens a ser mostrado por página
 
 $(document).ready(function() {
 
@@ -65,7 +65,7 @@ function getitens(pag, maximo) {
         type: 'GET',
         data: 'tipo=listagem&pag=' + pag + '&maximo=' + maximo + '&acao=listar',
         //url:'getitens.php',
-        url: '../controller/ResumoController.class.php',
+        url: '../controller/ChecklistController.class.php',
         success: function(retorno) {
             $('#tbody').html(retorno);
             contador() //Chamando função que conta os itens e chama o paginador
@@ -79,7 +79,7 @@ function contador() {
         type: 'GET',
         data: 'tipo=contador&acao=listar',
         //url:'getitens.php',
-        url: '../controller/ResumoController.class.php',
+        url: '../controller/ChecklistController.class.php',
         success: function(retorno_pg) {
             paginador(retorno_pg);
         }
@@ -94,15 +94,15 @@ function paginador(cont) {
 
     if (cont <= numitens) { //Verificando se há mais de uma página
 
-        $('#listarResumos').html("<tr><td><i style='color:#666666'>Apenas uma Página</><td><tr>");
+        $('#listarChecklists').html("<tr><td><i style='color:#666666'>Apenas uma Página</><td><tr>");
 
     } else {
 
-        $('#listarResumos').html('<tr class="pagination pg-blue pagination"></tr>');
+        $('#listarChecklists').html('<tr class="pagination pg-blue pagination"></tr>');
 
         if (pagina != 1) {
 
-            $('#listarResumos tr').append('<td><a  class="page-link" aria-label="Previous" href="#" onclick="getitens(' + (pagina - 1) + ', ' + numitens + ')"> << </a></td>')
+            $('#listarChecklists tr').append('<td><a  class="page-link" aria-label="Previous" href="#" onclick="getitens(' + (pagina - 1) + ', ' + numitens + ')"> << </a></td>')
         }
 
         var qtdpaginas = Math.ceil(cont / numitens); //arredondando divisão fracionada para cima
@@ -119,7 +119,7 @@ function paginador(cont) {
             }
         }*/
         if (pagina != qtdpaginas) {
-            $('#listarResumos tr').append('<td><a class="page-link" aria-label="Next" href="#" onclick="getitens(' + (pagina + 1) + ', ' + numitens + ')"> >> </a></td>')
+            $('#listarChecklists tr').append('<td><a class="page-link" aria-label="Next" href="#" onclick="getitens(' + (pagina + 1) + ', ' + numitens + ')"> >> </a></td>')
         }
         //console.log(cont);
         console.log("Chegou ao fim!");
@@ -132,7 +132,7 @@ function getPesquisa(pag, maximo, valores) {
         type: 'GET',
         data: 'tipo=listagem&pag=' + pagina + '&maximo=100&acao=listarPesquisa' + '&' + valores,
         //url:'getitens.php',
-        url: '../controller/ResumoController.class.php',
+        url: '../controller/ChecklistController.class.php',
         beforeSend: function() { //Chama o loading antes do carregamento
             loading_show();
         },
@@ -150,7 +150,7 @@ function contadorPesquisa(valores, pagina, maximo) {
         type: 'GET',
         data: 'tipo=contador&acao=listarPesquisa' + '&' + valores,
         //url:'getitens.php',
-        url: '../controller/ResumoController.class.php',
+        url: '../controller/ChecklistController.class.php',
         success: function(retorno_pg) {
             paginadorPesquisa(retorno_pg, valores, pagina, maximo)
         }
@@ -164,15 +164,15 @@ function paginadorPesquisa(cont, valores, pagina, maximo) {
     numitens = maximo;
     if (cont <= numitens) { //Verificando se há mais de uma página
 
-        $('#listarResumos').html("<tr><td><i style='color:#666666'>Apenas uma Página</i><td><tr>");
+        $('#listarChecklists').html("<tr><td><i style='color:#666666'>Apenas uma Página</i><td><tr>");
 
     } else {
 
-        $('#listarResumos').html('<tr class="pagination pg-blue pagination"></tr>');
+        $('#listarChecklists').html('<tr class="pagination pg-blue pagination"></tr>');
 
         if (pagina != 1) {
 
-            $('#listarResumos tr').append('<td><a  class="page-link" aria-label="Previous" href="#" onclick="getPesquisa(' + (pagina - 1) + ', ' + numitens + ', ' + valores + ')"> << </a></td>')
+            $('#listarChecklists tr').append('<td><a  class="page-link" aria-label="Previous" href="#" onclick="getPesquisa(' + (pagina - 1) + ', ' + numitens + ', ' + valores + ')"> << </a></td>')
         }
 
         var qtdpaginas = Math.ceil(cont / numitens); //arredondando divisão fracionada para cima
@@ -189,7 +189,7 @@ function paginadorPesquisa(cont, valores, pagina, maximo) {
         		}
         }*/
         if (pagina != qtdpaginas) {
-            $('#listarResumos tr').append('<td><a class="page-link" aria-label="Next" href="#" onclick="getPesquisa(' + (pagina + 1) + ', ' + numitens + ', ' + valores + ')"> >> </a></td>')
+            $('#listarChecklists tr').append('<td><a class="page-link" aria-label="Next" href="#" onclick="getPesquisa(' + (pagina + 1) + ', ' + numitens + ', ' + valores + ')"> >> </a></td>')
         }
         console.log(cont);
     }

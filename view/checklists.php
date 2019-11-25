@@ -70,7 +70,7 @@
 
                             <div class="jumbotron" style="padding:5px">
 
-                              <table id="listarChecklists" class='table display table-hover table-borderless table-responsive table-data3' style="display: table">
+                              <table id="listarChecklists" class='table display table-hover table-borderless table-responsive dt3' style="display: table">
                                 
                                     <div id="tbody">
                                     </div>
@@ -87,36 +87,9 @@
 
                       </div>
                   </div>
-                  <!--
-                  <script>
-                      $(document).ready(function() {
-                          $('#listarChecklists').DataTable({
-                              "order": [
-                                  [0, "desc"],
-                              ], //or asc 
-                              "columnDefs": [{
-                                  "targets": 3,
-                                  "type": "date-eu"
-                              }],
-                              "oLanguage": {
-                                  "sProcessing": "Aguarde enquanto os dados são carregados ...",
-                                  "sLengthMenu": "Mostrar _MENU_ registros por pagina",
-                                  "sZeroRecords": "Nenhum registro correspondente ao criterio encontrado",
-                                  "sInfoEmtpy": "Exibindo 0 a 0 de 0 registros",
-                                  "sInfo": "Exibindo de _START_ a _END_ de _TOTAL_ registros",
-                                  "sInfoFiltered": "",
-                                  "sSearch": "Pesquisar: ",
-                                  "oPaginate": {
-                                      "sFirst": "Primeiro",
-                                      "sPrevious": "Anterior",
-                                      "sNext": "Próximo",
-                                      "sLast": "Último"
-                                  }
-                              }
-                          });
-                      });
-                  </script>
-                    -->
+
+                  <script type="text/javascript" src="../assets/js/paginadorChecklists.js"></script>
+                  
                   <!-- RODAPÉ -->
                   <?php include_once 'rodape.php'; ?>
                   <!-- RODAPÉ -->

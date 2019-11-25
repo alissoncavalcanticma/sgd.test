@@ -46,13 +46,16 @@
                                                             <div class="col-md-3 table-bordered">
 
                                                             </div>
-                                                            <div class="col-md-3 table-bordered text-center">
+                                                            <div class="col-md-2 table-bordered text-center">
                                                                 DC FCA
                                                             </div>
-                                                            <div class="col-md-3 table-bordered text-center">
+                                                            <div class="col-md-2 table-bordered text-center">
                                                                 DC Supplier Park
                                                             </div>
-                                                            <div class="col-md-3 table-bordered text-center">
+                                                            <div class="col-md-2 table-bordered text-center">
+                                                                DC DR
+                                                            </div>
+                                                            <div class="col-md-2 table-bordered text-center">
                                                                 Sala Técnica
                                                             </div>
                                                         </div>
@@ -64,7 +67,7 @@
                                                                 <label>Operador:</label>
                                                             </div>
                                                             <!-- OPERADOR FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="">
 
                                                                     <select id="operador_fca" name="operador_fca" class="form-control input-format-center">
@@ -97,7 +100,7 @@
                                                             <!-- END OPERADOR FCA -->
 
                                                             <!-- OPERADOR SP -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="">
 
                                                                     <select id="operador_sp" name="operador_sp" class="form-control input-format-center">
@@ -126,8 +129,38 @@
                                                             </div>
                                                             <!-- END OPERADOR SP -->
 
+                                                            <!-- OPERADOR DR -->
+                                                            <div class="col-md-2 table-bordered">
+                                                                <div class="">
+
+                                                                    <select id="operador_dr" name="operador_dr" class="form-control input-format-center">
+                                                                        <option value=""></option>
+                                                        
+                                                                        <?php  foreach($userC->listaUsuarios("WHERE status = 'ativo'") as $user): 
+                                                                         ?>
+
+                                                                        <option value="<?= $user['apelido'] ?>" <?php 
+                                                                            if(isset($id)){
+                                                                                if($chk['operador_sp'] == $user['apelido']){ 
+                                                                                        echo "selected";
+                                                                                    }       
+                                                                            }else{
+                                                                                if($user['apelido'] == $_SESSION['logon']){
+                                                                                        echo "selected";
+                                                                                    }       
+                                                                            }?>>
+                                                                            <?= $user['apelido']; ?>
+                                                                        </option>
+
+                                                                        <?php  endforeach; ?>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END OPERADOR DR -->
+
                                                             <!-- OPERADOR TR -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="">
 
                                                                     <select id="operador_tr" name="operador_tr" class="form-control input-format-center">
