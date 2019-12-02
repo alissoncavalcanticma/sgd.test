@@ -334,21 +334,28 @@
                                                                 Luminárias:
                                                             </div>
                                                             <!-- LUMINARIAS FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="lumin_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['lumin_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END LUMINARIAS FCA -->
                                                             <!-- LUMINARIAS SP -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="lumin_sp" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['lumin_sp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END LUMINARIAS SP -->
+                                                            <!-- LUMINARIAS DR -->
+                                                            <div class="col-md-2 table-bordered">
+                                                                <div class="input-format-center">
+                                                                    <input type="checkbox" name="lumin_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['lumin_sp'] == 1 ? "checked" : ""; ?>>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END LUMINARIAS DR -->
                                                             <!-- LUMINARIAS TR -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="lumin_tr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['lumin_tr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
@@ -363,21 +370,28 @@
                                                                 Infra-estrutura da sala:
                                                             </div>
                                                             <!-- INFRA FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="infra_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['infra_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END INFRA FCA -->
                                                             <!-- INFRA SP -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="infra_sp" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['infra_sp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END INFRA SP -->
+                                                            <!-- INFRA DR -->
+                                                            <div class="col-md-2 table-bordered">
+                                                                <div class="input-format-center">
+                                                                    <input type="checkbox" name="infra_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['infra_sp'] == 1 ? "checked" : ""; ?>>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END INFRA DR -->
                                                             <!-- INFRA TR -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="infra_tr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['infra_tr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
@@ -392,21 +406,28 @@
                                                                 Condição de acesso:
                                                             </div>
                                                             <!-- CONDIÇÃO DE ACESSO FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="acesso_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['acesso_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END CONDIÇÃO DE ACESSO FCA -->
                                                             <!-- CONDIÇÃO DE ACESSO SP -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="acesso_sp" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['acesso_sp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END CONDIÇÃO DE ACESSO SP -->
+                                                            <!-- END CONDIÇÃO DE ACESSO DR -->
+                                                            <!-- CONDIÇÃO DE ACESSO SP -->
+                                                            <div class="col-md-2 table-bordered">
+                                                                <div class="input-format-center">
+                                                                    <input type="checkbox" name="acesso_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['acesso_sp'] == 1 ? "checked" : ""; ?>>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END CONDIÇÃO DE ACESSO DR -->
                                                             <!-- CONDIÇÃO DE ACESSO TR-->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="acesso_tr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['acesso_tr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
@@ -420,20 +441,27 @@
                                                                 Porta corta fogo:
                                                             </div>
                                                             <!-- PT CORTA FOGO FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="portacf_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['portacf_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END PT CORTA FOGO FCA-->
                                                             <!-- PT CORTA FOGO SP-->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="portacf_sp" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['portacf_sp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END PT CORTA FOGO SP-->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <!-- PT CORTA FOGO DR-->
+                                                            <div class="col-md-2 table-bordered">
+                                                                <div class="input-format-center">
+                                                                    <input type="checkbox" name="portacf_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['portacf_sp'] == 1 ? "checked" : ""; ?>>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END PT CORTA FOGO DR-->
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!-- -->
                                                             </div>
                                                         </div>
@@ -444,21 +472,28 @@
                                                                 Ar-condicionados:
                                                             </div>
                                                             <!-- AR-CONDICIONADOS FCA-->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="arc_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['arc_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END AR-CONDICIONADOS FCA -->
                                                             <!-- AR-CONDICIONADOS SP -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="arc_sp" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['arc_sp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END AR-CONDICIONADOS SP -->
+                                                            <!-- AR-CONDICIONADOS DR -->
+                                                            <div class="col-md-2 table-bordered">
+                                                                <div class="input-format-center">
+                                                                    <input type="checkbox" name="arc_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['arc_sp'] == 1 ? "checked" : ""; ?>>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END AR-CONDICIONADOS DR -->
                                                             <!-- AR-CONDICIONADOS TR -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="arc_tr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['arc_tr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
@@ -473,21 +508,28 @@
                                                                 Sistema / Extintores de incêndio:
                                                             </div>
                                                             <!-- SISTEMA / EXTINTORES DE INCÊNDIO FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="sist_extint_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['sist_extint_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END SISTEMA / EXTINTORES DE INCÊNDIO FCA -->
                                                             <!-- SISTEMA / EXTINTORES DE INCÊNDIO SP -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="sist_extint_sp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['sist_extint_sp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END SISTEMA / EXTINTORES DE INCÊNDIO SP -->
+                                                            <!-- SISTEMA / EXTINTORES DE INCÊNDIO DR -->
+                                                            <div class="col-md-2 table-bordered">
+                                                                <div class="input-format-center">
+                                                                    <input type="checkbox" name="sist_extint_dr" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['sist_extint_sp'] == 1 ? "checked" : ""; ?>>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END SISTEMA / EXTINTORES DE INCÊNDIO DR -->
                                                             <!-- SISTEMA / EXTINTORES DE INCÊNDIO TR -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="sist_extint_tr" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['sist_extint_tr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
@@ -502,16 +544,23 @@
                                                                 Led de Saúde:
                                                             </div>
                                                             <!-- LED SAUDE FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="ledsaude_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['ledsaude_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END LED SAUDE FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 
                                                             </div>
-                                                            <div class="col-md-3 table-bordered">
+                                                            <!-- LED SAUDE DR -->
+                                                            <div class="col-md-2 table-bordered">
+                                                                <div class="input-format-center">
+                                                                    <input type="checkbox" name="ledsaude_dr" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['ledsaude_fca'] == 1 ? "checked" : ""; ?>>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END LED SAUDE DR -->
+                                                            <div class="col-md-2 table-bordered">
                                                                 
                                                             </div>
                                                         </div>
