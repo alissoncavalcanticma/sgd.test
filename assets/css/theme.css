@@ -13495,3 +13495,23 @@ section {
 .jumbFormAccess {
     padding: 15px !important;
 }
+
+
+/* regras input */
+
+input[type=time]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=time] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.form-control[type=time] {
+    padding: 0px;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 0.5rem;
+}
