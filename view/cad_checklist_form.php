@@ -3,10 +3,10 @@
 
                                                         <div class="row" style="margin-bottom: 7px">
                                                             
-                                                            <div class="col-md-11" style="background-color: #E9ECEF">
+                                                            <div class="col-md-12" style="background-color: #E9ECEF">
                                                             
                                                             <!-- TURNO -->
-                                                                <div class="col-md-3" style="float: left">
+                                                                <div class="col-md-4" style="float: left">
                                                                     <select style="background-color: #E9ECEF; font-weight: bold; font-size: 14px; border: 0px" name="turno" class="form-control text-center"  required oninvalid="setCustomValidity('Selecione o turno')" onchange="try{setCustomValidity('')}catch(e){}">
 
                                                                             <option value="">Selecione o turno...</option>
@@ -43,7 +43,7 @@
                                                         <!-- TITLE DC'S -->
                                                         <div class="row" style="text-align: center; background-color: #E9ECEF">
 
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
 
                                                             </div>
                                                             <div class="col-md-2 table-bordered text-center">
@@ -63,7 +63,7 @@
 
                                                         <!-- OPERADOR -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 <label>Operador:</label>
                                                             </div>
                                                             <!-- OPERADOR FCA -->
@@ -197,54 +197,54 @@
                                                         <!-- END OPERADOR -->
                                                        
                                                        <!-- HORA -->
-                                                        <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                        <div class="row" style="padding-bottom:5px">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Hora:
                                                             </div>
                                                             <!-- HORA FCA -->
-                                                            <div class="col-md-2 table-bordered">
-                                                                <div style="width: 50%; float: left">
-                                                                    <label style="font-size: 12px">Entrada:</label>
+                                                            <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
+                                                                <div style="width: 50%; float: left; text-align: center">
+                                                                    <label style="font-size: 13px">Entrada:</label>
                                                                     <input name="entrada_fca" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['entrada_fca'] : '' ?>">
                                                                 </div>
-                                                                <div style="width: 50%; float: right">
-                                                                    <label style="font-size: 12px">Saída:</label>
+                                                                <div style="width: 50%; float: right; text-align: center">
+                                                                    <label style="font-size: 13px">Saída:</label>
                                                                     <input name="saida_fca" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['saida_fca'] : '' ?>">
                                                                 </div>
                                                             </div>
                                                             <!-- END HORA FCA -->
                                                             <!-- HORA SP -->
-                                                            <div class="col-md-2 table-bordered">
-                                                                <div style="width: 50%; float: left">
-                                                                    <label style="font-size: 12px">Entrada:</label>
+                                                            <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
+                                                                <div style="width: 50%; float: left; text-align: center">
+                                                                    <label style="font-size: 13px">Entrada:</label>
                                                                     <input name="entrada_sp" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['entrada_sp'] : '' ?>">
                                                                 </div>
-                                                                <div style="width: 50%; float: right">
-                                                                    <label style="font-size: 12px">Saída:</label>
+                                                                <div style="width: 50%; float: right; text-align: center">
+                                                                    <label style="font-size: 13px">Saída:</label>
                                                                     <input name="saida_sp" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['saida_sp'] : '' ?>">
                                                                 </div>
                                                             </div>
                                                             <!-- END HORA SP -->
                                                             <!-- HORA DR -->
-                                                            <div class="col-md-2 table-bordered">
-                                                                <div style="width: 50%; float: left">
-                                                                    <label style="font-size: 12px">Entrada:</label>
+                                                            <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
+                                                                <div style="width: 50%; float: left; text-align: center">
+                                                                    <label style="font-size: 13px">Entrada:</label>
                                                                     <input name="entrada_dr" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['entrada_dr'] : '' ?>">
                                                                 </div>
-                                                                <div style="width: 50%; float: right">
-                                                                    <label style="font-size: 12px">Saída:</label>
+                                                                <div style="width: 50%; float: right; text-align: center">
+                                                                    <label style="font-size: 13px">Saída:</label>
                                                                     <input name="saida_dr" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['saida_dr'] : '' ?>">
                                                                 </div>
                                                             </div>
                                                             <!-- END HORA DR -->
                                                             <!-- HORA TR -->
-                                                            <div class="col-md-2 table-bordered">
-                                                                <div style="width: 50%; float: left">
-                                                                    <label style="font-size: 12px">Entrada:</label>
+                                                            <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
+                                                                <div style="width: 50%; float: left; text-align: center">
+                                                                    <label style="font-size: 13px">Entrada:</label>
                                                                     <input name="entrada_tr" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['entrada_tr'] : '' ?>">
                                                                 </div>
-                                                                <div style="width: 50%; float: right">
-                                                                    <label style="font-size: 12px">Saída:</label>
+                                                                <div style="width: 50%; float: right; text-align: center">
+                                                                    <label style="font-size: 13px">Saída:</label>
                                                                     <input name="saida_tr" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['saida_tr'] : '' ?>">
                                                                 </div>
                                                             </div>
@@ -259,7 +259,7 @@
 
                                                         <!-- RACK'S -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Rack's:
                                                             </div>
                                                             <!-- RACK'S FCA -->
@@ -295,7 +295,7 @@
 
                                                         <!-- ORGAN. SALA -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Organização da Sala:
                                                             </div>
                                                             <!-- ORGAN. SALA FCA -->
@@ -330,7 +330,7 @@
                                                         <!-- END ORGAN. SALA -->
                                                         <!-- LUMINARIAS -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Luminárias:
                                                             </div>
                                                             <!-- LUMINARIAS FCA -->
@@ -366,7 +366,7 @@
                                                         
                                                         <!-- INFRA -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Infra-estrutura da sala:
                                                             </div>
                                                             <!-- INFRA FCA -->
@@ -402,7 +402,7 @@
 
                                                         <!-- CONDIÇÃO DE ACESSO -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Condição de acesso:
                                                             </div>
                                                             <!-- CONDIÇÃO DE ACESSO FCA -->
@@ -437,7 +437,7 @@
                                                         <!-- END CONDIÇÃO DE ACESSO -->
                                                         <!-- PT CORTA FOGO -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Porta corta fogo:
                                                             </div>
                                                             <!-- PT CORTA FOGO FCA -->
@@ -468,7 +468,7 @@
                                                         <!-- END PT CORTA FOGO -->
                                                         <!-- AR-CONDICIONADOS -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Ar-condicionados:
                                                             </div>
                                                             <!-- AR-CONDICIONADOS FCA-->
@@ -504,7 +504,7 @@
                                                         
                                                         <!-- SISTEMA/EXTINTORES INCÊNDIO -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Sistema / Extintores de incêndio:
                                                             </div>
                                                             <!-- SISTEMA / EXTINTORES DE INCÊNDIO FCA -->
@@ -540,7 +540,7 @@
 
                                                         <!-- LED SAUDE -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Led de Saúde:
                                                             </div>
                                                             <!-- LED SAUDE FCA -->
@@ -572,10 +572,10 @@
 
                                                         <!-- TEMPERATURA 1  -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 TEMP. 1 / HUMID. 1:
                                                             </div>
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!-- TEMPERATURA FCA 01  -->
                                                                 <div style="width: 50%; float: left">
                                                                     
@@ -590,7 +590,7 @@
                                                                 <!-- END HUMIDADE FCA 01 -->
                                                             </div>
 
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!-- TEMPERATURA SP 01  -->
                                                                 <div style="width: 50%; float: left">
                                                                     
@@ -605,7 +605,20 @@
                                                                 <!-- END HUMIDADE SP 01  -->
                                                             </div>
                                                             <!--  -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
+                                                                <!--
+                                                                <div style="width: 50%; float: left">
+                                                                    
+                                                                    <input name="entrada" type="number" class="form-control input-format-center" value="">
+                                                                </div>
+                                                                <div style="width: 50%; float: right">
+                                                                    
+                                                                    <input name="saida" type="number" class="form-control input-format-center" value="">
+                                                                </div>
+                                                                -->
+                                                            </div>
+                                                            <!--  -->
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!--
                                                                 <div style="width: 50%; float: left">
                                                                     
@@ -625,10 +638,10 @@
 
                                                         <!-- TEMPERATURA 2  -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 TEMP. 2 / HUMID. 2:
                                                             </div>
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!-- TEMPERATURA FCA 02  -->
                                                                 <div style="width: 50%; float: left">
                                                                     
@@ -643,7 +656,7 @@
                                                                 <!-- END HUMIDADE FCA 02 -->
                                                             </div>
 
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!-- TEMPERATURA SP 02 -->
                                                                 <div style="width: 50%; float: left">
                                                                     
@@ -658,7 +671,20 @@
                                                                 <!-- END HUMIDADE SP 02  -->
                                                             </div>
                                                             <!--  -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
+                                                                <!--
+                                                                <div style="width: 50%; float: left">
+                                                                    
+                                                                    <input name="entrada" type="number" class="form-control input-format-center" value="">
+                                                                </div>
+                                                                <div style="width: 50%; float: right">
+                                                                    
+                                                                    <input name="saida" type="number" class="form-control input-format-center" value="">
+                                                                </div>
+                                                                -->
+                                                            </div>
+                                                            <!--  -->
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!--
                                                                 <div style="width: 50%; float: left">
                                                                     
@@ -677,10 +703,10 @@
 
                                                         <!-- TEMPERATURA 3  -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 TEMP. 3 / HUMID. 3:
                                                             </div>
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!-- TEMPERATURA FCA 03  -->
                                                                 <div style="width: 50%; float: left">
                                                                     
@@ -695,7 +721,7 @@
                                                                 <!-- END HUMIDADE FCA 03 -->
                                                             </div>
 
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!-- TEMPERATURA SP 03 -->
                                                                 <div style="width: 50%; float: left">
                                                                     
@@ -710,7 +736,19 @@
                                                                 <!-- END HUMIDADE SP 03 -->
                                                             </div>
                                                             <!--  -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
+                                                                <!--
+                                                                <div style="width: 50%; float: left">
+                                                                    
+                                                                    <input name="entrada" type="number" class="form-control input-format-center" value="">
+                                                                </div>
+                                                                <div style="width: 50%; float: right">
+                                                                    
+                                                                    <input name="saida" type="number" class="form-control input-format-center" value="">
+                                                                </div>
+                                                                -->
+                                                            </div>
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!--
                                                                 <div style="width: 50%; float: left">
                                                                     
@@ -731,25 +769,28 @@
 
                                                         <!-- CAPACIDADE DA UPS  -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Capacidade da UPS:
                                                             </div>
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!-- 
                                                                 -->
                                                             </div>
 
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
+                                                                <!-- 
+                                                                -->
+                                                            </div>
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!-- 
                                                                 -->
                                                             </div>
                                                             <!-- CAPACIDADE UPS TR -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <div style="width: 50%; margin:auto">
+                                                                    <div style="width: 80%; margin:auto">
                                                                     
                                                                         <input name="cap_ups_tr" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['cap_ups_tr'] : '' ?>">
-
 
                                                                     </div>
                                                                 </div>
@@ -766,24 +807,30 @@
                                                         </div>
                                                         <!-- LUMINÁRIAS SC -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Luminárias:
                                                             </div>
                                                             <!-- LUMINÁRIAS SALA CIRCULAÇÃO FCA  -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="lumin_sc_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['lumin_sc_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END LUMINÁRIAS SALA CIRCULAÇÃO FCA  -->
 
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!--<div class="input-format-center">
                                                                     <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
                                                                 </div>
                                                                  -->
                                                             </div>
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
+                                                                <!--<div class="input-format-center">
+                                                                    <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
+                                                                </div>
+                                                                 -->
+                                                            </div>
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!--
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
@@ -794,24 +841,30 @@
                                                         <!-- END LUMINÁRIAS SC -->
                                                         <!-- PORTA CORTA FOGO SC -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Porta corta fogo:
                                                             </div>
                                                             <!-- PORTA CORTA FOGO SALA CIRCULAÇÃO FCA  -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="portacf_sc_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['portacf_sc_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END PORTA CORTA FOGO SALA CIRCULAÇÃO FCA  -->
 
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!--<div class="input-format-center">
                                                                     <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
                                                                 </div>
                                                                  -->
                                                             </div>
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
+                                                                <!--<div class="input-format-center">
+                                                                    <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
+                                                                </div>
+                                                                 -->
+                                                            </div>
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!--
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
@@ -823,24 +876,30 @@
 
                                                         <!-- CONDIÇÃO DE ACESSO SALA CIRC. FCA -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Condição de acesso:
                                                             </div>
                                                             <!-- CONDIÇÃO DE ACESSO SALA CIRC. FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="acesso_sc_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['acesso_sc_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END CONDIÇÃO DE ACESSO SALA CIRC. FCA -->
 
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!--<div class="input-format-center">
                                                                     <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
                                                                 </div>
                                                                  -->
                                                             </div>
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
+                                                                <!--<div class="input-format-center">
+                                                                    <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
+                                                                </div>
+                                                                 -->
+                                                            </div>
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!--
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
@@ -860,24 +919,31 @@
 
                                                         <!-- GERADORES -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Geradores:
                                                             </div>
                                                             <!-- GERADORES FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="geradores_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['geradores_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END GERADORES FCA -->
                                                             <!-- GERADORES SP -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="geradores_sp" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['geradores_sp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END GERADORES FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
+                                                                <!--
+                                                                <div class="input-format-center">
+                                                                    <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
+                                                                </div>
+                                                                -->
+                                                            </div>
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!--
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
@@ -889,25 +955,32 @@
 
                                                         <!-- ORG EXTERNA -->
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 Organização externa:
                                                             </div>
                                                             <!-- ORG EXTERNA FCA -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="org_ext_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_ext_fca'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END ORG EXTERNA FCA -->
                                                             <!-- ORG EXTERNA SP -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="org_ext_sp" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_ext_sp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END ORG EXTERNA SP -->
+                                                            <!-- ORG EXTERNA DR -->
+                                                            <div class="col-md-2 table-bordered">
+                                                                <div class="input-format-center">
+                                                                    <input type="checkbox" name="org_ext_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_ext_sp'] == 1 ? "checked" : ""; ?>>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END ORG EXTERNA DR -->
                                                             <!-- ORG EXTERNA TR -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="org_ext_tr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_ext_tr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
@@ -925,24 +998,31 @@
                                                         </div>
 
                                                         <div class="row">
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-4 table-bordered">
                                                                 ZABBIX:
                                                             </div>
                                                             <!-- ZABBIX -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="zabbix" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['zabbix'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- ZABBIX -->
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!--
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
                                                                 </div>
                                                                 -->
                                                             </div>
-                                                            <div class="col-md-3 table-bordered">
+                                                            <div class="col-md-2 table-bordered">
+                                                                <!--
+                                                                <div class="input-format-center">
+                                                                    <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
+                                                                </div>
+                                                                -->
+                                                            </div>
+                                                            <div class="col-md-2 table-bordered">
                                                                 <!--
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger">
@@ -956,9 +1036,7 @@
                                                         <!-- OBS CHECKLIST -->
                                                         <!-- OBS CHECKLIST FCA -->
                                                         <div class="row table-bordered">
-                                                            <p style="text-align: center; width: 100%; background-color: #E9ECEF; color: #666666">
-                                                                OBS CHECKLIST DC FCA
-                                                            </p>
+                                                            <p style="text-align: center; width: 100%; background-color: #E9ECEF; color: #666666">OBS CHECKLIST DC FCA</p>
                                                         </div>
 
                                                         <div class="row table-bordered">
