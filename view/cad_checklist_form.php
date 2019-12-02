@@ -1054,6 +1054,16 @@
                                                                 <textarea name="obs_sp" id="textarea-input" placeholder="Detalhamento das observações de checklist do DC SP" class="form-control form-control-textarea" style="width: 100%"><?= $chk['obs_sp']; ?></textarea>
                                                         </div>
                                                         <!-- END OBS CHECKLIST SP -->
+                                                        <!-- OBS CHECKLIST DR -->
+                                                        <div class="row table-bordered">
+                                                            <p style="text-align: center; width: 100%; background-color: #E9ECEF; color: #666666">OBS CHECKLIST DC DR</p>
+                                                        </div>
+
+                                                        <div class="row table-bordered">
+
+                                                                <textarea name="obs_dr" id="textarea-input" placeholder="Detalhamento das observações de checklist do DC DR" class="form-control form-control-textarea" style="width: 100%"><?= $chk['obs_sp']; ?></textarea>
+                                                        </div>
+                                                        <!-- END OBS CHECKLIST DR -->
                                                         <!-- OBS CHECKLIST TR -->
                                                         <div class="row table-bordered">
                                                             <p style="text-align: center; width: 100%; background-color: #E9ECEF; color: #666666">OBS CHECKLIST SALA TÉCNICA</p>
