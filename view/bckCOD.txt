@@ -24,19 +24,19 @@
 </select>
 
 
-operador_dr X
-entrada_dr X
-saida_dr X
-racks_dr X
-org_dr X
-lumin_dr X
-infra_dr X
-acesso_dr X
-portacf_dr X
-arc_dr X
-sist_extint_dr X
-ledsaude_dr X
-temp_dr X
-humid_dr X
-org_ext_dr X
-obs_dr X 
+operador_dr
+entrada_dr
+saida_dr
+racks_dr
+org_dr
+lumin_dr
+infra_dr
+acesso_dr
+portacf_dr
+arc_dr
+sist_extint_dr
+ledsaude_dr
+temp_dr
+humid_dr
+org_ext_dr
+obs_dr
