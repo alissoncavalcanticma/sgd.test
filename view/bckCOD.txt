@@ -40,3 +40,71 @@ temp_dr
 humid_dr
 org_ext_dr
 obs_dr
+
+'operador_dr'
+'entrada_dr'
+'saida_dr'
+'racks_dr'
+'org_dr'
+'lumin_dr'
+'infra_dr'
+'acesso_dr'
+'portacf_dr'
+'arc_dr'
+'sist_extint_dr'
+'ledsaude_dr'
+'temp_dr'
+'humid_dr'
+'org_ext_dr'
+'obs_dr'
+
+$operador_dr;
+$entrada_dr;
+$saida_dr;
+$racks_dr;
+$org_dr;
+$lumin_dr;
+$infra_dr;
+$acesso_dr;
+$portacf_dr;
+$arc_dr;
+$sist_extint_dr;
+$ledsaude_dr;
+$temp_dr;
+$humid_dr;
+$org_ext_dr;
+$obs_dr;
+
+$this->operador_dr = operador_dr;
+$this->entrada_dr = entrada_dr;
+$this->saida_dr = saida_dr;
+$this->racks_dr = racks_dr;
+$this->org_dr = org_dr;
+$this->lumin_dr = lumin_dr;
+$this->infra_dr = infra_dr;
+$this->acesso_dr = acesso_dr;
+$this->portacf_dr = portacf_dr;
+$this->arc_dr = arc_dr;
+$this->sist_extint_dr = sist_extint_dr;
+$this->ledsaude_dr = ledsaude_dr;
+$this->temp_dr = temp_dr;
+$this->humid_dr = humid_dr;
+$this->org_ext_dr = org_ext_dr;
+$this->obs_dr = obs_dr;
+
+'$this->operador_dr'
+'$this->entrada_dr'
+'$this->saida_dr'
+'$this->racks_dr'
+'$this->org_dr'
+'$this->lumin_dr'
+'$this->infra_dr'
+'$this->acesso_dr'
+'$this->portacf_dr'
+'$this->arc_dr'
+'$this->sist_extint_dr'
+'$this->ledsaude_dr'
+'$this->temp_dr'
+'$this->humid_dr'
+'$this->org_ext_dr'
+'$this->obs_dr'
