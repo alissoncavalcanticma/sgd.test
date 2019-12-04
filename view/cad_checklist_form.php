@@ -606,16 +606,18 @@
                                                             </div>
                                                             <!--  -->
                                                             <div class="col-md-2 table-bordered">
-                                                                <!--
+                                                                <!-- TEMPERATURA DR 01 -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input name="entrada" type="number" class="form-control input-format-center" value="">
+                                                                    <input name="temp01_dr" type="number" class="form-control input-format-center" value="">
                                                                 </div>
+                                                                <!-- END TEMPERATURA DR 01 -->
+                                                                <!-- HUMIDADE DR 01 -->
                                                                 <div style="width: 50%; float: right">
                                                                     
-                                                                    <input name="saida" type="number" class="form-control input-format-center" value="">
+                                                                    <input name="humid01_dr" type="number" class="form-control input-format-center" value="">
                                                                 </div>
-                                                                -->
+                                                                <!-- END HUMIDADE DR 01 -->
                                                             </div>
                                                             <!--  -->
                                                             <div class="col-md-2 table-bordered">

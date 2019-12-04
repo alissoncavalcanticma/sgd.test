@@ -79,6 +79,12 @@ ul {
     margin: 0;
 }
 
+ol {
+    counter-reset: item;
+    margin: 0 0 1.5em;
+    padding: 0;
+}
+
 button,
 input[type='button'] {
     cursor: pointer;
@@ -13434,6 +13440,11 @@ section {
     padding-left: 10px;
 }
 
+.tab-chk {
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
 .dt3 thead {
     background-color: #1376C6;
     color: #fff;
@@ -13497,7 +13508,7 @@ section {
 }
 
 
-/* regras input */
+/* regras input type time */
 
 input[type=time]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -13514,4 +13525,21 @@ input[type=time] {
     font-weight: bold;
     text-align: center;
     padding-left: 0.5rem;
+}
+
+
+/* regras input type number */
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.form-control[type=number] {
+    font-weight: bold;
+    text-align: center;
 }

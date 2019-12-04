@@ -178,19 +178,19 @@ class ChecklistController{
 				//return $checklist->getChecks();
 
 				?>
-					<table class="table display table-striped table-condensed table-borderless table-responsive dt3 minha-tabela" style="font-size: 13px; width: 100%">
+					<table class="table display table-striped table-condensed table-borderless table-responsive dt3 tab-chk minha-tabela" style="font-size: 13px; width: 100%">
 						<thead>
 						<tr>
 							<!--TH hidden para ordenação -->
 							<!-- <th style="display:none;">ID</th> -->
-							<th>ID</th>
-							<th>Data</th>
-							<th>Turno</th>
-							<th>OBS DC FCA</th>
-							<th>OBS DC SP</th>
-							<th>OBS DC DR</th>
-							<th>OBS Sala Técnica</th>
-							<th>OBS NPO</th>
+							<!--<th>ID</th>-->
+							<th style="min-width:50px">Data</th>
+							<th style="min-width:50px">Turno</th>
+							<th style="min-width:180px">OBS DC FCA</th>
+							<th style="min-width:180px">OBS DC SP</th>
+							<th style="min-width:180px">OBS DC DR</th>
+							<th style="min-width:180px">OBS Sala Técnica</th>
+							<th style="min-width:130px">OBS NPO</th>
 							<th>View</th>
 						</tr>
 					</thead>
@@ -205,11 +205,11 @@ class ChecklistController{
 				?>
 
 					<tr class="col-md-12">
-							<td style="font-weight: bold"><?= $chk['id'] ?></td>
-							<td style="font-weight: bold"><?= date('d/m/Y', strtotime($chk['data'])); ?></td>
+							<!--<td style="font-weight: bold"><?php //echo $chk['id'] ?></td>-->
+							<td style="font-weight: bold; padding-right: 0px; padding-left: 8px"><?= date('d/m/Y', strtotime($chk['data'])); ?></td>
 							<td style="font-weight: bold"><?= $chk['turno']; ?></td>
 							<td>
-								<ul style="line-height:15px">
+								<ol style="line-height:15px">
 									<?php
 
 										$result = explode(';', $chk['obs_fca']);
@@ -218,10 +218,10 @@ class ChecklistController{
 										}
 
 										?>
-								</ul>
+								</ol>
 							</td>
-							<td>
-								<ul style="line-height:15px">
+							<td style="padding-right:15px; padding-left: 15px">
+								<ol style="line-height:15px">
 									<?php
 
 										$result = explode(';', $chk['obs_sp']);
@@ -230,10 +230,10 @@ class ChecklistController{
 										}
 
 										?>
-								</ul>
+								</ol>
 							</td>
-							<td>
-								<ul style="line-height:15px">
+							<td style="padding-right:15px; padding-left: 15px">
+								<ol style="line-height:15px">
 									<?php
 
 										$result = explode(';', $chk['obs_dr']);
@@ -242,10 +242,10 @@ class ChecklistController{
 										}
 
 										?>
-								</ul>
+								</ol>
 							</td>
-							<td>
-								<ul style="line-height:15px">
+							<td style="padding-right:15px; padding-left: 15px">
+								<ol style="line-height:15px">
 									<?php
 
 										$result = explode(';', $chk['obs_tr']);
@@ -254,10 +254,10 @@ class ChecklistController{
 										}
 
 										?>
-								</ul>
+								</ol>
 							</td>
 							<td>
-								<ul style="line-height:15px">
+								<ol style="line-height:15px">
 									<?php
 
 										$result = explode(';', $chk['obs_npo']);
@@ -266,9 +266,9 @@ class ChecklistController{
 										}
 
 										?>
-								</ul>
+								</ol>
 							</td>
-							<td style="margin:2px; padding-left: 5px; padding-right: 10px">
+							<td style="margin:2px; padding-left: 5px; padding-right: 5px">
 								<div>
 									<div style="width: 50%">
 										<a href="cad_checklist.php?id=<?= $chk['id']; ?>">
