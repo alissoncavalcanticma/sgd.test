@@ -138,6 +138,26 @@ class ChecklistController{
 			isset($_GET['chk_batcel']) ? $chk_batcel = addslashes($_GET['chk_batcel']) : $chk_batcel = "0";
 			isset($_GET['obs_npo']) ? $obs_npo = addslashes($_GET['obs_npo']) : $obs_npo = "0";
 
+			
+			/**INC DC DR */
+			
+			$operador_dr = addslashes($_GET['operador_dr']);
+			$entrada_dr = addslashes($_GET['entrada_dr']);
+			$saida_dr = addslashes($_GET['saida_dr']);
+			isset($_GET['racks_dr']) ? $racks_dr = addslashes($_GET['racks_dr']) : $racks_dr = "0";
+			isset($_GET['org_dr']) ? $org_dr = addslashes($_GET['org_dr']) : $org_dr = "0";
+			isset($_GET['lumin_dr']) ? $lumin_dr = addslashes($_GET['lumin_dr']) : $lumin_dr = "0";
+			isset($_GET['infra_dr']) ? $infra_dr = addslashes($_GET['infra_dr']) : $infra_dr = "0";
+			isset($_GET['acesso_dr']) ? $acesso_dr = addslashes($_GET['acesso_dr']) : $acesso_dr = "0";
+			isset($_GET['portacf_dr']) ? $portacf_dr = addslashes($_GET['portacf_dr']) : $portacf_dr = "0";
+			isset($_GET['arc_dr']) ? $arc_dr = addslashes($_GET['arc_dr']) : $arc_dr = "0";
+			isset($_GET['sist_extint_dr']) ? $sist_extint_dr = addslashes($_GET['sist_extint_dr']) : $sist_extint_dr = "0";
+			isset($_GET['ledsaude_dr']) ? $ledsaude_dr = addslashes($_GET['ledsaude_dr']) : $ledsaude_dr = "0";
+			isset($_GET['temp_dr']) ? $temp_dr = addslashes($_GET['temp_dr']) : $temp_dr = "0";
+			isset($_GET['humid_dr']) ? $humid_dr = addslashes($_GET['humid_dr']) : $humid_dr = "0";
+			isset($_GET['org_ext_dr']) ? $org_ext_dr = addslashes($_GET['org_ext_dr']) : $org_ext_dr = "0";
+			isset($_GET['obs_dr']) ? $obs_dr = addslashes($_GET['obs_dr']) : $obs_dr = "0";
+
 
 			$pdo = new Conexao();
 			$checklist = new Checklist($pdo);
@@ -153,7 +173,10 @@ class ChecklistController{
                                 $temp03_sp, $humid03_sp, $cap_ups_tr, $lumin_sc_fca, $portacf_sc_fca,
                                 $acesso_sc_fca, $geradores_fca, $geradores_sp, $org_ext_fca, $org_ext_sp,
                                 $org_ext_tr, $zabbix, $obs_fca, $obs_sp, $obs_tr, $chk_carro, $chk_sala,
-                                $chk_not, $chk_cel, $chk_batcel, $obs_npo);
+								$chk_not, $chk_cel, $chk_batcel, $obs_npo, 
+								$operador_dr, $entrada_dr,$saida_dr, $racks_dr, $org_dr, $lumin_dr, $infra_dr, 
+								$acesso_dr, $portacf_dr, $arc_dr, $sist_extint_dr, $ledsaude_dr, $temp_dr,
+                                $humid_dr, $org_ext_dr, $obs_dr);
 
 	}
 
