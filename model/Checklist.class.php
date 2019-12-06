@@ -1639,8 +1639,7 @@ class Checklist{
         '$this->chk_cel',
         '$this->chk_batcel',
         '$this->obs_npo',
-
-        '$this->operador_dr',
+        '$this->operador_dr',/**Início DR */
         '$this->entrada_dr',
         '$this->saida_dr',
         '$this->racks_dr',
@@ -1655,7 +1654,7 @@ class Checklist{
         '$this->temp_dr',
         '$this->humid_dr',
         '$this->org_ext_dr',
-        '$this->obs_dr',
+        '$this->obs_dr'
     )";
 
         $sql = $this->pdo->prepare($sql);
