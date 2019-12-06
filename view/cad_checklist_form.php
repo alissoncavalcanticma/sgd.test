@@ -279,7 +279,7 @@
                                                             <!-- RACK'S DR -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="racks_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['racks_sp'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="racks_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['racks_dr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END RACK'S DR -->
@@ -315,7 +315,7 @@
                                                             <!-- ORGAN. SALA DR -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="org_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_sp'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="org_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_dr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END ORGAN. SALA DR -->
@@ -350,7 +350,7 @@
                                                             <!-- LUMINARIAS DR -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="lumin_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['lumin_sp'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="lumin_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['lumin_dr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END LUMINARIAS DR -->
@@ -386,7 +386,7 @@
                                                             <!-- INFRA DR -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="infra_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['infra_sp'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="infra_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['infra_dr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END INFRA DR -->
@@ -422,7 +422,7 @@
                                                             <!-- CONDIÇÃO DE ACESSO SP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="acesso_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['acesso_sp'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="acesso_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['acesso_dr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END CONDIÇÃO DE ACESSO DR -->
@@ -457,7 +457,7 @@
                                                             <!-- PT CORTA FOGO DR-->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="portacf_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['portacf_sp'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="portacf_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['portacf_dr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END PT CORTA FOGO DR-->
@@ -488,7 +488,7 @@
                                                             <!-- AR-CONDICIONADOS DR -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="arc_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['arc_sp'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="arc_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['arc_dr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END AR-CONDICIONADOS DR -->
@@ -524,7 +524,7 @@
                                                             <!-- SISTEMA / EXTINTORES DE INCÊNDIO DR -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="sist_extint_dr" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['sist_extint_sp'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="sist_extint_dr" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['sist_extint_dr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END SISTEMA / EXTINTORES DE INCÊNDIO DR -->
@@ -556,7 +556,7 @@
                                                             <!-- LED SAUDE DR -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="ledsaude_dr" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['ledsaude_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="ledsaude_dr" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['ledsaude_dr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END LED SAUDE DR -->
@@ -609,13 +609,13 @@
                                                                 <!-- TEMPERATURA DR 01 -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input name="temp01_dr" type="number" class="form-control input-format-center" value="">
+                                                                    <input name="temp_dr" type="number" class="form-control input-format-center" value="">
                                                                 </div>
                                                                 <!-- END TEMPERATURA DR 01 -->
                                                                 <!-- HUMIDADE DR 01 -->
                                                                 <div style="width: 50%; float: right">
                                                                     
-                                                                    <input name="humid01_dr" type="number" class="form-control input-format-center" value="">
+                                                                    <input name="humid_dr" type="number" class="form-control input-format-center" value="">
                                                                 </div>
                                                                 <!-- END HUMIDADE DR 01 -->
                                                             </div>
@@ -977,7 +977,7 @@
                                                             <!-- ORG EXTERNA DR -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="org_ext_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_ext_sp'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="org_ext_dr" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_ext_dr'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
                                                             <!-- END ORG EXTERNA DR -->
@@ -1063,7 +1063,7 @@
 
                                                         <div class="row table-bordered">
 
-                                                                <textarea name="obs_dr" id="textarea-input" placeholder="Detalhamento das observações de checklist do DC DR" class="form-control form-control-textarea" style="width: 100%"><?= $chk['obs_sp']; ?></textarea>
+                                                                <textarea name="obs_dr" id="textarea-input" placeholder="Detalhamento das observações de checklist do DC DR" class="form-control form-control-textarea" style="width: 100%"><?= $chk['obs_dr']; ?></textarea>
                                                         </div>
                                                         <!-- END OBS CHECKLIST DR -->
                                                         <!-- OBS CHECKLIST TR -->
