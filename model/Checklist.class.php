@@ -1481,11 +1481,14 @@ class Checklist{
                                 $acesso_sc_fca, $geradores_fca, $geradores_sp, $org_ext_fca, $org_ext_sp,
                                 $org_ext_tr, $zabbix, $obs_fca, $obs_sp, $obs_tr, $chk_carro, $chk_sala,
                                 $chk_not, $chk_cel, $chk_batcel, $obs_npo, 
-                                $operador_dr, $entrada_dr,$saida_dr, $racks_dr, $org_dr, $lumin_dr, $infra_dr,
+                                $operador_dr, $entrada_dr, $saida_dr, $racks_dr, $org_dr, $lumin_dr, $infra_dr,
                                 $acesso_dr, $portacf_dr, $arc_dr, $sist_extint_dr, $ledsaude_dr, $temp_dr,
                                 $humid_dr, $org_ext_dr, $obs_dr){
 
-
+                                    //echo $infra_dr."<br>";
+                                    //echo $obs_dr."<br>";
+                                    //echo $saida_dr."<br>";
+                                    //echo $ledsaude_dr."<br>"; exit();
      $this->turno = $turno;
      $this->data = $data;
      $this->operador_fca = $operador_fca;
@@ -1552,27 +1555,27 @@ class Checklist{
      $this->chk_cel = $chk_cel;
      $this->chk_batcel = $chk_batcel;
      $this->obs_npo = $obs_npo;
-     
-     $this->operador_dr = operador_dr;
-     $this->entrada_dr = entrada_dr;
-     $this->saida_dr = saida_dr;
-     $this->racks_dr = racks_dr;
-     $this->org_dr = org_dr;
-     $this->lumin_dr = lumin_dr;
-     $this->infra_dr = infra_dr;
-     $this->acesso_dr = acesso_dr;
-     $this->portacf_dr = portacf_dr;
-     $this->arc_dr = arc_dr;
-     $this->sist_extint_dr = sist_extint_dr;
-     $this->ledsaude_dr = ledsaude_dr;
-     $this->temp_dr = temp_dr;
-     $this->humid_dr = humid_dr;
-     $this->org_ext_dr = org_ext_dr;
-     $this->obs_dr = obs_dr;
+     $this->operador_dr = $operador_dr; /**Início DR */
+     $this->entrada_dr = $entrada_dr;
+     $this->saida_dr = $saida_dr;
+     $this->racks_dr = $racks_dr;
+     $this->org_dr = $org_dr;
+     $this->lumin_dr = $lumin_dr;
+     $this->infra_dr = $infra_dr;
+     $this->acesso_dr = $acesso_dr;
+     $this->portacf_dr = $portacf_dr;
+     $this->arc_dr = $arc_dr;
+     $this->sist_extint_dr = $sist_extint_dr;
+     $this->ledsaude_dr = $ledsaude_dr;
+     $this->temp_dr = $temp_dr;
+     $this->humid_dr = $humid_dr;
+     $this->org_ext_dr = $org_ext_dr;
+     $this->obs_dr = $obs_dr;
 
+     /*
 	$sql = "INSERT INTO `checklists` (`turno`, `data`, `operador_fca`, `operador_sp`, `operador_tr`, `entrada_fca`, `saida_fca`, `entrada_sp`, `saida_sp`, `entrada_tr`, `saida_tr`, `racks_fca`, `racks_sp`, `racks_tr`, `org_fca`, `org_sp`, `org_tr`, `lumin_fca`, `lumin_sp`, `lumin_tr`, `infra_fca`, `infra_sp`, `infra_tr`, `acesso_fca`, `acesso_sp`, `acesso_tr`, `portacf_fca`, `portacf_sp`, `arc_fca`, `arc_sp`, `arc_tr`, `sist_extint_fca`, `sist_extint_sp`, `sist_extint_tr`, `ledsaude_fca`, `temp01_fca`, `humid01_fca`, `temp02_fca`, `humid02_fca`, `temp03_fca`, `humid03_fca`, `temp01_sp`, `humid01_sp`, `temp02_sp`, `humid02_sp`, `temp03_sp`, `humid03_sp`, `cap_ups_tr`, `lumin_sc_fca`, `portacf_sc_fca`, `acesso_sc_fca`, `geradores_fca`, `geradores_sp`, `org_ext_fca`, `org_ext_sp`, `org_ext_tr`, `zabbix`, `obs_fca`, `obs_sp`, `obs_tr`, `chk_carro`, `chk_sala`, `chk_not`, `chk_cel`, `chk_batcel`, `obs_npo`,
-    'operador_dr', 'entrada_dr', 'saida_dr', 'racks_dr', 'org_dr', 'lumin_dr', 'infra_dr', 'acesso_dr', 'portacf_dr', 'arc_dr',
-    'sist_extint_dr', 'ledsaude_dr', 'temp_dr', 'humid_dr', 'org_ext_dr', 'obs_dr') VALUES (
+    `operador_dr`, `entrada_dr`, `saida_dr`, `racks_dr`, `org_dr`, `lumin_dr`, `infra_dr`, `acesso_dr`, `portacf_dr`, `arc_dr`,
+    `sist_extint_dr`, `ledsaude_dr`, `temp_dr`, `humid_dr`, `org_ext_dr`, `obs_dr`) VALUES (
         '$this->turno',
         '$this->data',
         '$this->operador_fca',
@@ -1639,7 +1642,7 @@ class Checklist{
         '$this->chk_cel',
         '$this->chk_batcel',
         '$this->obs_npo',
-        '$this->operador_dr',/**Início DR */
+        '$this->operador_dr',
         '$this->entrada_dr',
         '$this->saida_dr',
         '$this->racks_dr',
@@ -1654,8 +1657,56 @@ class Checklist{
         '$this->temp_dr',
         '$this->humid_dr',
         '$this->org_ext_dr',
-        '$this->obs_dr'
-    )";
+        '$this->obs_dr')";
+        */
+
+                                   /*
+                                    echo $this->operador_dr."<br>";
+                                    echo $this->entrada_dr."<br>";
+                                    echo $this->saida_dr."<br>";
+                                    echo $this->racks_dr."<br>";
+                                    echo $this->org_dr."<br>";
+                                    echo $this->lumin_dr."<br>";
+                                    echo $this->infra_dr."<br>";
+                                    echo $this->acesso_dr."<br>";
+                                    echo $this->portacf_dr."<br>";
+                                    echo $this->arc_dr."<br>";
+                                    echo $this->sist_extint_dr."<br>";
+                                    echo $this->ledsaude_dr."<br>";
+                                    echo $this->temp_dr."<br>";
+                                    echo $this->humid_dr."<br>";
+                                    echo $this->org_ext_dr."<br>";
+                                    echo $this->obs_dr."<br>"; exit();
+                                    */
+        /** Novos testes */
+
+        $sql = "INSERT INTO checklists (turno, data, operador_fca, operador_sp, operador_dr, operador_tr,
+        entrada_fca, saida_fca, entrada_sp, saida_sp, entrada_dr, saida_dr, entrada_tr, saida_tr, racks_fca,
+        racks_sp, racks_dr, racks_tr, org_fca, org_sp, org_dr, org_tr, lumin_fca, lumin_sp, lumin_dr,
+        lumin_tr, infra_fca, infra_sp, infra_dr, infra_tr, acesso_fca, acesso_sp, acesso_dr, acesso_tr,
+        portacf_fca, portacf_sp, portacf_dr, arc_fca, arc_sp, arc_dr, arc_tr, sist_extint_fca, sist_extint_sp,
+        sist_extint_dr, sist_extint_tr, ledsaude_fca, ledsaude_dr, temp01_fca, humid01_fca, temp02_fca,
+        humid02_fca, temp03_fca, humid03_fca, temp01_sp, humid01_sp, temp02_sp, humid02_sp, temp03_sp,
+        humid03_sp, temp_dr, humid_dr, cap_ups_tr, lumin_sc_fca, portacf_sc_fca, acesso_sc_fca, geradores_fca,
+        geradores_sp, org_ext_fca, org_ext_sp, org_ext_dr, org_ext_tr, zabbix, obs_fca, obs_sp, obs_dr,
+        obs_tr, chk_carro, chk_sala, chk_not, chk_cel, chk_batcel, obs_npo) VALUES ('$this->turno', '$this->data',
+        '$this->operador_fca', '$this->operador_sp', '$this->operador_dr', '$this->operador_tr', '$this->entrada_fca',
+        '$this->saida_fca', '$this->entrada_sp', '$this->saida_sp', '$this->entrada_dr', '$this->saida_dr', '$this->entrada_tr',
+        '$this->saida_tr', '$this->racks_fca', '$this->racks_sp', '$this->racks_dr', '$this->racks_tr', '$this->org_fca',
+        '$this->org_sp', '$this->org_dr', '$this->org_tr', '$this->lumin_fca', '$this->lumin_sp', '$this->lumin_dr',
+        '$this->lumin_tr', '$this->infra_fca', '$this->infra_sp', '$this->infra_dr', '$this->infra_tr', '$this->acesso_fca',
+        '$this->acesso_sp', '$this->acesso_dr', '$this->acesso_tr', '$this->portacf_fca', '$this->portacf_sp', '$this->portacf_dr',
+        '$this->arc_fca', '$this->arc_sp', '$this->arc_dr', '$this->arc_tr', '$this->sist_extint_fca', '$this->sist_extint_sp',
+        '$this->sist_extint_dr', '$this->sist_extint_tr', '$this->ledsaude_fca', '$this->ledsaude_dr', '$this->temp01_fca',
+        '$this->humid01_fca', '$this->temp02_fca', '$this->humid02_fca', '$this->temp03_fca', '$this->humid03_fca',
+        '$this->temp01_sp', '$this->humid01_sp', '$this->temp02_sp', '$this->humid02_sp', '$this->temp03_sp',
+        '$this->humid03_sp', '$this->temp_dr', '$this->humid_dr', '$this->cap_ups_tr', '$this->lumin_sc_fca',
+        '$this->portacf_sc_fca', '$this->acesso_sc_fca', '$this->geradores_fca', '$this->geradores_sp', '$this->org_ext_fca',
+        '$this->org_ext_sp', '$this->org_ext_dr', '$this->org_ext_tr', '$this->zabbix', '$this->obs_fca', '$this->obs_sp',
+        '$this->obs_dr', '$this->obs_tr', '$this->chk_carro', '$this->chk_sala', '$this->chk_not', '$this->chk_cel',
+        '$this->chk_batcel', '$this->obs_npo')";
+
+        /** END Novos testes */
 
         $sql = $this->pdo->prepare($sql);
         $sql->execute();

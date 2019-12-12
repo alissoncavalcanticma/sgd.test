@@ -158,6 +158,9 @@ class ChecklistController{
 			isset($_GET['org_ext_dr']) ? $org_ext_dr = addslashes($_GET['org_ext_dr']) : $org_ext_dr = "0";
 			isset($_GET['obs_dr']) ? $obs_dr = addslashes($_GET['obs_dr']) : $obs_dr = "0";
 
+			//echo $operador_dr."<br>";
+			//echo $ledsaude_dr."<br>";
+			//echo $obs_dr."<br>"; exit();
 
 			$pdo = new Conexao();
 			$checklist = new Checklist($pdo);
@@ -174,7 +177,7 @@ class ChecklistController{
                                 $acesso_sc_fca, $geradores_fca, $geradores_sp, $org_ext_fca, $org_ext_sp,
                                 $org_ext_tr, $zabbix, $obs_fca, $obs_sp, $obs_tr, $chk_carro, $chk_sala,
 								$chk_not, $chk_cel, $chk_batcel, $obs_npo, 
-								$operador_dr, $entrada_dr,$saida_dr, $racks_dr, $org_dr, $lumin_dr, $infra_dr, 
+								$operador_dr, $entrada_dr, $saida_dr, $racks_dr, $org_dr, $lumin_dr, $infra_dr, 
 								$acesso_dr, $portacf_dr, $arc_dr, $sist_extint_dr, $ledsaude_dr, $temp_dr,
                                 $humid_dr, $org_ext_dr, $obs_dr);
 
