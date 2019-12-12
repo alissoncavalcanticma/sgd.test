@@ -107,7 +107,7 @@ class Acesso{
 		$this->turno = $turno;
 		$this->motivo = $motivo;
 		$this->servico = $servico;
-		$this->equipamento =  $equipamento;
+		$this->equipamento = $equipamento;
 		$this->obs = $obs;
 		$this->solicitante = $solicitante; 
 		$this->empresa =  $empresa;
