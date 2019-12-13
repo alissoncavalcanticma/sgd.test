@@ -609,13 +609,13 @@
                                                                 <!-- TEMPERATURA DR 01 -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input name="temp_dr" type="number" class="form-control input-format-center" value="">
+                                                                    <input name="temp_dr" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp_dr'] : '' ?>">
                                                                 </div>
                                                                 <!-- END TEMPERATURA DR 01 -->
                                                                 <!-- HUMIDADE DR 01 -->
                                                                 <div style="width: 50%; float: right">
                                                                     
-                                                                    <input name="humid_dr" type="number" class="form-control input-format-center" value="">
+                                                                    <input name="humid_dr" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid_dr'] : '' ?>">
                                                                 </div>
                                                                 <!-- END HUMIDADE DR 01 -->
                                                             </div>
