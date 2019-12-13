@@ -98,13 +98,13 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                     <button type="button" class="btn btn-primary" onclick="window.open('checklists.php', '_self')"><<<</button>
                                     </button>
                                     
-                                    <div class="div-cad-acesso-int">
+                                    <div class="div-cad-acesso-int" style="padding-left: 70px">
                                     
                                    <!-- /# column -->
                                     <div class="col-lg-11">
                                        
                                             
-                                            <div style="margin: auto; padding-left: 35px; padding-right: 35px">
+                                            <div style="margin: auto; padding-left: 0px; padding-right: 0px">
 
                                                     <!-- CHECKLIST -->
                                                         <div class="tab-pane fade show active">
