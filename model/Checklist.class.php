@@ -1725,7 +1725,10 @@ class Checklist{
                                 $temp03_sp, $humid03_sp, $cap_ups_tr, $lumin_sc_fca, $portacf_sc_fca,
                                 $acesso_sc_fca, $geradores_fca, $geradores_sp, $org_ext_fca, $org_ext_sp,
                                 $org_ext_tr, $zabbix, $obs_fca, $obs_sp, $obs_tr, $chk_carro, $chk_sala,
-                                $chk_not, $chk_cel, $chk_batcel, $obs_npo){
+                                $chk_not, $chk_cel, $chk_batcel, $obs_npo,
+                                $operador_dr, $entrada_dr, $saida_dr, $racks_dr, $org_dr, $lumin_dr, $infra_dr,
+                                $acesso_dr, $portacf_dr, $arc_dr, $sist_extint_dr, $ledsaude_dr, $temp_dr,
+                                $humid_dr, $org_ext_dr, $obs_dr){
 
      $this->id = $i;
      $this->turno = $turno;
@@ -1794,15 +1797,137 @@ class Checklist{
      $this->chk_cel = $chk_cel;
      $this->chk_batcel = $chk_batcel;
      $this->obs_npo = $obs_npo;
+     $this->operador_dr = $operador_dr; /**Início DR */
+     $this->entrada_dr = $entrada_dr;
+     $this->saida_dr = $saida_dr;
+     $this->racks_dr = $racks_dr;
+     $this->org_dr = $org_dr;
+     $this->lumin_dr = $lumin_dr;
+     $this->infra_dr = $infra_dr;
+     $this->acesso_dr = $acesso_dr;
+     $this->portacf_dr = $portacf_dr;
+     $this->arc_dr = $arc_dr;
+     $this->sist_extint_dr = $sist_extint_dr;
+     $this->ledsaude_dr = $ledsaude_dr;
+     $this->temp_dr = $temp_dr;
+     $this->humid_dr = $humid_dr;
+     $this->org_ext_dr = $org_ext_dr;
+     $this->obs_dr = $obs_dr;
+                                    /*
+                                    echo $this->operador_dr."<br>";
+                                    echo $this->entrada_dr."<br>";
+                                    echo $this->saida_dr."<br>";
+                                    echo $this->racks_dr."<br>";
+                                    echo $this->org_dr."<br>";
+                                    echo $this->lumin_dr."<br>";
+                                    echo $this->infra_dr."<br>";
+                                    echo $this->acesso_dr."<br>";
+                                    echo $this->portacf_dr."<br>";
+                                    echo $this->arc_dr."<br>";
+                                    echo $this->sist_extint_dr."<br>";
+                                    echo $this->ledsaude_dr."<br>";
+                                    echo $this->temp_dr."<br>";
+                                    echo $this->humid_dr."<br>";
+                                    echo $this->org_ext_dr."<br>";
+                                    echo $this->obs_dr."<br>"; exit();
+                                    */
 
 
      //$sql = "UPDATE `checklists` SET id = '$this->id', turno = '$this->turno', data = '$this->data', operador_fca = '$this->operador_fca', operador_sp = '$this->operador_sp', operador_tr = '$this->operador_tr', entrada_fca = '$this->entrada_fca', saida_fca = '$this->saida_fca', entrada_sp = '$this->entrada_sp', saida_sp = '$this->saida_sp', entrada_tr = '$this->entrada_tr', saida_tr = '$this->saida_tr', racks_fca = '$this->racks_fca', racks_sp = '$this->racks_sp', racks_tr = '$this->racks_tr', org_fca = '$this->org_fca', org_sp = '$this->org_sp', org_tr = '$this->org_tr', lumin_fca = '$this->lumin_fca', lumin_sp = '$this->lumin_sp', lumin_tr = '$this->lumin_tr', infra_fca = '$this->infra_fca', infra_sp = '$this->infra_sp', infra_tr = '$this->infra_tr', acesso_fca = '$this->acesso_fca', acesso_sp = '$this->acesso_sp', acesso_tr = '$this->acesso_tr', portacf_fca = '$this->portacf_fca', portacf_sp = '$this->portacf_sp', arc_fca = '$this->arc_fca', arc_sp = '$this->arc_sp', arc_tr = '$this->arc_tr', sist_extint_fca = '$this->sist_extint_fca', sist_extint_sp = '$this->sist_extint_sp', sist_extint_tr = '$this->sist_extint_tr', ledsaude_fca = '$this->ledsaude_fca', temp01_fca = '$this->temp01_fca', humid01_fca = '$this->humid01_fca', temp02_fca = '$this->temp02_fca', humid02_fca = '$this->humid02_fca', temp03_fca = '$this->temp03_fca', humid03_fca = '$this->humid03_fca', temp01_sp = '$this->temp01_sp', humid01_sp = '$this->humid01_sp', temp02_sp = '$this->temp02_sp', humid02_sp = '$this->humid02_sp', temp03_sp = '$this->temp03_sp', humid03_sp = '$this->humid03_sp', cap_ups_tr = '$this->cap_ups_tr', lumin_sc_fca = '$this->lumin_sc_fca', portacf_sc_fca = '$this->portacf_sc_fca', acesso_sc_fca = '$this->acesso_sc_fca', geradores_fca = '$this->geradores_fca', geradores_sp = '$this->geradores_sp', org_ext_fca = '$this->org_ext_fca', org_ext_sp = '$this->org_ext_sp', org_ext_tr = '$this->org_ext_tr', zabbix = '$this->zabbix', obs_fca = '$this->obs_fca', obs_sp = '$this->obs_sp', obs_tr = '$this->obs_tr', chk_carro = '$this->chk_carro', chk_sala = '$this->chk_sala', chk_not = '$this->chk_not', chk_cel = '$this->chk_cel', chk_batcel = '$this->chk_batcel', obs_npo = '$this->obs_npo' WHERE id = '$this->id'";
-     $sql = "UPDATE `checklists` SET turno = '$this->turno', data = '$this->data', operador_fca = '$this->operador_fca', operador_sp = '$this->operador_sp', operador_tr = '$this->operador_tr', entrada_fca = '$this->entrada_fca', saida_fca = '$this->saida_fca', entrada_sp = '$this->entrada_sp', saida_sp = '$this->saida_sp', entrada_tr = '$this->entrada_tr', saida_tr = '$this->saida_tr', racks_fca = '$this->racks_fca', racks_sp = '$this->racks_sp', racks_tr = '$this->racks_tr', org_fca = '$this->org_fca', org_sp = '$this->org_sp', org_tr = '$this->org_tr', lumin_fca = '$this->lumin_fca', lumin_sp = '$this->lumin_sp', lumin_tr = '$this->lumin_tr', infra_fca = '$this->infra_fca', infra_sp = '$this->infra_sp', infra_tr = '$this->infra_tr', acesso_fca = '$this->acesso_fca', acesso_sp = '$this->acesso_sp', acesso_tr = '$this->acesso_tr', portacf_fca = '$this->portacf_fca', portacf_sp = '$this->portacf_sp', arc_fca = '$this->arc_fca', arc_sp = '$this->arc_sp', arc_tr = '$this->arc_tr', sist_extint_fca = '$this->sist_extint_fca', sist_extint_sp = '$this->sist_extint_sp', sist_extint_tr = '$this->sist_extint_tr', ledsaude_fca = '$this->ledsaude_fca', temp01_fca = '$this->temp01_fca', humid01_fca = '$this->humid01_fca', temp02_fca = '$this->temp02_fca', humid02_fca = '$this->humid02_fca', temp03_fca = '$this->temp03_fca', humid03_fca = '$this->humid03_fca', temp01_sp = '$this->temp01_sp', humid01_sp = '$this->humid01_sp', temp02_sp = '$this->temp02_sp', humid02_sp = '$this->humid02_sp', temp03_sp = '$this->temp03_sp', humid03_sp = '$this->humid03_sp', cap_ups_tr = '$this->cap_ups_tr', lumin_sc_fca = '$this->lumin_sc_fca', portacf_sc_fca = '$this->portacf_sc_fca', acesso_sc_fca = '$this->acesso_sc_fca', geradores_fca = '$this->geradores_fca', geradores_sp = '$this->geradores_sp', org_ext_fca = '$this->org_ext_fca', org_ext_sp = '$this->org_ext_sp', org_ext_tr = '$this->org_ext_tr', zabbix = '$this->zabbix', obs_fca = '$this->obs_fca', obs_sp = '$this->obs_sp', obs_tr = '$this->obs_tr', chk_carro = '$this->chk_carro', chk_sala = '$this->chk_sala', chk_not = '$this->chk_not', chk_cel = '$this->chk_cel', chk_batcel = '$this->chk_batcel', obs_npo = '$this->obs_npo' WHERE id = '$this->id'";
+     //$sql = "UPDATE `checklists` SET turno = '$this->turno', data = '$this->data', operador_fca = '$this->operador_fca', operador_sp = '$this->operador_sp', operador_tr = '$this->operador_tr', entrada_fca = '$this->entrada_fca', saida_fca = '$this->saida_fca', entrada_sp = '$this->entrada_sp', saida_sp = '$this->saida_sp', entrada_tr = '$this->entrada_tr', saida_tr = '$this->saida_tr', racks_fca = '$this->racks_fca', racks_sp = '$this->racks_sp', racks_tr = '$this->racks_tr', org_fca = '$this->org_fca', org_sp = '$this->org_sp', org_tr = '$this->org_tr', lumin_fca = '$this->lumin_fca', lumin_sp = '$this->lumin_sp', lumin_tr = '$this->lumin_tr', infra_fca = '$this->infra_fca', infra_sp = '$this->infra_sp', infra_tr = '$this->infra_tr', acesso_fca = '$this->acesso_fca', acesso_sp = '$this->acesso_sp', acesso_tr = '$this->acesso_tr', portacf_fca = '$this->portacf_fca', portacf_sp = '$this->portacf_sp', arc_fca = '$this->arc_fca', arc_sp = '$this->arc_sp', arc_tr = '$this->arc_tr', sist_extint_fca = '$this->sist_extint_fca', sist_extint_sp = '$this->sist_extint_sp', sist_extint_tr = '$this->sist_extint_tr', ledsaude_fca = '$this->ledsaude_fca', temp01_fca = '$this->temp01_fca', humid01_fca = '$this->humid01_fca', temp02_fca = '$this->temp02_fca', humid02_fca = '$this->humid02_fca', temp03_fca = '$this->temp03_fca', humid03_fca = '$this->humid03_fca', temp01_sp = '$this->temp01_sp', humid01_sp = '$this->humid01_sp', temp02_sp = '$this->temp02_sp', humid02_sp = '$this->humid02_sp', temp03_sp = '$this->temp03_sp', humid03_sp = '$this->humid03_sp', cap_ups_tr = '$this->cap_ups_tr', lumin_sc_fca = '$this->lumin_sc_fca', portacf_sc_fca = '$this->portacf_sc_fca', acesso_sc_fca = '$this->acesso_sc_fca', geradores_fca = '$this->geradores_fca', geradores_sp = '$this->geradores_sp', org_ext_fca = '$this->org_ext_fca', org_ext_sp = '$this->org_ext_sp', org_ext_tr = '$this->org_ext_tr', zabbix = '$this->zabbix', obs_fca = '$this->obs_fca', obs_sp = '$this->obs_sp', obs_tr = '$this->obs_tr', chk_carro = '$this->chk_carro', chk_sala = '$this->chk_sala', chk_not = '$this->chk_not', chk_cel = '$this->chk_cel', chk_batcel = '$this->chk_batcel', obs_npo = '$this->obs_npo' WHERE id = '$this->id'";
+    
+    $sql = "UPDATE
+     `checklists`
+    SET
+     turno = '$this->turno',
+     data = '$this->data',
+     operador_fca = '$this->operador_fca',
+     operador_sp = '$this->operador_sp',
+     operador_dr = '$this->operador_dr',
+     operador_tr = '$this->operador_tr',
+     entrada_fca = '$this->entrada_fca',
+     saida_fca = '$this->saida_fca',
+     entrada_sp = '$this->entrada_sp',
+     saida_sp = '$this->saida_sp',
+     entrada_dr = '$this->entrada_dr',
+     saida_dr = '$this->saida_dr',
+     entrada_tr = '$this->entrada_tr',
+     saida_tr = '$this->saida_tr',
+     racks_fca = '$this->racks_fca',
+     racks_sp = '$this->racks_sp',
+     racks_dr = '$this->racks_dr',
+     racks_tr = '$this->racks_tr',
+     org_fca = '$this->org_fca',
+     org_sp = '$this->org_sp',
+     org_dr = '$this->org_dr',
+     org_tr = '$this->org_tr',
+     lumin_fca = '$this->lumin_fca',
+     lumin_sp = '$this->lumin_sp',
+     lumin_dr = '$this->lumin_dr',
+     lumin_tr = '$this->lumin_tr',
+     infra_fca = '$this->infra_fca',
+     infra_sp = '$this->infra_sp',
+     infra_dr = '$this->infra_dr',
+     infra_tr = '$this->infra_tr',
+     acesso_fca = '$this->acesso_fca',
+     acesso_sp = '$this->acesso_sp',
+     acesso_dr = '$this->acesso_dr',
+     acesso_tr = '$this->acesso_tr',
+     portacf_fca = '$this->portacf_fca',
+     portacf_sp = '$this->portacf_sp',
+     portacf_dr = '$this->portacf_dr',
+     arc_fca = '$this->arc_fca',
+     arc_sp = '$this->arc_sp',
+     arc_dr = '$this->arc_dr',
+     arc_tr = '$this->arc_tr',
+     sist_extint_fca = '$this->sist_extint_fca',
+     sist_extint_sp = '$this->sist_extint_sp',
+     sist_extint_dr = '$this->sist_extint_dr',
+     sist_extint_tr = '$this->sist_extint_tr',
+     ledsaude_fca = '$this->ledsaude_fca',
+     ledsaude_dr = '$this->ledsaude_dr',
+     temp01_fca = '$this->temp01_fca',
+     humid01_fca = '$this->humid01_fca',
+     temp02_fca = '$this->temp02_fca',
+     humid02_fca = '$this->humid02_fca',
+     temp03_fca = '$this->temp03_fca',
+     humid03_fca = '$this->humid03_fca',
+     temp01_sp = '$this->temp01_sp',
+     humid01_sp = '$this->humid01_sp',
+     temp02_sp = '$this->temp02_sp',
+     humid02_sp = '$this->humid02_sp',
+     temp03_sp = '$this->temp03_sp',
+     humid03_sp = '$this->humid03_sp',
+     temp_dr = '$this->temp_dr',
+     humid_dr = '$this->humid_dr',
+     cap_ups_tr = '$this->cap_ups_tr',
+     lumin_sc_fca = '$this->lumin_sc_fca',
+     portacf_sc_fca = '$this->portacf_sc_fca',
+     acesso_sc_fca = '$this->acesso_sc_fca',
+     geradores_fca = '$this->geradores_fca',
+     geradores_sp = '$this->geradores_sp',
+     org_ext_fca = '$this->org_ext_fca',
+     org_ext_sp = '$this->org_ext_sp',
+     org_ext_dr = '$this->org_ext_dr',
+     org_ext_tr = '$this->org_ext_tr',
+     zabbix = '$this->zabbix',
+     obs_fca = '$this->obs_fca',
+     obs_sp = '$this->obs_sp',
+     obs_dr = '$this->obs_dr',
+     obs_tr = '$this->obs_tr',
+     chk_carro = '$this->chk_carro',
+     chk_sala = '$this->chk_sala',
+     chk_not = '$this->chk_not',
+     chk_cel = '$this->chk_cel',
+     chk_batcel = '$this->chk_batcel',
+     obs_npo = '$this->obs_npo'
+    WHERE
+     id = '$this->id'";
 
-        $sql = $this->pdo->prepare($sql);
-        $sql->execute();
+    $sql = $this->pdo->prepare($sql);
+    $sql->execute();
 
-        return true;
+    return true;
 
     }
 
