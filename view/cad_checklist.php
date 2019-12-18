@@ -14,9 +14,8 @@ $checklistC = new ChecklistController();
 
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
-      $id = $_GET['id'];
-      #$acessoC = new AcessoController();
-      $chk = $checklistC->retornaChecklist($id);
+    $id = $_GET['id'];
+    $chk = $checklistC->retornaChecklist($id);
 }else{
 
     $chk = $checklistC->ultimoRegistro();

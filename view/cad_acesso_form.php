@@ -10,15 +10,16 @@
             date_default_timezone_set('America/Sao_Paulo');
             $data = date("d/m/Y", time());
             ?>
-            <input type="datetime" id="data" name="data" class="form-control form-control-sm input-format-center" value="<?php
-                                                                                                                            if (isset($ac['data'])) {
-                                                                                                                                $dt = array_reverse(explode('-', $ac['data']));
-                                                                                                                                $dt = implode('/', $dt);
-                                                                                                                                echo $dt;
-                                                                                                                            } else {
-                                                                                                                                echo $data;
-                                                                                                                            }
-                                                                                                                            ?>" readonly>
+            <input type="datetime" id="data" name="data" class="form-control form-control-sm input-format-center" 
+            value="<?php
+                        if (isset($ac['data'])) {
+                            $dt = array_reverse(explode('-', $ac['data']));
+                            $dt = implode('/', $dt);
+                            echo $dt;
+                        } else {
+                            echo $data;
+                        }
+                        ?>" readonly>
 
             <!-- <input type="hidden" name="data" value="<?= $data ?>"> -->
         </div>

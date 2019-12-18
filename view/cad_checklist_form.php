@@ -72,28 +72,41 @@
 
                                                                     <select id="operador_fca" name="operador_fca" class="form-control input-format-center">
                                                                         <option value=""></option>
-                                                        
-                                                                        <?php  foreach($userC->listaUsuarios("WHERE status = 'ativo'") as $user): 
-                                                                         ?>
-
-                                                                        <option value="<?= $user['apelido'] ?>" <?php 
-
-                                                                            if(isset($id)){
-                                                                                if($chk['operador_fca'] == $user['apelido']){ 
-                                                                                        echo "selected";
-                                                                                    }       
+                                                                        
+                                                                        
+                                                                        <?php 
+                                                                            
+                                                                            if(isset($_GET['id'])){
+                                                                                $pesquisaStatus = "";
                                                                             }else{
-                                                                                if($user['apelido'] == $_SESSION['logon']){
-                                                                                        echo "selected";
-                                                                                    }       
-                                                                            }?>>
-                                                                            <?= $user['apelido']; ?>
-                                                          
-                                                                        </option>
+                                                                                $pesquisaStatus = "WHERE status = 'ativo'";
+                                                                            }
+                                                                            
+                                                                            foreach ($userC->listaUsuarios($pesquisaStatus) as $user) :
+                                                                            
+                                                                            ?>
 
-                                                                        <?php  endforeach; ?>
+                                                                            <option value="<?= $user['id'] ?>" <?php
+
+                                                                                                                    //Lógica de add
+                                                                                                                    if (!isset($_GET['id'])) {
+                                                                                                                        echo $user['apelido'] == $_SESSION['logon'] ? 'selected' : '';
+                                                                                                                    }
+                                                                                                                    //Lógica de Editar
+                                                                                                                    else {
+                                                                                                                        
+                                                                                                                        $uc = $userC->retornaApelido($chk['operador_fca']);
+                                                                                                                        //echo $uc['apelido'];
+                                                                                                                        echo $user['apelido'] == $uc['apelido'] ? 'selected' : '';
+                                                                                                                    }
+                                                                                                                    ?>><?= $user['apelido']; ?>
+
+                                                                            </option>
+
+                                                                        <?php endforeach; ?>
 
                                                                     </select>
+                                                                    <?php //echo "user: ".$user['apelido']."<br> UC: ".$uc['apelido']; ?>
                                                                 </div>
 
                                                             </div>
@@ -106,23 +119,31 @@
                                                                     <select id="operador_sp" name="operador_sp" class="form-control input-format-center">
                                                                         <option value=""></option>
                                                         
-                                                                        <?php  foreach($userC->listaUsuarios("WHERE status = 'ativo'") as $user): 
-                                                                         ?>
+                                                                        <?php 
+                                                                            
+                                                                            foreach ($userC->listaUsuarios($pesquisaStatus) as $user) :
+                                                                            
+                                                                                ?>
+    
+                                                                                <option value="<?= $user['id'] ?>" <?php
+    
+                                                                                                                        //Lógica de add
+                                                                                                                        if (!isset($_GET['id'])) {
+                                                                                                                            echo $user['apelido'] == $_SESSION['logon'] ? 'selected' : '';
+                                                                                                                        }
+                                                                                                                        //Lógica de Editar
+                                                                                                                        else {
+                                                                                                                            
+                                                                                                                            $uc = $userC->retornaApelido($chk['operador_sp']);
+                                                                                                                            //echo $uc['apelido'];
+                                                                                                                            echo $user['apelido'] == $uc['apelido'] ? 'selected' : '';
+                                                                                                                        }
+                                                                                                                        ?>><?= $user['apelido']; ?>
+    
+                                                                                </option>
+    
+                                                                            <?php endforeach; ?>
 
-                                                                        <option value="<?= $user['apelido'] ?>" <?php 
-                                                                            if(isset($id)){
-                                                                                if($chk['operador_sp'] == $user['apelido']){ 
-                                                                                        echo "selected";
-                                                                                    }       
-                                                                            }else{
-                                                                                if($user['apelido'] == $_SESSION['logon']){
-                                                                                        echo "selected";
-                                                                                    }       
-                                                                            }?>>
-                                                                            <?= $user['apelido']; ?>
-                                                                        </option>
-
-                                                                        <?php  endforeach; ?>
 
                                                                     </select>
                                                                 </div>
@@ -136,23 +157,31 @@
                                                                     <select id="operador_dr" name="operador_dr" class="form-control input-format-center">
                                                                         <option value=""></option>
                                                         
-                                                                        <?php  foreach($userC->listaUsuarios("WHERE status = 'ativo'") as $user): 
-                                                                         ?>
+                                                                        <?php 
+                                                                            
+                                                                            foreach ($userC->listaUsuarios($pesquisaStatus) as $user) :
+                                                                            
+                                                                                ?>
+    
+                                                                                <option value="<?= $user['id'] ?>" <?php
+    
+                                                                                                                        //Lógica de add
+                                                                                                                        if (!isset($_GET['id'])) {
+                                                                                                                            echo $user['apelido'] == $_SESSION['logon'] ? 'selected' : '';
+                                                                                                                        }
+                                                                                                                        //Lógica de Editar
+                                                                                                                        else {
+                                                                                                                            
+                                                                                                                            $uc = $userC->retornaApelido($chk['operador_dr']);
+                                                                                                                            //echo $uc['apelido'];
+                                                                                                                            echo $user['apelido'] == $uc['apelido'] ? 'selected' : '';
+                                                                                                                        }
+                                                                                                                        ?>><?= $user['apelido']; ?>
+    
+                                                                                </option>
+    
+                                                                            <?php endforeach; ?>
 
-                                                                        <option value="<?= $user['apelido'] ?>" <?php 
-                                                                            if(isset($id)){
-                                                                                if($chk['operador_dr'] == $user['apelido']){ 
-                                                                                        echo "selected";
-                                                                                    }       
-                                                                            }else{
-                                                                                if($user['apelido'] == $_SESSION['logon']){
-                                                                                        echo "selected";
-                                                                                    }       
-                                                                            }?>>
-                                                                            <?= $user['apelido']; ?>
-                                                                        </option>
-
-                                                                        <?php  endforeach; ?>
 
                                                                     </select>
                                                                 </div>
@@ -166,28 +195,30 @@
                                                                     <select id="operador_tr" name="operador_tr" class="form-control input-format-center">
                                                                         <option value=""></option>
                                                         
-                                                                        <?php  foreach($userC->listaUsuarios("WHERE status = 'ativo'") as $user): 
-                                                                         ?>
-
-                                                                        <option value="<?= $user['apelido'] ?>" 
-                                                                        
-                                                                            <?php 
-                                                                                if(isset($id)){
-                                                                                    if($chk['operador_tr'] == $user['apelido']){ 
-                                                                                            echo "selected";
-                                                                                        }       
-                                                                                }else{
-                                                                                    if($user['apelido'] == $_SESSION['logon']){
-                                                                                            echo "selected";
-                                                                                        }       
-                                                                                }?>
-                                                                        >
-                                                                        
-                                                                        <?= $user['apelido']; ?>
-                                                          
-                                                                        </option>
-
-                                                                        <?php  endforeach; ?>
+                                                                        <?php 
+                                                                            
+                                                                            foreach ($userC->listaUsuarios($pesquisaStatus) as $user) :
+                                                                            
+                                                                                ?>
+    
+                                                                                <option value="<?= $user['id'] ?>" <?php
+    
+                                                                                                                        //Lógica de add
+                                                                                                                        if (!isset($_GET['id'])) {
+                                                                                                                            echo $user['apelido'] == $_SESSION['logon'] ? 'selected' : '';
+                                                                                                                        }
+                                                                                                                        //Lógica de Editar
+                                                                                                                        else {
+                                                                                                                            
+                                                                                                                            $uc = $userC->retornaApelido($chk['operador_tr']);
+                                                                                                                            //echo $uc['apelido'];
+                                                                                                                            echo $user['apelido'] == $uc['apelido'] ? 'selected' : '';
+                                                                                                                        }
+                                                                                                                        ?>><?= $user['apelido']; ?>
+    
+                                                                                </option>
+    
+                                                                            <?php endforeach; ?>
 
                                                                     </select>
                                                                 </div>
