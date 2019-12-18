@@ -13510,21 +13510,21 @@ section {
 
 /* regras input type time */
 
-input[type=time]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+.time-adjust::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
 }
 
-input[type=time] {
-    -moz-appearance: textfield;
-    appearance: textfield;
+.time-adjust {
+    -moz-appearance: textfield !important;
+    appearance: textfield !important;
 }
 
-.form-control[type=time] {
-    padding: 0px;
-    font-size: small;
-    font-weight: bold;
-    text-align: center;
-    padding-left: 0.5rem;
+.time-adjust {
+    padding: 0px !important;
+    font-size: small !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    padding-left: 0.5rem !important;
 }
 
 
