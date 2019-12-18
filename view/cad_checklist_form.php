@@ -205,11 +205,11 @@
                                                             <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
                                                                 <div style="width: 50%; float: left; text-align: center">
                                                                     <label style="font-size: 13px">Entrada:</label>
-                                                                    <input name="entrada_fca" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['entrada_fca'] : '' ?>">
+                                                                    <input name="entrada_fca" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_fca'] : '' ?>">
                                                                 </div>
                                                                 <div style="width: 50%; float: right; text-align: center">
                                                                     <label style="font-size: 13px">Saída:</label>
-                                                                    <input name="saida_fca" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['saida_fca'] : '' ?>">
+                                                                    <input name="saida_fca" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_fca'] : '' ?>">
                                                                 </div>
                                                             </div>
                                                             <!-- END HORA FCA -->
@@ -217,11 +217,11 @@
                                                             <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
                                                                 <div style="width: 50%; float: left; text-align: center">
                                                                     <label style="font-size: 13px">Entrada:</label>
-                                                                    <input name="entrada_sp" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['entrada_sp'] : '' ?>">
+                                                                    <input name="entrada_sp" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_sp'] : '' ?>">
                                                                 </div>
                                                                 <div style="width: 50%; float: right; text-align: center">
                                                                     <label style="font-size: 13px">Saída:</label>
-                                                                    <input name="saida_sp" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['saida_sp'] : '' ?>">
+                                                                    <input name="saida_sp" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_sp'] : '' ?>">
                                                                 </div>
                                                             </div>
                                                             <!-- END HORA SP -->
@@ -229,11 +229,11 @@
                                                             <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
                                                                 <div style="width: 50%; float: left; text-align: center">
                                                                     <label style="font-size: 13px">Entrada:</label>
-                                                                    <input name="entrada_dr" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['entrada_dr'] : '' ?>">
+                                                                    <input name="entrada_dr" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_dr'] : '' ?>">
                                                                 </div>
                                                                 <div style="width: 50%; float: right; text-align: center">
                                                                     <label style="font-size: 13px">Saída:</label>
-                                                                    <input name="saida_dr" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['saida_dr'] : '' ?>">
+                                                                    <input name="saida_dr" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_dr'] : '' ?>">
                                                                 </div>
                                                             </div>
                                                             <!-- END HORA DR -->
@@ -241,11 +241,11 @@
                                                             <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
                                                                 <div style="width: 50%; float: left; text-align: center">
                                                                     <label style="font-size: 13px">Entrada:</label>
-                                                                    <input name="entrada_tr" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['entrada_tr'] : '' ?>">
+                                                                    <input name="entrada_tr" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_tr'] : '' ?>">
                                                                 </div>
                                                                 <div style="width: 50%; float: right; text-align: center">
                                                                     <label style="font-size: 13px">Saída:</label>
-                                                                    <input name="saida_tr" type="time" class="form-control input-format-center" value="<?= isset($id) ? $chk['saida_tr'] : '' ?>">
+                                                                    <input name="saida_tr" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_tr'] : '' ?>">
                                                                 </div>
                                                             </div>
                                                             <!-- END HORA TR -->
