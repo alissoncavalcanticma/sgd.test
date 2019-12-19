@@ -70,7 +70,7 @@
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="">
 
-                                                                    <select id="operador_fca" name="operador_fca" class="form-control input-format-center">
+                                                                    <select id="operador_fca" name="operador_fca" class="form-control input-format-center" required oninvalid="setCustomValidity('Selecione um operador')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                         <option value=""></option>
                                                                         
                                                                         
@@ -116,7 +116,7 @@
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="">
 
-                                                                    <select id="operador_sp" name="operador_sp" class="form-control input-format-center">
+                                                                    <select id="operador_sp" name="operador_sp" class="form-control input-format-center" required oninvalid="setCustomValidity('Selecione um operador')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                         <option value=""></option>
                                                         
                                                                         <?php 
@@ -154,7 +154,7 @@
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="">
 
-                                                                    <select id="operador_dr" name="operador_dr" class="form-control input-format-center">
+                                                                    <select id="operador_dr" name="operador_dr" class="form-control input-format-center" required oninvalid="setCustomValidity('Selecione um operador')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                         <option value=""></option>
                                                         
                                                                         <?php 
@@ -192,7 +192,7 @@
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="">
 
-                                                                    <select id="operador_tr" name="operador_tr" class="form-control input-format-center">
+                                                                    <select id="operador_tr" name="operador_tr" class="form-control input-format-center" required oninvalid="setCustomValidity('Selecione um operador')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                         <option value=""></option>
                                                         
                                                                         <?php 
@@ -236,11 +236,11 @@
                                                             <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
                                                                 <div style="width: 50%; float: left; text-align: center">
                                                                     <label style="font-size: 13px">Entrada:</label>
-                                                                    <input name="entrada_fca" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_fca'] : '' ?>">
+                                                                    <input name="entrada_fca" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a hora de entrada')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <div style="width: 50%; float: right; text-align: center">
                                                                     <label style="font-size: 13px">Saída:</label>
-                                                                    <input name="saida_fca" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_fca'] : '' ?>">
+                                                                    <input name="saida_fca" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a hora de saída')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                             </div>
                                                             <!-- END HORA FCA -->
@@ -248,11 +248,11 @@
                                                             <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
                                                                 <div style="width: 50%; float: left; text-align: center">
                                                                     <label style="font-size: 13px">Entrada:</label>
-                                                                    <input name="entrada_sp" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_sp'] : '' ?>">
+                                                                    <input name="entrada_sp" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_sp'] : '' ?>" required oninvalid="setCustomValidity('Insira a hora de entrada')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <div style="width: 50%; float: right; text-align: center">
                                                                     <label style="font-size: 13px">Saída:</label>
-                                                                    <input name="saida_sp" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_sp'] : '' ?>">
+                                                                    <input name="saida_sp" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_sp'] : '' ?>" required oninvalid="setCustomValidity('Insira a hora de saída')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                             </div>
                                                             <!-- END HORA SP -->
@@ -260,11 +260,11 @@
                                                             <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
                                                                 <div style="width: 50%; float: left; text-align: center">
                                                                     <label style="font-size: 13px">Entrada:</label>
-                                                                    <input name="entrada_dr" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_dr'] : '' ?>">
+                                                                    <input name="entrada_dr" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_dr'] : '' ?>" required oninvalid="setCustomValidity('Insira a hora de entrada')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <div style="width: 50%; float: right; text-align: center">
                                                                     <label style="font-size: 13px">Saída:</label>
-                                                                    <input name="saida_dr" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_dr'] : '' ?>">
+                                                                    <input name="saida_dr" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_dr'] : '' ?>" required oninvalid="setCustomValidity('Insira a hora de saída')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                             </div>
                                                             <!-- END HORA DR -->
@@ -272,11 +272,11 @@
                                                             <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
                                                                 <div style="width: 50%; float: left; text-align: center">
                                                                     <label style="font-size: 13px">Entrada:</label>
-                                                                    <input name="entrada_tr" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_tr'] : '' ?>">
+                                                                    <input name="entrada_tr" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_tr'] : '' ?>" required oninvalid="setCustomValidity('Insira a hora de entrada')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <div style="width: 50%; float: right; text-align: center">
                                                                     <label style="font-size: 13px">Saída:</label>
-                                                                    <input name="saida_tr" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_tr'] : '' ?>">
+                                                                    <input name="saida_tr" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_tr'] : '' ?>" required oninvalid="setCustomValidity('Insira a hora de saída')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                             </div>
                                                             <!-- END HORA TR -->
