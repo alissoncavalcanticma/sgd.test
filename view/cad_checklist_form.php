@@ -610,13 +610,13 @@
                                                                 <!-- TEMPERATURA FCA 01  -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input name="temp01_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp01_fca'] : '' ?>">
+                                                                    <input name="temp01_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp01_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura 01 FCA')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END TEMPERATURA FCA 01  -->
                                                                 <!-- HUMIDADE FCA 01  -->
                                                                 <div style="width: 50%; float: right">
 
-                                                                    <input name="humid01_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid01_fca'] : '' ?>">
+                                                                    <input name="humid01_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid01_fca'] : '' ?>"  required oninvalid="setCustomValidity('Insira a humidade 01 FCA')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END HUMIDADE FCA 01 -->
                                                             </div>
@@ -625,13 +625,13 @@
                                                                 <!-- TEMPERATURA SP 01  -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input name="temp01_sp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp01_sp'] : '' ?>">
+                                                                    <input name="temp01_sp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp01_sp'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura 01 SP')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END TEMPERATURA SP 01  -->
                                                                 <!-- HUMIDADE SP 01  -->
                                                                 <div style="width: 50%; float: right">
                                                                     
-                                                                    <input name="humid01_sp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid01_sp'] : '' ?>">
+                                                                    <input name="humid01_sp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid01_sp'] : '' ?>" required oninvalid="setCustomValidity('Insira a humidade 01 SP')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END HUMIDADE SP 01  -->
                                                             </div>
@@ -640,13 +640,13 @@
                                                                 <!-- TEMPERATURA DR 01 -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input name="temp_dr" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp_dr'] : '' ?>">
+                                                                    <input name="temp_dr" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp_dr'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura DR')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END TEMPERATURA DR 01 -->
                                                                 <!-- HUMIDADE DR 01 -->
                                                                 <div style="width: 50%; float: right">
                                                                     
-                                                                    <input name="humid_dr" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid_dr'] : '' ?>">
+                                                                    <input name="humid_dr" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid_dr'] : '' ?>" required oninvalid="setCustomValidity('Insira a humidade DR')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END HUMIDADE DR 01 -->
                                                             </div>
@@ -678,13 +678,13 @@
                                                                 <!-- TEMPERATURA FCA 02  -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input name="temp02_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp02_fca'] : '' ?>">
+                                                                    <input name="temp02_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp02_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura 02 FCA')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END TEMPERATURA FCA 02  -->
                                                                 <!-- HUMIDADE FCA 02  -->
                                                                 <div style="width: 50%; float: right">
 
-                                                                    <input name="humid02_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid02_fca'] : '' ?>">
+                                                                    <input name="humid02_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid02_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a humidade 02 FCA')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END HUMIDADE FCA 02 -->
                                                             </div>
@@ -693,13 +693,13 @@
                                                                 <!-- TEMPERATURA SP 02 -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input name="temp02_sp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp02_sp'] : '' ?>">
+                                                                    <input name="temp02_sp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp02_sp'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura 02 SP')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END TEMPERATURA SP 02  -->
                                                                 <!-- HUMIDADE SP 02 -->
                                                                 <div style="width: 50%; float: right">
                                                                     
-                                                                    <input name="humid02_sp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid02_sp'] : '' ?>">
+                                                                    <input name="humid02_sp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid02_sp'] : '' ?>" required oninvalid="setCustomValidity('Insira a humidade 02 SP')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END HUMIDADE SP 02  -->
                                                             </div>
@@ -743,13 +743,13 @@
                                                                 <!-- TEMPERATURA FCA 03  -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input name="temp03_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp03_fca'] : '' ?>">
+                                                                    <input name="temp03_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp03_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura 03 FCA')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END TEMPERATURA FCA 03  -->
                                                                 <!-- HUMIDADE FCA 03 -->
                                                                 <div style="width: 50%; float: right">
 
-                                                                    <input name="humid03_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid03_fca'] : '' ?>">
+                                                                    <input name="humid03_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid03_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a humidade 03 FCA')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END HUMIDADE FCA 03 -->
                                                             </div>
@@ -758,13 +758,13 @@
                                                                 <!-- TEMPERATURA SP 03 -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input name="temp03_sp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp03_sp'] : '' ?>">
+                                                                    <input name="temp03_sp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp03_sp'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura 03 SP')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END TEMPERATURA SP 03  -->
                                                                 <!-- HUMIDADE SP 03 -->
                                                                 <div style="width: 50%; float: right">
                                                                     
-                                                                    <input name="humid03_sp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid03_sp'] : '' ?>">
+                                                                    <input name="humid03_sp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid03_sp'] : '' ?>" required oninvalid="setCustomValidity('Insira a humidade 03 SP')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <!-- END HUMIDADE SP 03 -->
                                                             </div>
@@ -823,7 +823,7 @@
                                                                 <div class="input-format-center">
                                                                     <div style="width: 80%; margin:auto">
                                                                     
-                                                                        <input name="cap_ups_tr" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['cap_ups_tr'] : '' ?>">
+                                                                        <input name="cap_ups_tr" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['cap_ups_tr'] : '' ?>" required oninvalid="setCustomValidity('Insira a capacidade da UPS da TR')" onchange="try{setCustomValidity('')}catch(e){}">
 
                                                                     </div>
                                                                 </div>
@@ -1181,7 +1181,7 @@
                                                                 <div class="input-format-center">
                                                                     <div style="width: 25%; margin:auto; padding: 5px">
                                                                     
-                                                                    <input name="chk_batcel" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['chk_batcel'] : "" ?>">
+                                                                    <input name="chk_batcel" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['chk_batcel'] : "" ?>" required oninvalid="setCustomValidity('Insira a % da bateria do celular')" onchange="try{setCustomValidity('')}catch(e){}">
 
                                                                     </div>
                                                                 </div>
