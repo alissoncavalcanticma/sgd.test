@@ -1118,7 +1118,7 @@
                                                         
                                                         <!-- CHECKLIST CARRO NPO -->
                                                         <div class="row">
-                                                            <div class="col-md-6 table-bordered"  style="">
+                                                            <div class="col-md-6 table-bordered">
                                                                 <div style="padding-left: 20px; line-height: 50px">Carro:
                                                                 </div>
                                                             </div>

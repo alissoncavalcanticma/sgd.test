@@ -87,6 +87,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 <div class="main-content" style="padding-top: 10px;">
                     <div class="section__content section__content--p30">
                         <div class="container-fluid">
+                        
                             <div class="row">
                   
                                 <div class="col-lg-12" style=" margin: auto;">
@@ -97,7 +98,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                     <button type="button" class="btn btn-primary" onclick="window.open('checklists.php', '_self')"><<<</button>
                                     </button>
                                     
-                                    <div class="div-cad-acesso-int" style="padding-left: 70px">
+                                    <div class="div-cad-checklist-int" style="padding-left: 70px">
                                     
                                    <!-- /# column -->
                                     <div class="col-lg-11">
