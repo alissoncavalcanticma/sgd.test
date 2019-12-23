@@ -1549,8 +1549,8 @@ section {
 
 .account-dropdown .info .image {
     float: left;
-    height: 65px;
-    width: 65px;
+    height: 85px;
+    width: 85px;
     overflow: hidden;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -1558,7 +1558,7 @@ section {
 }
 
 .account-dropdown .info .content {
-    margin-left: 65px;
+    margin-left: 95px;
     padding: 11px 0;
     padding-left: 12px;
 }
@@ -13552,3 +13552,6 @@ input[type=number] {
     font-weight: bold;
     text-align: center;
 }
+
+
+/* IMAGE LOGO */

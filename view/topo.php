@@ -144,7 +144,7 @@
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="../assets/images/users/<?= strtolower($_SESSION['logon']) ?>.jpg" />
+                                                        <img src="../assets/images/users/<?= strtolower($_SESSION['logon']) ?>.jpg"/>
                                                     </a>
                                                 </div>
                                                 <div class="content">
@@ -159,6 +159,7 @@
                                                     <a href="#">
                                                         <i class="zmdi zmdi-account"></i>Account</a>
                                                 </div>
+                                                <!--
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
                                                         <i class="zmdi zmdi-settings"></i>Setting</a>
@@ -167,6 +168,7 @@
                                                     <a href="#">
                                                         <i class="zmdi zmdi-money-box"></i>Billing</a>
                                                 </div>
+                                                -->
                                             </div>
                                             <div class="account-dropdown__footer">
                                                 <a href="../controller/UsuarioController.class.php?acao=deslogar">
