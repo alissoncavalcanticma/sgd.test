@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 18/12/2019 às 16:49
+-- Tempo de geração: 24/12/2019 às 13:24
 -- Versão do servidor: 5.7.28-0ubuntu0.18.04.4
 -- Versão do PHP: 7.2.24-0ubuntu0.18.04.1
 
@@ -9673,9 +9673,7 @@ INSERT INTO `acessos` (`id`, `dc`, `turno`, `motivo`, `servico`, `equipamento`, 
 (9846, 'SP', 2, 'LIMPEZA DO LOCAL 123', '', '', '', 'LUCIANA', 'SERIS', 2, '2019-07-19', '12:59:00', '13:04:00', 'Telefone', '08:50:00', '13:00:00', '12:52:00', 'Limpeza', '2019-07-19 13:21:05', 0),
 (9848, 'TR', 3, 'REALIZAÇÃO DE TESTES NAS CONEXÕES', 'REALIZAR TESTES FUNCIONAIS NAS FIBRAS DE INTERCONEXÃO ENTRE A TR E DC SP;', 'NEXUS 7000', 'N/A', 'LUCAS', 'N&C', 3, '2019-09-23', '21:21:00', '23:54:00', 'E-mail', '23:23:00', '04:43:00', '12:12:00', 'Conectividade', '2019-09-23 13:26:16', 0),
 (9849, 'SP', 2, 'VERIFICAÇÃO DOS EQUIPAMENTOS', 'TIRAR FOTOS DOS EQUIPAMENTOS DA DENSO', '', '', 'JACLINTON', 'DENSO', 3, '2019-09-24', '08:24:00', '08:29:00', 'Telefone', '08:01:00', '00:00:00', '08:23:00', 'Servidores', '2019-09-24 08:55:56', 0),
-(9850, 'SP', 2, 'VERIFICAR AMBIENTE DA SALA ANEXA DO DC SP PARA REALIZAR FUTURA INSTALAÇÃO DO AR-CONDICIONADO DE BACKUP', '', '', 'ACESSO FOI EM CONJUNTO COM REPRESENTANTE DA EMPRESA HILT, TERCEIRIZADA CONTRATADA.\r\n\r\npjçoiklçk', 'COSTA', 'COSTA&CARDOSO', 2, '2019-09-27', '09:49:00', '10:04:00', 'Presencial', '09:30:00', '00:00:00', '09:48:00', 'Climatização', '2019-09-27 12:05:17', 3),
-(9851, 'FCA', 3, 'kjnkjnkjn', '', '', '', 'csdc', 'hbhj', 2, '2019-10-13', '08:59:00', '22:02:00', 'E-mail', '09:59:00', '11:01:00', '08:59:00', 'Conectividade', '2019-10-13 12:16:00', 6),
-(9852, 'DR', 1, 'jjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjjjjjjjjjjjjjj 666666666666666666666666666666', 'hh', 'hhhh', '', 'kjnk', 'nkj', 5, '2019-10-13', '09:59:00', '11:11:00', 'E-mail', '08:59:00', '22:02:00', '09:59:00', 'Conectividade', '2019-10-13 12:16:27', 0);
+(9850, 'SP', 2, 'VERIFICAR AMBIENTE DA SALA ANEXA DO DC SP PARA REALIZAR FUTURA INSTALAÇÃO DO AR-CONDICIONADO DE BACKUP', '', '', 'ACESSO FOI EM CONJUNTO COM REPRESENTANTE DA EMPRESA HILT, TERCEIRIZADA CONTRATADA.\r\n\r\npjçoiklçk', 'COSTA', 'COSTA&CARDOSO', 2, '2019-09-27', '09:49:00', '10:04:00', 'Presencial', '09:30:00', '00:00:00', '09:48:00', 'Climatização', '2019-09-27 12:05:17', 3);
 
 -- --------------------------------------------------------
 
@@ -9774,10 +9772,7 @@ CREATE TABLE `checklists` (
 --
 
 INSERT INTO `checklists` (`id`, `turno`, `data`, `operador_fca`, `operador_sp`, `operador_dr`, `operador_tr`, `entrada_fca`, `saida_fca`, `entrada_sp`, `saida_sp`, `entrada_dr`, `saida_dr`, `entrada_tr`, `saida_tr`, `racks_fca`, `racks_sp`, `racks_dr`, `racks_tr`, `org_fca`, `org_sp`, `org_dr`, `org_tr`, `lumin_fca`, `lumin_sp`, `lumin_dr`, `lumin_tr`, `infra_fca`, `infra_sp`, `infra_dr`, `infra_tr`, `acesso_fca`, `acesso_sp`, `acesso_dr`, `acesso_tr`, `portacf_fca`, `portacf_sp`, `portacf_dr`, `arc_fca`, `arc_sp`, `arc_dr`, `arc_tr`, `sist_extint_fca`, `sist_extint_sp`, `sist_extint_dr`, `sist_extint_tr`, `ledsaude_fca`, `ledsaude_dr`, `temp01_fca`, `humid01_fca`, `temp02_fca`, `humid02_fca`, `temp03_fca`, `humid03_fca`, `temp01_sp`, `humid01_sp`, `temp02_sp`, `humid02_sp`, `temp03_sp`, `humid03_sp`, `temp_dr`, `humid_dr`, `cap_ups_tr`, `lumin_sc_fca`, `portacf_sc_fca`, `acesso_sc_fca`, `geradores_fca`, `geradores_sp`, `org_ext_fca`, `org_ext_sp`, `org_ext_dr`, `org_ext_tr`, `zabbix`, `obs_fca`, `obs_sp`, `obs_dr`, `obs_tr`, `chk_carro`, `chk_sala`, `chk_not`, `chk_cel`, `chk_batcel`, `obs_npo`) VALUES
-(94, 2, '2019-12-10', 3, 5, 5, 7, '06:59:00', '22:23:00', '06:59:00', '12:12:00', '03:24:00', '06:25:00', '06:59:00', '12:12:00', 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 'teste;', 'teste;', 'teste;', 'teste;', 0, 1, 0, 0, 0, 'teste;'),
-(95, 3, '2019-12-18', 6, 6, 6, 6, '08:08:00', '08:59:00', '08:08:00', '08:08:00', '08:59:00', '07:07:00', '07:07:00', '07:07:00', 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 9, 0, 0, 0, 0, 9, 7, 0, 0, 7, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 'teste;32124', '42342teste;', 'teste;42342', 'teste;423432', 1, 0, 0, 1, 555, 'teste;3333'),
-(96, 1, '2019-12-18', 4, 6, 4, 3, '09:59:00', '09:09:00', '09:59:00', '09:59:00', '09:09:00', '09:59:00', '09:59:00', '09:59:00', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '99999teste;32124', '9999942342teste;', 'teste;42342', '999999teste;423432', 1, 1, 1, 1, 99, '9999teste;3333'),
-(97, 2, '2019-12-18', 2, 2, 2, 2, '11:01:00', '11:01:00', '11:01:00', '11:59:00', '11:06:00', '11:01:00', '11:05:00', '05:59:00', 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 88, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '99999teste;32124 99999teste;32124; 99999teste;32124; 99999teste;32124', ' 9999942342teste; 9999942342teste; 9999942342teste;', '9999942342teste;9999942342teste;teste;42342', '9999942342teste;9999942342teste;999999teste;423432', 1, 1, 1, 1, 100, '9999teste;3333\r\n9999teste;3333');
+(99, 2, '2019-12-23', 2, 2, 2, 2, '12:52:00', '12:57:00', '13:01:00', '13:06:00', '13:06:00', '13:10:00', '13:25:00', '13:28:00', 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 20, 52, 21, 55, 21, 57, 21, 55, 22, 59, 23, 58, 21, 57, 100, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 'No rack 02 todos os equipamentos estão desligados', 'O painel do ar-condicionado Stullz está com várias exclamações;\r\nUm dos geradores sem funcionar', 'Racks com portas abertas; cabos do força e ópticos estocados em caixa no chão do DC', 'UPS continua disparando vários e-mails referentes à 7 erros;\r\nSomente 4 ar-condicionados funcionando;\r\nLuminária fora do lugar;\r\nAlgumas tampas do piso e do teto continuam deslocadas desde o serviço de passagem de fibra realizado anteriormente', 1, 1, 1, 1, 100, 'Carro sujo');
 
 -- --------------------------------------------------------
 
@@ -9876,12 +9871,12 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `acessos`
 --
 ALTER TABLE `acessos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9853;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9851;
 --
 -- AUTO_INCREMENT de tabela `checklists`
 --
 ALTER TABLE `checklists`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 --
 -- AUTO_INCREMENT de tabela `resumos`
 --
